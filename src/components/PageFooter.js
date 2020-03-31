@@ -1,5 +1,5 @@
-import React from 'react';
-import config from '../../config';
+import React from 'react'
+import config from '../../config'
 
 export default function PageFooter() {
   return (
@@ -11,5 +11,5 @@ export default function PageFooter() {
         </li>
       </ul>
     </footer>
-  );
+  )
 }

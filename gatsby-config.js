@@ -1,4 +1,4 @@
-const config = require('./config');
+const config = require('./config')
 
 module.exports = {
   pathPrefix: config.pathPrefix,
@@ -26,4 +26,4 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
   ],
-};
+}

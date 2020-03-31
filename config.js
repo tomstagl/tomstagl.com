@@ -1,5 +1,6 @@
 module.exports = {
-  siteTitle: 'Tom Stagl - Engineering Leader, Agile Coach', // <title>
+  siteTitle:
+    'Scrum Master, Engineering Leader, Agile Coach, Interim CTO - Tom Stagl', // <title>
   manifestName: 'Identity',
   manifestShortName: 'Landing', // max 12 characters
   manifestStartUrl: '/',
@@ -7,7 +8,7 @@ module.exports = {
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
-  pathPrefix: `/gatsby-starter-identity/`, // This path is subpath of your hosting https://domain/portfolio
+  pathPrefix: `/`, // This path is subpath of your hosting https://domain/portfolio
   authorName: 'Tom Stagl',
   authorStreet: 'Berggasse 2',
   authorZip: 2542,
@@ -37,4 +38,4 @@ module.exports = {
       url: 'https://www.linkedin.com/in/herrstagl/',
     },
   ],
-};
+}

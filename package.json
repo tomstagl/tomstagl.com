@@ -26,8 +26,8 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "npm run clean && gatsby build",
-    "deploy-s3": "gatsby-plugin-s3 deploy",
     "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public",
+    "deploy-s3": "npm run deploy && AWS_PROFILE=gatsby gatsby-plugin-s3 deploy --yes",
     "serve": "gatsby serve",
     "clean": "rimraf .cache public",
     "format": "prettier --write '**/*.js'",
