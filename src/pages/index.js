@@ -16,26 +16,27 @@ const IndexPage = () => (
     <div>
       <div>
         Besides helping teams to see and feel the benefits of{' '}
-        <strong>agile</strong>- and <strong>DevOps</strong> principles, I also
-        like to code.
+        <strong>Agile</strong>- and <strong>DevOps</strong> principles, I'm also
+        an experienced engineering leader who can help organisations to lift off
+        an successful agile transition journey.
       </div>
     </div>
     <div className="pt-6">
       <h2>&#128640; My main agile competencies</h2>
       <ol className="list-inside list-disc">
         <li>Scrum</li>
+        <li>Team Lift-off</li>
         <li>Business Agility</li>
+        <li>Product Ownership</li>
         <li>Agile Transition</li>
       </ol>
     </div>
     <div className="pt-6">
-      <h2>My prefered technololgy stack:</h2>
+      <h2>&#x2B50; My leadership competencies</h2>
       <ol className="list-inside list-disc">
-        <li>NodeJS</li>
-        <li>NextJS</li>
-        <li>GatsbyJS - Especially for this site</li>
-        <li>Gitlab</li>
-        <li>Amazon Web Services</li>
+        <li>Team composition</li>
+        <li>Value stream mapping</li>
+        <li>Talent Acquisition</li>
       </ol>
     </div>
   </Layout>

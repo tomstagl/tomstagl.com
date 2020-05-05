@@ -6,8 +6,8 @@ const Navigation = () => (
     <ul className="flex justify-center">
       <li className="mr-6">
         <Link
-          className="text-gray-500 hover:text-gray-700"
-          activeClassName="text-teal-400 underline"
+          className="text-gray-500 hover:text-teal-500"
+          activeClassName="text-teal-500 underline"
           to="/"
         >
           Start
@@ -15,8 +15,8 @@ const Navigation = () => (
       </li>
       <li className="mr-6">
         <Link
-          className="text-gray-500 hover:text-gray-700"
-          activeClassName="text-teal-400 underline"
+          className="text-gray-500 hover:text-teal-500"
+          activeClassName="text-teal-500 underline"
           to="/blog/"
         >
           Blog
@@ -24,8 +24,8 @@ const Navigation = () => (
       </li>
       <li className="mr-6">
         <Link
-          className="text-gray-500 hover:text-gray-700"
-          activeClassName="text-black"
+          className="text-gray-500 hover:text-teal-500"
+          activeClassName="text-teal-500 underline"
           to="/about/"
         >
           About
@@ -33,8 +33,8 @@ const Navigation = () => (
       </li>
       <li className="mr-6">
         <Link
-          className="text-gray-500 hover:text-gray-700"
-          activeClassName="text-black"
+          className="text-gray-500 hover:text-teal-500"
+          activeClassName="text-teal-500 underline text-bold"
           to="/impressum/"
         >
           Impressum

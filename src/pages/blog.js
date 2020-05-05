@@ -2,6 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import BlogPost from '../components/blogPost'
+import SEO from '../components/seo'
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -39,7 +40,18 @@ const Blog = () => {
 
   return (
     <Layout>
-      <h1>{blogPosts}</h1>
+      <SEO title="Blog" />
+      <div className="pt-4">
+        <h2>Some blog posts</h2>
+        <div>{blogPosts}</div>
+      </div>
+      <div className="pt-4">
+        <h2>Things I like to post about, when there is time</h2>
+        <ul className="list-inside list-disc">
+          <li>Metrics, Metrics, Metrics - from top to bottom</li>
+          <li>Performance Reviews and how to do them in an agile world</li>
+        </ul>
+      </div>
     </Layout>
   )
 }

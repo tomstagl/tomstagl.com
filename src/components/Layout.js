@@ -22,9 +22,9 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <Navigation />
       <div>
-        <main className="p-4">{children}</main>
-        <footer className="bg-gray-200 p-4 shadow text-xs">
-          © {new Date().getFullYear()}
+        <main className="p-4 mx-auto md:max-w-lg lg:max-w-2xl">{children}</main>
+        <footer className="p-4 mx-auto bg-gray-200 shadow text-xs">
+          ©{new Date().getFullYear()}
         </footer>
       </div>
     </>
