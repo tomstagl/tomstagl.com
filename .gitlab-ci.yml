@@ -1,0 +1,42 @@
+image: node:10-alpine
+
+stages:
+  - setup
+  - format
+  - lint
+  - deploy # dummy stage to follow the template guidelines
+
+
+#include:
+#  - template: Auto-DevOps.gitlab-ci.yml
+
+cache:
+  paths:
+    - ./node_modules/
+
+
+setup:
+  stage: setup
+  script:
+    - npm install
+  artifacts:
+    paths:
+      - ./node_modules/
+
+format:
+  stage: setup
+  script:
+    - npm run format
+
+lint:
+  stage: setup
+  script:
+    - npm run eslint
+
+lint:
+  stage: setup
+  script:
+    - npm audit
+
+deploy:
+  

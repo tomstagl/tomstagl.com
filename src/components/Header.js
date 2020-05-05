@@ -1,16 +1,27 @@
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 import React from 'react'
+import Avatar from './avatar'
 
-import config from '../../config'
-const pic = require('../assets/images/avatar.jpg')
+const Header = ({ siteTitle }) => (
+  <header className="pl-4">
+    <div className="flex items-center">
+      <Avatar />
+      <div>
+        <h1 className="font-extrabold">
+          <Link to="/">{siteTitle}</Link>
+        </h1>
+      </div>
+    </div>
+  </header>
+)
 
-export default function Footer() {
-  return (
-    <header>
-      <span className="avatar">
-        <img height="128px" src={pic} alt="" />
-      </span>
-      <h1>{config.authorName}</h1>
-      <p>{config.heading}</p>
-    </header>
-  )
+Header.propTypes = {
+  siteTitle: PropTypes.string,
 }
+
+Header.defaultProps = {
+  siteTitle: ``,
+}
+
+export default Header

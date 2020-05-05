@@ -1,0 +1,24 @@
+@import 'tailwindcss/base';
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+a {
+  @apply text-gray-800;
+}
+
+body {
+  @apply pt-4;
+}
+
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
