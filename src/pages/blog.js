@@ -46,7 +46,7 @@ const Blog = () => {
         <div>{blogPosts}</div>
       </div>
       <div className="pt-4">
-        <h2>Things I like to post about, when there is time</h2>
+        <h2>Things I like to write about, when there is time</h2>
         <ul className="list-inside list-disc">
           <li>Metrics, Metrics, Metrics - from top to bottom</li>
           <li>Performance Reviews and how to do them in an agile world</li>
