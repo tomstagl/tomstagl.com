@@ -50,6 +50,7 @@ const Blog = () => {
         <ul className="list-inside list-disc">
           <li>Metrics, Metrics, Metrics - from top to bottom</li>
           <li>Performance Reviews and how to do them in an agile world</li>
+          <li>About expectations and responsibilities in Agile environments.</li>
         </ul>
       </div>
     </Layout>
