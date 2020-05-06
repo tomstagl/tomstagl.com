@@ -52,7 +52,7 @@ module.exports = {
         mergeDefaultDirectives: true,
         directives: {
           'script-src': "'self'",
-          'style-src': "'self' 'unsafe-inline'",
+          'style-src': "default-src 'self' style-src 'unsafe-inline'",
           'img-src': "'self' data:",
         },
       },
