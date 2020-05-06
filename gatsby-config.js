@@ -42,6 +42,7 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-csp`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
