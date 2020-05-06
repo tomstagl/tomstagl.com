@@ -42,7 +42,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-csp`,
+    {
+      resolve: `gatsby-plugin-csp`,
+      options: {
+        disableOnDev: false,
+        reportOnly: false, // Changes header to Content-Security-Policy-Report-Only for csp testing purposes
+        mergeScriptHashes: true, // you can disable scripts sha256 hashes
+        mergeStyleHashes: true, // you can disable styles sha256 hashes
+        mergeDefaultDirectives: true,
+        directives: {
+          'script-src': "'self'",
+          'style-src': "'self' 'unsafe-inline'",
+          'img-src': "'self' data:",
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -52,8 +66,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
-        printRejected: true, // Print removed selectors and processed file names
-        //develop: true, // Enable while using `gatsby develop`
+        printRejected: false, // Print removed selectors and processed file names
+        develop: false, // Enable while using `gatsby develop`
         tailwind: true, // Enable tailwindcss support
         // whitelist: ['whitelist'], // Don't remove this selector
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
