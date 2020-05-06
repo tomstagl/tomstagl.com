@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 const About = () => (
   <Layout>
     <SEO title="About" />
-    <div className="pt-6">
+    <div>
       <h1>Principles</h1>
       <ul className="list-inside list-disc">
         <li>

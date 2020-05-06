@@ -41,8 +41,8 @@ const Blog = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <div className="pt-4">
-        <h2>Some blog posts</h2>
+      <div>
+        <h1>Blog posts about agility and DevOps</h1>
         <div>{blogPosts}</div>
       </div>
       <div className="pt-4">
