@@ -3,6 +3,7 @@ module.exports = {
     title: `Tom Stagl`,
     description: `Scrum Master, Engineering Leader, Agile Coach, Interim CTO - Tom Stagl`,
     author: `@herrstagl`,
+    siteUrl: `https://tomstagl.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -45,8 +46,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        configFile: '.robotstxt-conf.js'
-      }
+        configFile: '.robotstxt-conf.js',
+      },
     },
     {
       resolve: `gatsby-plugin-purgecss`,
