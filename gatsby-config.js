@@ -42,7 +42,12 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-csp`,
-    `gatsby-plugin-robots-txt`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        configFile: '.robotstxt-conf.js'
+      }
+    },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
