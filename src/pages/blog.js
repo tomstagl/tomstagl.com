@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+
 import Layout from '../components/layout'
 import BlogPost from '../components/blogPost'
 import SEO from '../components/seo'
@@ -10,22 +11,14 @@ const Blog = () => {
       allMediumPost(sort: { fields: [createdAt], order: DESC }) {
         edges {
           node {
-            id
             title
             virtuals {
               subtitle
-              previewImage {
-                imageId
-              }
+              totalClapCount
+              readingTime
             }
-            previewContent2 {
-              bodyModel {
-                paragraphs {
-                  name
-                  text
-                }
-              }
-            }
+            createdAt(fromNow: true)
+            slug
           }
         }
       }
@@ -50,7 +43,9 @@ const Blog = () => {
         <ul className="list-inside list-disc">
           <li>Metrics, Metrics, Metrics - from top to bottom</li>
           <li>Performance Reviews and how to do them in an agile world</li>
-          <li>About expectations and responsibilities in Agile environments.</li>
+          <li>
+            About expectations and responsibilities in Agile environments.
+          </li>
         </ul>
       </div>
     </Layout>
