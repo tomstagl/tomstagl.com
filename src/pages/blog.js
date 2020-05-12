@@ -8,24 +8,45 @@ import SEO from '../components/seo'
 const Blog = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMediumPost(sort: { fields: [createdAt], order: DESC }) {
+      allDatoCmsBlogpost {
         edges {
           node {
             title
-            virtuals {
-              subtitle
-              totalClapCount
-              readingTime
-            }
-            createdAt(fromNow: true)
+            content
             slug
+            meta {
+              publishedAt(fromNow: true)
+            }
+            blogimage {
+              size
+              width
+              height
+              path
+              format
+              isImage
+              createdAt
+              url
+              notes
+              author
+              copyright
+              originalId
+              filename
+              basename
+              exifInfo
+              mimeType
+              blurhash
+              alt
+              title
+              customData
+            }
           }
         }
       }
     }
   `)
 
-  const blogData = data.allMediumPost.edges
+  console.log(data)
+  const blogData = data.allDatoCmsBlogpost.edges
 
   const blogPosts = blogData.map((post, index) => (
     <BlogPost key={index} post={post.node} />
