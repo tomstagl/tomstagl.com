@@ -9,13 +9,15 @@ const links = [
 ]
 
 const navItems = links.map((item, index) => (
-  <NavItem to={item.to} name={item.name} />
+  <NavItem key={index} to={item.to} name={item.name} />
 ))
 
 const Navigation = () => (
-  <nav className="p-4 my-4 bg-gray-200">
-    <ul className="flex justify-center">{navItems}</ul>
-  </nav>
+  <div className="absolute right-0">
+    <nav className="p-4 my-4">
+      <ul className="flex justify-center">{navItems}</ul>
+    </nav>
+  </div>
 )
 
 export default Navigation

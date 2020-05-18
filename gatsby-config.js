@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Tom Stagl`,
-    description: `Scrum Master, Engineering Leader, Agile Coach, Interim CTO - Tom Stagl`,
+    description: `Experienced Engineering Leader, Agile Coach, Interim CTO - Tom Stagl`,
     author: `@herrstagl`,
     siteUrl: `https://tomstagl.com`,
   },
@@ -40,7 +40,7 @@ module.exports = {
         previewMode: false,
 
         // Disable automatic reloading of content when some change occurs on DatoCMS:
-        disableLiveReload: false,  
+        disableLiveReload: false,
         // Custom API base URL (most don't need this)
         // apiUrl: 'https://site-api.datocms.com',
         // Setup locale fallbacks

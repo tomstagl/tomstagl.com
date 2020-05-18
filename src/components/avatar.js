@@ -16,7 +16,7 @@ const Avatar = () => {
   `)
 
   return (
-    <div>
+    <div className="w-1/7">
       <Img
         className="h-16 w-16 mr-4 rounded-full mx-atuo border-2 border-teal-400"
         fluid={data.avatarImage.childImageSharp.fluid}

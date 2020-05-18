@@ -18,26 +18,12 @@ const Blog = () => {
               publishedAt(fromNow: true)
             }
             blogimage {
-              size
-              width
-              height
-              path
-              format
-              isImage
-              createdAt
-              url
-              notes
-              author
-              copyright
-              originalId
-              filename
-              basename
-              exifInfo
-              mimeType
-              blurhash
-              alt
-              title
-              customData
+              fluid(
+                maxWidth: 600
+                imgixParams: { fm: "jpg", auto: "compress" }
+              ) {
+                ...GatsbyDatoCmsFluid
+              }
             }
           }
         }
@@ -47,7 +33,7 @@ const Blog = () => {
 
   console.log(data)
   const blogData = data.allDatoCmsBlogpost.edges
-
+  console.log('post:' + blogData)
   const blogPosts = blogData.map((post, index) => (
     <BlogPost key={index} post={post.node} />
   ))

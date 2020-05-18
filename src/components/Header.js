@@ -2,16 +2,18 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import Avatar from './avatar'
+import Navigation from './navigation'
 
 const Header = ({ siteTitle }) => (
-  <header className="pl-4 mx-auto md:max-w-lg lg:max-w-2xl">
-    <div className="flex items-center">
+  <header className="pl-4 mx-auto md:max-w-lg lg:max-w-3xl">
+    <div className="relative flex items-center">
       <Avatar />
       <div>
-        <h1 className="font-extrabold">
+        <div className="font-extrabold text-2xl">
           <Link to="/">{siteTitle}</Link>
-        </h1>
+        </div>
       </div>
+      <Navigation />
     </div>
   </header>
 )
