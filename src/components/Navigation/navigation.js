@@ -15,8 +15,9 @@ const navItems = links.map((item, index) => (
 const Navigation = () => {
   const [burgerMenuVisible, setBurgerMenuVisible] = React.useState(false)
   return (
-    <div className="absolute right-0">
+    <div className="absolute right-0 ">
       <nav className="p-4 my-4">
+      <div>
         <div className="lg:hidden" id="mobile-nav-toggle">
           <button
             id="toggle-burger-menu"
@@ -34,8 +35,9 @@ const Navigation = () => {
         </div>
 
         <div className={`${!burgerMenuVisible ? 'hidden' : ''} lg:block`} id="desktop-menu">
-          <ul className="flex justify-center">{navItems}</ul>
+          <ul className="justify-center bg-white shadow w-screen lg:w-auto lg:shadow-none lg:flex lg:flex-row lg:block">{navItems}</ul>
         </div>
+      </div>
       </nav>
     </div>
   )
