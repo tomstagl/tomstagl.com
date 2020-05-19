@@ -4,7 +4,7 @@ const mobileMenu = (props) => {
   const { navItems } = props
 
   return (
-    <div className="hidden" id="desktop-menu">
+    <div className="hidden sm:block" id="desktop-menu">
       <ul className="flex justify-center">{navItems}</ul>
     </div>
   )

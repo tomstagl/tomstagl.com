@@ -18,7 +18,7 @@ const Avatar = () => {
   return (
     <div className="w-1/7">
       <Img
-        className="h-16 w-16 mr-4 rounded-full mx-atuo border-2 border-teal-400"
+        className="h-16 w-16 mr-4 rounded-full mx-auto border-2 border-teal-400"
         fluid={data.avatarImage.childImageSharp.fluid}
         alt="Portrait of Tom Stagl"
       />
