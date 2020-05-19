@@ -16,9 +16,9 @@ const IndexPage = () => (
     <div>
       <div>
         Besides helping teams to see and feel the benefits of{' '}
-        <strong>Agile</strong>- and <strong>DevOps</strong> principles, I&apos;m also
-        an experienced engineering leader who can help organisations to lift off
-        an successful agile transition journey.
+        <strong>Agile</strong>- and <strong>DevOps</strong> principles, I&apos;m
+        also an experienced engineering leader who can help organisations to
+        lift off an successful agile transition journey.
       </div>
     </div>
     <div className="pt-6">
