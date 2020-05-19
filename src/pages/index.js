@@ -7,7 +7,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div>
-      <h1>👋 I'm Tom Stagl</h1>
+      <h1>👋 I&apos;m Tom Stagl</h1>
       <p>
         living and working as a freelance <strong>Agile Coach</strong> in
         Austria.
@@ -16,7 +16,7 @@ const IndexPage = () => (
     <div>
       <div>
         Besides helping teams to see and feel the benefits of{' '}
-        <strong>Agile</strong>- and <strong>DevOps</strong> principles, I'm also
+        <strong>Agile</strong>- and <strong>DevOps</strong> principles, I&apos;m also
         an experienced engineering leader who can help organisations to lift off
         an successful agile transition journey.
       </div>

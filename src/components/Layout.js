@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
-        <main className="p-4 mx-auto md:max-w-lg lg:max-w-3xl">{children}</main>
+        <main className="p-4 mx-auto sm:max-w-l md:max-w-lg lg:max-w-3xl">{children}</main>
         <footer className="p-4 mx-auto bg-gray-200 shadow text-xs">
           ©{new Date().getFullYear()}
           <Link to="/imprint" />

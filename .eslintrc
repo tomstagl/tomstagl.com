@@ -5,20 +5,16 @@
     "es6": true,
     "node": true
   },
+  "parserOptions": {
+      "sourceType": "module"
+  },
   "extends": ["plugin:react/recommended", "eslint-config-prettier"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "sourceType": "module",
-    "ecmaVersion": 2019
-  },
-  "plugins": ["react", "@typescript-eslint"],
+
+  "plugins": ["react"],
   "rules": {
     "semi": ["error", "never"],
     "react/react-in-jsx-scope": "off",
@@ -38,13 +34,13 @@
     "propWrapperFunctions": [
       // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
       "forbidExtraProps",
-      {"property": "freeze", "object": "Object"},
-      {"property": "myFavoriteWrapper"}
+      { "property": "freeze", "object": "Object" },
+      { "property": "myFavoriteWrapper" }
     ],
     "linkComponents": [
       // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
       "Hyperlink",
-      {"name": "Link", "linkAttribute": "to"}
+      { "name": "Link", "linkAttribute": "to" }
     ]
   }
 }
