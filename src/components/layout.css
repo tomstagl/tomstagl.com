@@ -18,6 +18,7 @@ a {
 
 body {
   @apply pt-4;
+  @apply antialiased;
 }
 
 @import 'tailwindcss/components';
