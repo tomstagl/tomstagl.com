@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
@@ -23,6 +24,7 @@ const Layout = ({ children }) => {
         <main className="p-4 mx-auto md:max-w-lg lg:max-w-3xl">{children}</main>
         <footer className="p-4 mx-auto bg-gray-200 shadow text-xs">
           ©{new Date().getFullYear()}
+          <Link to="/imprint" />
         </footer>
       </div>
     </>

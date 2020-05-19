@@ -5,7 +5,6 @@ const links = [
   { to: '/', name: 'Start' },
   { to: '/blog/', name: 'Blog' },
   { to: '/about/', name: 'About' },
-  { to: '/impressum/', name: 'Imprint' },
 ]
 
 const navItems = links.map((item, index) => (
