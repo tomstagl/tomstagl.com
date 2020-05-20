@@ -15,10 +15,10 @@ const Navigation = () => {
   const [burgerMenuVisible, setBurgerMenuVisible] = React.useState(false)
   return (
     <>
-      <div className="block lg:hidden relative" id="mobile-nav-toggle">
+      <div className="block lg:hidden " id="mobile-nav-toggle">
         <button
           id="toggle-burger-menu"
-          className="flex items-center text-teal-600"
+          className="flex items-center px-3 py-2 text-teal-600"
           onClick={() => setBurgerMenuVisible(!burgerMenuVisible)}
         >
           <svg
@@ -34,10 +34,10 @@ const Navigation = () => {
       <div
         className={`${
           !burgerMenuVisible ? 'hidden' : ''
-        } absolute lg:relative lg:flex lg:items-center lg:w-auto lg:mt-0 lg:block`}
+        } w-full -mx-4 block flex-grow lg:flex lg:items-center lg:w-auto`}
         id="nav-menu"
       >
-        <ul className="justify-end flex-1 bg-gray-200 shadow lg:bg-white lg:w-auto lg:shadow-none lg:flex lg:flex-row lg:block">
+        <ul className="my-2 p-4 bg-gray-200 shadow flex flex-grow items-center lg:p-0 lg:bg-white lg:w-auto lg:shadow-none">
           {navItems}
         </ul>
       </div>
