@@ -32,11 +32,11 @@ const Navigation = () => {
         </button>
       </div>
       <div
-        className=
-        {`${
+        className={`${
           !burgerMenuVisible ? 'hidden' : ''
         } absolute lg:relative lg:flex lg:items-center lg:w-auto lg:mt-0 lg:block`}
-        id="nav-menu" >
+        id="nav-menu"
+      >
         <ul className="justify-end flex-1 bg-gray-200 shadow lg:bg-white lg:w-auto lg:shadow-none lg:flex lg:flex-row lg:block">
           {navItems}
         </ul>
