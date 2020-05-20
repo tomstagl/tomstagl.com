@@ -18,8 +18,8 @@ const Avatar = ({ title }) => {
 
   return (
     <>
-      <div>
-        <Link to="/" className="flex flex-auto items-center text-2xl">
+      <div className="flex items-center flex-shrink-0 text-white mr-6">
+        <Link to="/" className="text-2xl">
           <Img
             className="h-16 w-16 mr-4 rounded-full mx-auto border-2 border-teal-400"
             fluid={data.avatarImage.childImageSharp.fluid}

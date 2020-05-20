@@ -4,12 +4,10 @@ import Avatar from './avatar'
 import Navigation from './Navigation/navigation'
 
 const Header = ({ siteTitle }) => (
-  <header className="pl-4 mx-auto sm:max-w-l md:max-w-lg lg:max-w-3xl">
-    <div className="w-full container mx-auto justify-between iiii relative flex flex-wrap items-center">
-      <Avatar title={siteTitle} />
-      <Navigation />
-    </div>
-  </header>
+  <nav className="flex items-center justify-between flex-wrap lg:max-w-3xl">
+    <Avatar title={siteTitle} />
+    <Navigation />
+  </nav>
 )
 
 Header.propTypes = {
