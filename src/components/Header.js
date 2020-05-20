@@ -4,7 +4,7 @@ import Avatar from './avatar'
 import Navigation from './Navigation/navigation'
 
 const Header = ({ siteTitle }) => (
-  <nav className="mx-auto px-4 flex items-center justify-between flex-wrap lg:max-w-3xl">
+  <nav className="max-w-2xl mx-auto px-4 pb-3 flex items-center justify-between flex-wrap">
     <Avatar title={siteTitle} />
     <Navigation />
   </nav>

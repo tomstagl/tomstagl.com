@@ -18,18 +18,14 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="mx-auto">
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main className="p-4 mx-auto sm:max-w-l md:max-w-lg lg:max-w-3xl">
-          {children}
-        </main>
-        <footer className="p-4 mx-auto bg-gray-200 shadow text-xs">
-          ©{new Date().getFullYear()}
-          <Link to="/imprint" />
-        </footer>
-      </div>
-    </>
+      <main className="p-4 max-w-2xl mx-auto">{children}</main>
+      <footer className="p-4 w-12/12 max-w-none bg-gray-200 shadow text-xs">
+        ©{new Date().getFullYear()}
+        <Link to="/imprint" />
+      </footer>
+    </div>
   )
 }
 
