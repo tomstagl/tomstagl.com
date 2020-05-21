@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
       <main className="p-4 max-w-2xl mx-auto">{children}</main>
       <footer className="p-4 w-12/12 max-w-none bg-gray-200 shadow text-xs">
         ©{new Date().getFullYear()}
-        <Link to="/imprint" />
+        <Link to="/imprint">Imprint</Link>
       </footer>
     </div>
   )
