@@ -1,5 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
 import BlogTextBlock from '../components/Blog/blogTextBlock'
 import BlogQuoteBlock from '../components/Blog/blogQuoteBlock'
 import BlogCodeBlock from '../components/Blog/blogCodeBlock'
@@ -16,7 +18,7 @@ const Components = {
 
 export default function BlogPost({ data }) {
   const post = data.datoCmsBlogpost
-  const { title, subtitle, abstract, content } = post
+  const { title, subtitle, abstract, content, blogimage } = post
 
   const mapSections = () => {
     const sections = []
@@ -43,6 +45,7 @@ export default function BlogPost({ data }) {
         <header>
           <h1>{title}</h1>
           <h3>{subtitle}</h3>
+          {blogimage && <Img fluid={blogimage.fluid} />}
           <pre>{abstract}</pre>
         </header>
         {mapSections()}
@@ -57,6 +60,11 @@ export const query = graphql`
       abstract
       title
       subtitle
+      blogimage {
+        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsFluid
+        }
+      }
       content {
         ... on DatoCmsText {
           model {
@@ -75,11 +83,8 @@ export const query = graphql`
           }
           bild {
             title
-            fluid {
-              base64
-              tracedSVG
-              width
-              height
+            fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsFluid
             }
           }
         }

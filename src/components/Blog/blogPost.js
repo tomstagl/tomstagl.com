@@ -6,12 +6,6 @@ const BlogPost = (props) => {
   const { post } = props
   const read_more_link = '/blog/' + post.slug
 
-  let imageUrl = undefined
-
-  if (post && post.blogimage && post.blogimage.fluid) {
-    imageUrl = <Img fluid={post.blogimage.fluid} />
-  }
-
   return (
     <article className="pt-4 relative overflow-hidden">
       <header>
@@ -19,8 +13,8 @@ const BlogPost = (props) => {
           Published {post.meta.publishedAt}
         </small>
         <h3>{post.title}</h3>
-        {imageUrl}
       </header>
+      {post.blogimage && <Img fluid={post.blogimage.fluid} />}
       <small>contentPreview</small>
       <p className="mt-2">
         <Link to={read_more_link}>Read more</Link>

@@ -1,12 +1,11 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import BlogPost from '../components/Blog/blogPost'
 import SEO from '../components/seo'
 
 const Blog = (data) => {
-  console.log(data.data)
   const blogData = data.data.allDatoCmsBlogpost.edges
   const blogPosts = blogData.map((post, index) => (
     <BlogPost key={index} post={post.node} />
@@ -44,6 +43,11 @@ export const query = graphql`
           slug
           meta {
             publishedAt(fromNow: false)
+          }
+          blogimage {
+            fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsFluid
+            }
           }
         }
       }
