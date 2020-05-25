@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import BlogPost from '../components/blogPost'
+import BlogPost from '../components/Blog/blogPost'
 import SEO from '../components/seo'
 
 const Blog = (data) => {
