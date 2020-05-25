@@ -5,35 +5,9 @@ import Layout from '../components/layout'
 import BlogPost from '../components/blogPost'
 import SEO from '../components/seo'
 
-const Blog = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allDatoCmsBlogpost {
-        edges {
-          node {
-            title
-            content
-            slug
-            meta {
-              publishedAt(fromNow: true)
-            }
-            blogimage {
-              fluid(
-                maxWidth: 600
-                imgixParams: { fm: "jpg", auto: "compress" }
-              ) {
-                ...GatsbyDatoCmsFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  console.log(data)
-  const blogData = data.allDatoCmsBlogpost.edges
-  console.log('post:' + blogData)
+const Blog = (data) => {
+  console.log(data.data)
+  const blogData = data.data.allDatoCmsBlogpost.edges
   const blogPosts = blogData.map((post, index) => (
     <BlogPost key={index} post={post.node} />
   ))
@@ -58,5 +32,23 @@ const Blog = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allDatoCmsBlogpost {
+      edges {
+        node {
+          abstract
+          title
+          subtitle
+          slug
+          meta {
+            publishedAt(fromNow: false)
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Blog

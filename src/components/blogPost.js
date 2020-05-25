@@ -1,9 +1,10 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import { Link } from 'gatsby'
 
 const BlogPost = (props) => {
   const { post } = props
-  const contentPreview = post.content.substring(0, 350)
+  const read_more_link = '/blog/' + post.slug
 
   let imageUrl = undefined
 
@@ -20,9 +21,9 @@ const BlogPost = (props) => {
         <h3>{post.title}</h3>
         {imageUrl}
       </header>
-      <small>{contentPreview}</small>
+      <small>contentPreview</small>
       <p className="mt-2">
-        <a href="#">Read More</a>
+        <Link to={read_more_link}>Read more</Link>
       </p>
       <hr />
     </article>
