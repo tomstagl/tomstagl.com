@@ -2,20 +2,21 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import BlogTextBlock from '../components/Blog/blogTextBlock'
 import BlogQuoteBlock from '../components/Blog/blogQuoteBlock'
+import BlogCodeBlock from '../components/Blog/blogCodeBlock'
+import BlogImageBlock from '../components/Blog/blogImageBlock'
 import Layout from '../components/layout'
 
 const Components = {
   text: BlogTextBlock,
   quote: BlogQuoteBlock,
   trennzeichen: BlogTextBlock,
+  bild: BlogImageBlock,
+  code: BlogCodeBlock,
 }
 
 export default function BlogPost({ data }) {
   const post = data.datoCmsBlogpost
-  const title = post.title
-  const subtitle = post.subtitle
-  const abstract = post.abstract
-  const content = post.content
+  const { title, subtitle, abstract, content } = post
 
   const mapSections = () => {
     const sections = []
@@ -38,12 +39,14 @@ export default function BlogPost({ data }) {
 
   return (
     <Layout>
-      <div>
-        <h1>{title}</h1>
-        <h3>{subtitle}</h3>
-        <pre>{abstract}</pre>
-        <article>{mapSections()}</article>
-      </div>
+      <article>
+        <header>
+          <h1>{title}</h1>
+          <h3>{subtitle}</h3>
+          <pre>{abstract}</pre>
+        </header>
+        <div>{mapSections()}</div>
+      </article>
     </Layout>
   )
 }
@@ -70,12 +73,43 @@ export const query = graphql`
           model {
             apiKey
           }
+          bild {
+            title
+            fluid {
+              base64
+              tracedSVG
+              width
+              height
+            }
+          }
         }
         ... on DatoCmsQuote {
           quote
           author
           model {
             apiKey
+          }
+        }
+        ... on DatoCmsCode {
+          model {
+            apiKey
+          }
+          codeblock
+          language
+        }
+        ... on DatoCmsVideo {
+          id
+          model {
+            apiKey
+          }
+          video {
+            url
+            title
+            provider
+            providerUid
+            thumbnailUrl
+            width
+            height
           }
         }
       }

@@ -1,7 +1,13 @@
 import React from 'react'
 
 const BlogQuoteBlock = (props) => {
-  return <h1>blogQuote</h1>
+  const { quote, author } = props
+  return (
+    <blockquote className="border-l-4 pl-4 m-4 border-teal-500">
+      <p className="italic">{quote}</p>
+      <small>{author}</small>
+    </blockquote>
+  )
 }
 
 export default BlogQuoteBlock
