@@ -45,7 +45,7 @@ export default function BlogPost({ data }) {
           <h3>{subtitle}</h3>
           <pre>{abstract}</pre>
         </header>
-        <div>{mapSections()}</div>
+        {mapSections()}
       </article>
     </Layout>
   )
