@@ -46,7 +46,7 @@ export default function BlogPost({ data }) {
       <span>
         <Link
           to="/blog/"
-          className="text-gray-700 hover:text-teal-500"
+          className="font-light text-sm text-gray-700 hover:text-teal-500"
           activeClassName="text-teal-500 underline "
         >
           &lt; Back to Blog
