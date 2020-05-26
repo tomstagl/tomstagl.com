@@ -14,7 +14,6 @@ cache:
   paths:
     - ./node_modules/
 
-
 setup:
   stage: setup
   script:
@@ -37,6 +36,3 @@ lint:
   stage: setup
   script:
     - npm audit
-
-deploy:
-  
