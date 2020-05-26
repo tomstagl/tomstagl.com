@@ -6,7 +6,6 @@ stages:
   - lint
   - deploy # dummy stage to follow the template guidelines
 
-
 cache:
   paths:
     - ./node_modules/
@@ -25,11 +24,11 @@ format:
     - npm run format
 
 lint:
-  stage: format
+  stage: lint
   script:
     - npm run eslint
 
-lint:
-  stage: setup
+audit:
+  stage: lint
   script:
     - npm audit
