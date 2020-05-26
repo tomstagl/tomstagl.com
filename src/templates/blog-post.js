@@ -21,7 +21,6 @@ const Components = {
 export default function BlogPost({ data }) {
   const post = data.datoCmsBlogpost
   const { title, subtitle, abstract, content, blogimage, meta } = post
-  console.log(meta.publishedAt)
   const mapSections = () => {
     const sections = []
     content.forEach((item, index) => {
