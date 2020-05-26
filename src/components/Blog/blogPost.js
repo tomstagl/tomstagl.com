@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import BlogSeparatorBlock from './blogSeperatorBlock'
 
 const BlogPost = (props) => {
   const { post } = props
@@ -13,13 +14,14 @@ const BlogPost = (props) => {
           activeClassName="underline"
           to={read_more_link}
         >
-          <h3>{post.title}</h3>
+          <h2>{post.title}</h2>
         </Link>
-        <small className="text-gray-500">
+        <p className="text-gray-500 text-sm font-light">
           Published {post.meta.publishedAt}
-        </small>
+        </p>
       </header>
       <p className="text-lg font-serif">{post.abstract}</p>
+      <hr className="w-2/3 mt-2 mx-auto border-1 border-dotted border-gray-300 bg-opacity-75 max-w-sm object-center" />
     </article>
   )
 }
