@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="mx-auto">
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle="Tom Stagl" />
       <main className="p-4 max-w-2xl mx-auto">{children}</main>
       <footer className="p-4 w-12/12 max-w-none text-xs text-center">
         <Link to="/impressum">Imprint</Link>
