@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Tom Stagl`,
+    title: `Tom Stagl - Agile Coach, Engineering Leader`,
     description: `Experienced Engineering Leader, Agile Coach, Interim CTO - Tom Stagl`,
     author: `@herrstagl`,
     siteUrl: `https://tomstagl.com`,
