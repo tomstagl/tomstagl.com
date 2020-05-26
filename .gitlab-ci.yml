@@ -1,4 +1,4 @@
-image: node:10-alpine
+image: node:12-alpine
 
 stages:
   - setup
@@ -6,9 +6,6 @@ stages:
   - lint
   - deploy # dummy stage to follow the template guidelines
 
-
-#include:
-#  - template: Auto-DevOps.gitlab-ci.yml
 
 cache:
   paths:
@@ -23,12 +20,12 @@ setup:
       - ./node_modules/
 
 format:
-  stage: setup
+  stage: format
   script:
     - npm run format
 
 lint:
-  stage: setup
+  stage: format
   script:
     - npm run eslint
 
