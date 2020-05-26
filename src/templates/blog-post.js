@@ -57,7 +57,7 @@ export default function BlogPost({ data }) {
           <h1>{title}</h1>
           <p className="text-sm text-gray-500">Published {meta.publishedAt}</p>
           <h3>{subtitle}</h3>
-          {blogimage && <Img fluid={blogimage.fluid} />}
+          {blogimage && <Img fluid={blogimage.fluid} className="rounded" />}
           <p>{abstract}</p>
         </header>
         {mapSections()}

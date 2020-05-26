@@ -14,8 +14,8 @@ const BlogPost = (props) => {
         </small>
         <h3>{post.title}</h3>
       </header>
-      {post.blogimage && <Img fluid={post.blogimage.fluid} />}
-      <small>contentPreview</small>
+      {post.blogimage && <Img fluid={post.blogimage.fluid} className="rounded"/>}
+      <p className="text-sm">{post.abstract}</p>
       <p className="mt-2">
         <Link to={read_more_link}>Read more</Link>
       </p>
