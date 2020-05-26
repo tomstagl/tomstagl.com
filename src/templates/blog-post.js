@@ -1,25 +1,27 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 import BlogTextBlock from '../components/Blog/blogTextBlock'
 import BlogQuoteBlock from '../components/Blog/blogQuoteBlock'
 import BlogCodeBlock from '../components/Blog/blogCodeBlock'
 import BlogImageBlock from '../components/Blog/blogImageBlock'
+import BlogSeperatorBlock from '../components/Blog/blogSeperatorBlock'
 import Layout from '../components/layout'
 
 const Components = {
   text: BlogTextBlock,
   quote: BlogQuoteBlock,
-  trennzeichen: BlogTextBlock,
+  trennzeichen: BlogSeperatorBlock,
   bild: BlogImageBlock,
   code: BlogCodeBlock,
 }
 
 export default function BlogPost({ data }) {
   const post = data.datoCmsBlogpost
-  const { title, subtitle, abstract, content, blogimage } = post
-
+  const { title, subtitle, abstract, content, blogimage, meta } = post
+  console.log(meta.publishedAt)
   const mapSections = () => {
     const sections = []
     content.forEach((item, index) => {
@@ -41,12 +43,22 @@ export default function BlogPost({ data }) {
 
   return (
     <Layout>
+      <span>
+        <Link
+          to="/blog/"
+          className="text-gray-700 hover:text-teal-500"
+          activeClassName="text-teal-500 underline "
+        >
+          &lt; Back to Blog
+        </Link>
+      </span>
       <article>
         <header>
           <h1>{title}</h1>
+          <p className="text-sm text-gray-500">Published {meta.publishedAt}</p>
           <h3>{subtitle}</h3>
           {blogimage && <Img fluid={blogimage.fluid} />}
-          <pre>{abstract}</pre>
+          <p>{abstract}</p>
         </header>
         {mapSections()}
       </article>
@@ -60,6 +72,9 @@ export const query = graphql`
       abstract
       title
       subtitle
+      meta {
+        publishedAt(fromNow: true)
+      }
       blogimage {
         fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsFluid

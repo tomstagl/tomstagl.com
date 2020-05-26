@@ -9,7 +9,7 @@ const NavItem = (props) => {
     <li className="mr-6 block">
       <Link
         className="text-gray-700 hover:text-teal-500"
-        activeClassName="text-teal-500 underline "
+        activeClassName="text-teal-500 underline"
         to={to}
       >
         {name}
