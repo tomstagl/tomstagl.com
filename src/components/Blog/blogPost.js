@@ -28,7 +28,6 @@ const BlogPost = (props) => {
 
 BlogPost.propTypes = {
   post: PropTypes.object.isRequired,
-  slug: PropTypes.string.isRequired,
-
 }
+
 export default BlogPost
