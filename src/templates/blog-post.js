@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
 
 import BlogTextBlock from '../components/Blog/blogTextBlock'
 import BlogQuoteBlock from '../components/Blog/blogQuoteBlock'
@@ -21,6 +22,7 @@ const Components = {
 export default function BlogPost({ data }) {
   const post = data.datoCmsBlogpost
   const { title, subtitle, abstract, content, blogimage, meta } = post
+  console.log(typeof blogimage)
   const mapSections = () => {
     const sections = []
     content.forEach((item, index) => {
@@ -63,6 +65,10 @@ export default function BlogPost({ data }) {
       </article>
     </Layout>
   )
+}
+
+BlogPost.propTypes = {
+  data: PropTypes.object.isRequired,
 }
 
 export const query = graphql`
