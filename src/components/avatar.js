@@ -32,7 +32,7 @@ const Avatar = ({ title }) => {
 }
 
 Avatar.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
 }
 
 export default Avatar
