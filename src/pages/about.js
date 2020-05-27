@@ -14,6 +14,7 @@ const About = () => (
             target="_blank"
             className="underline"
             href="https://landing.google.com/sre/sre-book/chapters/postmortem-culture/"
+            rel="noopener noreferrer"
           >
             <strong>proper Post Mortem</strong>
           </a>

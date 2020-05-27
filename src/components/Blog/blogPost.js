@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import BlogSeparatorBlock from './blogSeperatorBlock'
+import PropTypes from 'prop-types'
 
 const BlogPost = (props) => {
   const { post } = props
@@ -26,4 +26,9 @@ const BlogPost = (props) => {
   )
 }
 
+BlogPost.propTypes = {
+  post: PropTypes.object.isRequired,
+  slug: PropTypes.string.isRequired,
+
+}
 export default BlogPost
