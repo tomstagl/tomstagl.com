@@ -12,9 +12,14 @@ const Impressum = () => (
       <div>2542 Kottingbrunn</div>
       <div>Austria</div>
 
-      <div className="pt-4">GEWERBE</div>
+      <div className="pt-4">
+        Dienstleistungen in der automatischen Datenverarbeitung und
+        Informationstechnik
+      </div>
 
-      <div className="pt-4">Tel <a href="tel://+436766688722">+43 676 6688722</a></div>
+      <div className="pt-4">
+        Tel <a href="tel://+436766688722">+43 676 6688722</a>
+      </div>
 
       <div className="pt-4">UID-Nr. XXX</div>
 
