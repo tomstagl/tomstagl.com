@@ -6,7 +6,8 @@
     "node": true
   },
   "parserOptions": {
-      "sourceType": "module"
+    "sourceType": "module",
+    "ecmaVersion": 2018
   },
   "extends": ["plugin:react/recommended", "eslint-config-prettier"],
   "globals": {
