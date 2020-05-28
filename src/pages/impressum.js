@@ -22,7 +22,9 @@ const Impressum = () => (
       </div>
 
       <div className="pt-4">
-        <p>Tel: <a href="tel://+436766688722">+43 676 6688722</a></p>
+        <p>
+          Tel: <a href="tel://+436766688722">+43 676 6688722</a>
+        </p>
         <p>Email: thomas.stagl@gmail.com</p>
       </div>
 
