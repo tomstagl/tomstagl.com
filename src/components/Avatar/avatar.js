@@ -25,7 +25,7 @@ const Avatar = ({ title }) => {
           fluid={data.avatarImage.childImageSharp.fluid}
           alt="Portrait of Tom Stagl"
         />
-        <span className="font-semibold text-xl tracking-tight">{title}</span>
+        <span className="font-semibold text-xl tracking-tight" data-testid="avatar-title">{title}</span>
       </Link>
     </div>
   )
