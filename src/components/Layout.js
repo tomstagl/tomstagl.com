@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
               target="_blank"
               href="https://twitter.com/herrstagl"
             >
-              <FaTwitter className="text-teal-600" />
+              <FaTwitter className="text-teal-500" />
             </a>
 
             <a
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
               target="_blank"
               href="https://at.linkedin.com/in/herrstagl"
             >
-              <FaLinkedin className="text-teal-600" />
+              <FaLinkedin className="text-teal-500" />
             </a>
           </div>
         </div>
