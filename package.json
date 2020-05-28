@@ -28,6 +28,7 @@
     "react-icons": "^3.10.0"
   },
   "devDependencies": {
+    "@testing-library/react": "^10.0.4",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "gatsby-plugin-s3": "^0.3.3",
