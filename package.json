@@ -58,7 +58,7 @@
     "build": "GATSBY_ENV=production npm run clean && gatsby build",
     "deploy": "npm run clean && gatsby build",
     "deploy-s3": "npm run deploy && AWS_PROFILE=gatsby gatsby-plugin-s3 deploy --yes",
-    "serve": "gatsby serve",
+    "serve": "GATSBY_ENV=production gatsby serve",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "eslint": "eslint --ignore-path .gitignore  .",
     "test": "NODE_ENV=test jest --coverage"

@@ -34,7 +34,7 @@ const Blog = (data) => {
 
 export const query = graphql`
   {
-    allDatoCmsBlogpost {
+    allDatoCmsBlogpost(filter: { meta: { status: { eq: "published" } } }) {
       edges {
         node {
           abstract

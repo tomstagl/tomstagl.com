@@ -73,7 +73,10 @@ BlogPost.propTypes = {
 
 export const query = graphql`
   query($slug: String!) {
-    datoCmsBlogpost(slug: { eq: $slug }) {
+    datoCmsBlogpost(
+      slug: { eq: $slug }
+      meta: { status: { eq: "published" } }
+    ) {
       abstract
       title
       subtitle

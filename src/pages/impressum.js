@@ -28,9 +28,9 @@ const Impressum = () => (
         <p>Email: thomas.stagl@gmail.com</p>
       </div>
 
-      <div className="pt-4">UID-Nr. XXX</div>
+      <div className="pt-4">UID-Nr. ATU52936809</div>
 
-      <div className="pt-4">Mitglieder der WKO..............</div>
+      <div className="pt-4">Mitglieder der WKO Nieder&ouml;sterreich</div>
 
       <div className="pt-4">
         <div>Berufsrecht:</div>
