@@ -31,4 +31,4 @@ lint:
 audit:
   stage: lint
   script:
-    - npm audit
+    - npm audit --production
