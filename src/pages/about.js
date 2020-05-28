@@ -45,8 +45,7 @@ const About = () => (
         <li>Amazon Web Services</li>
       </ol>
       <span className="text-xs">
-        ... however, I see myself as an Assoc. Junior Software Engineer. So I
-        code just for pure entertainment and joy.
+        ... as said. I love to code in my spare time, that&apos;s it.
       </span>
     </div>
   </Layout>

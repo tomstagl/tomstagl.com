@@ -7,7 +7,7 @@ const Impressum = () => (
     <SEO title="Impressum" />
     <h1>Impressum</h1>
     <div className="py-4">
-      FYI: Due to Austrian we are legally oblidged to disclose the ownership
+      FYI: Due to Austrian law we are legally oblidged to disclose the ownership
       details of this website.
     </div>
     <div>
@@ -37,10 +37,10 @@ const Impressum = () => (
         <div>Gewerbeordnung: www.ris.bka.gv.at</div>
       </div>
       <div className="pt-4">
-        Verbraucher haben die Möglichkeit, Beschwerden an die
-        OnlineStreitbeilegungsplattform der EU zu richten:
-        http://ec.europa.eu/odr. Sie können allfällige Beschwerde auch an die
-        oben angegebene E-Mail-Adresse richten.
+        Verbraucher haben die Möglichkeit, Beschwerden an die
+        Online-Streitbeilegungsplattform der EU zu richten:
+        http://ec.europa.eu/odr. Sie können Ihre Beschwerde auch an die oben
+        ange&uuml;hrte E-Mail-Adresse richten.
       </div>
     </div>
   </Layout>
