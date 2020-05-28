@@ -5,6 +5,7 @@ stages:
   - format
   - lint
   - deploy # dummy stage to follow the template guidelines
+  - test
 
 cache:
   paths:
@@ -38,7 +39,7 @@ test:
   script:
     - npm run test
   dependencies:
-    - install_dependencies
+    - setup
   artifacts:
     paths:
       - coverage/
