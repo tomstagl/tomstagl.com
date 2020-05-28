@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
-const BlogPost = (props) => {
-  const { post } = props
+const BlogPost = ({ post }) => {
   const read_more_link = '/blog/' + post.slug
+  const published_since = post.meta.publishedAt
+  const abstract = post.abstract
 
   return (
     <article className="py-4 relative overflow-hidden">
@@ -17,10 +18,10 @@ const BlogPost = (props) => {
           <h2>{post.title}</h2>
         </Link>
         <p className="text-gray-500 text-sm font-light">
-          Published {post.meta.publishedAt}
+          Published {published_since}
         </p>
       </header>
-      <p className="text-lg font-serif">{post.abstract}</p>
+      <p className="text-lg font-serif">{abstract}</p>
       <hr className="w-2/3 mt-2 mx-auto border-1 border-dotted border-gray-300 bg-opacity-75 max-w-sm object-center" />
     </article>
   )
