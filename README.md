@@ -1,3 +1,6 @@
+[![coverage report](https://gitlab.com/tstagl/tomstagl.com/badges/master/coverage.svg)](https://gitlab.com/tstagl/tomstagl.com/-/commits/master)
+[![pipeline status](https://gitlab.com/tstagl/tomstagl.com/badges/master/pipeline.svg)](https://gitlab.com/tstagl/tomstagl.com/-/commits/master)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
