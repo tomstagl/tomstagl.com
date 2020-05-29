@@ -1,7 +1,7 @@
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
     query {
-      allDatoCmsBlogpost(filter: { meta: { status: { eq: "published" } } }) {
+      allDatoCmsBlogpost {
         edges {
           node {
             slug

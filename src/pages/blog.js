@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import BlogPost from '../components/Blog/blogPost'
+import BlogPost from '../components/Blog/BlogList/blogPost'
 import SEO from '../components/seo'
 
 const Blog = (data) => {

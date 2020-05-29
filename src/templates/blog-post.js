@@ -4,11 +4,11 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 
-import BlogTextBlock from '../components/Blog/blogTextBlock'
-import BlogQuoteBlock from '../components/Blog/blogQuoteBlock'
-import BlogCodeBlock from '../components/Blog/blogCodeBlock'
-import BlogImageBlock from '../components/Blog/blogImageBlock'
-import BlogSeperatorBlock from '../components/Blog/blogSeperatorBlock'
+import BlogTextBlock from '../components/Blog/BlogEntry/blogTextBlock'
+import BlogQuoteBlock from '../components/Blog/BlogEntry/blogQuoteBlock'
+import BlogCodeBlock from '../components/Blog/BlogEntry/BlogCodeBlock/blogCodeBlock'
+import BlogImageBlock from '../components/Blog/BlogEntry/blogImageBlock'
+import BlogSeperatorBlock from '../components/Blog/BlogEntry/blogSeperatorBlock'
 import Layout from '../components/layout'
 
 const Components = {
