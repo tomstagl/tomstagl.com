@@ -21,6 +21,7 @@ const Components = {
 
 export default function BlogPost({ data }) {
   const post = data.datoCmsBlogpost
+  console.log(post)
   const { title, subtitle, abstract, content, blogimage, meta } = post
   console.log(typeof blogimage)
   const mapSections = () => {
@@ -94,6 +95,7 @@ export const query = graphql`
             apiKey
           }
           section
+          sectionTitle
         }
         ... on DatoCmsTrennzeichen {
           model {
