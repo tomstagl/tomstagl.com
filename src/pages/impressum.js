@@ -40,7 +40,7 @@ const Impressum = () => (
         Verbraucher haben die Möglichkeit, Beschwerden an die
         Online-Streitbeilegungsplattform der EU zu richten:
         http://ec.europa.eu/odr. Sie können Ihre Beschwerde auch an die oben
-        ange&uuml;hrte E-Mail-Adresse richten.
+        angef&uuml;hrte E-Mail-Adresse richten.
       </div>
     </div>
   </Layout>
