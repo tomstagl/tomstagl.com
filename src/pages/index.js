@@ -9,8 +9,8 @@ const IndexPage = () => (
     <div>
       <h1>👋 I&apos;m Tom Stagl</h1>
       <p>
-        living and working as a freelance <strong>Agile Coach</strong> in
-        Austria.
+        living and working as a freelance <span className="font-bold text-teal-500">Agile Coach</span> in
+        Austria. Focusing on <span className="font-bold text-teal-500">business agility</span> and <span className="font-bold text-teal-500">agile transformation</span>.
       </p>
     </div>
     <div>
