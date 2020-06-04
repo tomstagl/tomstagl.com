@@ -6,10 +6,10 @@ const BlogTextBlock = (props) => {
   console.log(props)
   console.log('Section Title: ', sectionTitle)
   return (
-    <section className="py-4">
+    <div className="py-4">
       <h2 className="pb-1">{sectionTitle}</h2>
       <div className="font-serif">{section}</div>
-    </section>
+    </div>
   )
 }
 

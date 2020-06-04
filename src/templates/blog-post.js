@@ -57,9 +57,10 @@ export default function BlogPost({ data }) {
       <article>
         <header>
           <h1>{title}</h1>
-          <p className="text-sm text-gray-500">Published {meta.publishedAt}</p>
+          <p className="text-sm text-right font-thin text-gray-500">Published {meta.publishedAt}</p>
           <h3>{subtitle}</h3>
           {blogimage && <Img fluid={blogimage.fluid} className="rounded" />}
+          {blogimage.title && <p className="text-sm font-thin text-gray-500 text-center pb-2">{blogimage.title}</p>}
           <p className="font-serif">{abstract}</p>
         </header>
         {mapSections()}
@@ -88,6 +89,7 @@ export const query = graphql`
         fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsFluid
         }
+        title
       }
       content {
         ... on DatoCmsText {
