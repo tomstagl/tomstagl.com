@@ -42,7 +42,7 @@ export const query = graphql`
           subtitle
           slug
           meta {
-            publishedAt(fromNow: true)
+            publishedAt(formatString: "DD. MMM YYYY")
           }
           blogimage {
             fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
