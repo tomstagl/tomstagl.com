@@ -7,4 +7,4 @@
 - writing tests
 - autodeploy to prod and ....
 - add Semantic Release support [https://www.npmjs.com/package/semantic-release]
-  together with `commitizen`
+- In progress - together with `commitizen`
