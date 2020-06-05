@@ -1,6 +1,11 @@
 [![coverage report](https://gitlab.com/tstagl/tomstagl.com/badges/master/coverage.svg)](https://gitlab.com/tstagl/tomstagl.com/-/commits/master)
 [![pipeline status](https://gitlab.com/tstagl/tomstagl.com/badges/master/pipeline.svg)](https://gitlab.com/tstagl/tomstagl.com/-/commits/master)
 
+# Setup
+## Commitizen
+´´´npm install -g commitizen´´´
+```commitizen init cz-conventional-changelog --save-dev --save-exact´´´
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
