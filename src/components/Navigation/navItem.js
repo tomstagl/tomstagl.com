@@ -6,7 +6,7 @@ const NavItem = (props) => {
   const { to, name } = props
 
   return (
-    <li className="mr-6 block">
+    <li className="mr-6 block my-1 lg:my-auto">
       <Link
         className="text-gray-700 hover:text-teal-500"
         activeClassName="text-teal-500 underline"
