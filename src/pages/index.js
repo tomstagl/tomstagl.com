@@ -7,7 +7,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Business Agility Coach" />
     <div>
-      <h1>👋 I&apos;m Tom Stagl</h1>
+      <h1>👋 I&apos;m Tom Stagl, business agility coach</h1>
       <p>
         living and working as a freelance <span className="font-bold text-teal-500">Agile Coach</span> in
         Austria. Focusing on <span className="font-bold text-teal-500">business agility</span> and <span className="font-bold text-teal-500">agile transformation</span>.
