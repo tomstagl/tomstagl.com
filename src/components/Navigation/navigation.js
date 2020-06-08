@@ -37,7 +37,7 @@ const Navigation = () => {
         } w-full -mx-4 block flex-grow lg:flex lg:items-center lg:w-auto`}
         id="nav-menu"
       >
-        <ul className="my-2 p-4 flex flex-grow flex-col items-center lg:flex-row lg:p-0 lg:w-auto lg:justify-end">
+        <ul className="pt-4 flex flex-grow flex-col items-center lg:flex-row lg:p-0 lg:w-auto lg:justify-end lg:my-2 ">
           {navItems}
         </ul>
       </div>
