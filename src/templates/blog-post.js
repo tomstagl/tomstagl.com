@@ -21,12 +21,11 @@ const Components = {
 
 export default function BlogPost({ data }) {
   const post = data.datoCmsBlogpost
-  console.log(post)
   const { title, subtitle, abstract, content, blogimage, meta } = post
-  console.log(typeof blogimage)
   const mapSections = () => {
     const sections = []
     content.forEach((item, index) => {
+      // TODO: check optional chaining posibility
       if (
         item.model &&
         item.model.apiKey &&
@@ -57,10 +56,16 @@ export default function BlogPost({ data }) {
       <article>
         <header>
           <h1>{title}</h1>
-          <p className="text-sm text-right font-thin text-gray-500">Published {meta.publishedAt}</p>
+          <p className="text-sm text-right font-thin text-gray-500">
+            Published {meta.publishedAt}
+          </p>
           <h3>{subtitle}</h3>
           {blogimage && <Img fluid={blogimage.fluid} className="rounded" />}
-          {blogimage.title && <p className="text-sm font-thin text-gray-500 text-center pb-2">{blogimage.title}</p>}
+          {blogimage.title && (
+            <p className="text-sm font-thin text-gray-500 text-center pb-2">
+              {blogimage.title}
+            </p>
+          )}
           <p className="font-serif">{abstract}</p>
         </header>
         {mapSections()}
