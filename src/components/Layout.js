@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
               Imprint
             </Link>
           </div>
-          <div className="w-1/3 flex flex-row-reverse">
+          <div className="w-1/3 flex flex-row-reverse text-3xl">
             <a
               className="px-4"
               rel="noopener noreferrer"
