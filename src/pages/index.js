@@ -5,12 +5,15 @@ import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Business Agility Coach" />
+    <SEO title="Engineering Leader" />
     <div>
       <h1>👋 I&apos;m Tom Stagl, business agility coach</h1>
       <p>
-        living and working as a freelance <span className="font-bold text-teal-500">Agile Coach</span> in
-        Austria. Focusing on <span className="font-bold text-teal-500">business agility</span> and <span className="font-bold text-teal-500">agile transformation</span>.
+        living and working as a freelance{' '}
+        <span className="font-bold text-teal-500">Agile Coach</span> in Austria.
+        Focusing on{' '}
+        <span className="font-bold text-teal-500">business agility</span> and{' '}
+        <span className="font-bold text-teal-500">agile transformation</span>.
       </p>
     </div>
     <div>
