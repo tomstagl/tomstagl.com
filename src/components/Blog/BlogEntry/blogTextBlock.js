@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 
 const BlogTextBlock = (props) => {
   const { section, sectionTitle } = props
-  console.log(props)
-  console.log('Section Title: ', sectionTitle)
   return (
     <div className="py-4">
       <h2 className="pb-1">{sectionTitle}</h2>
