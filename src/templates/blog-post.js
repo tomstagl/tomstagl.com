@@ -3,6 +3,14 @@ import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
+import {
+  TwitterShareButton,
+  TwitterIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  FacebookShareButton,
+  FacebookIcon,
+} from 'react-share'
 
 import BlogTextBlock from '../components/Blog/BlogEntry/blogTextBlock'
 import BlogQuoteBlock from '../components/Blog/BlogEntry/blogQuoteBlock'
@@ -70,6 +78,23 @@ export default function BlogPost({ data }) {
         </header>
         {mapSections()}
       </article>
+      <div className="flex flex-row-reverse">
+        <div className="mr-2">
+          <TwitterShareButton
+            title={subtitle}
+            hashtags="#agility"
+            related="@herrstagl"
+          >
+            <TwitterIcon size={45} borderRadius={5} />
+          </TwitterShareButton>
+        </div>
+        <div className="mr-2">
+          <LinkedinShareButton>
+            <LinkedinIcon size={45} borderRadius={5} />
+          </LinkedinShareButton>
+        </div>
+        <FacebookShareButton />
+      </div>
     </Layout>
   )
 }
