@@ -43,7 +43,7 @@ module.exports = {
         apiToken: `641e4f5f7b118f5c4e07fc26263b42`,
         // If you are working on development/staging environment, you might want to
         // preview the latest version of records instead of the published one:
-        previewMode: false,
+        previewMode: true,
 
         // Disable automatic reloading of content when some change occurs on DatoCMS:
         disableLiveReload: false,
@@ -73,7 +73,7 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: false, // Print removed selectors and processed file names
-        develop: false, // Enable while using `gatsby develop`
+        develop: true, // Enable while using `gatsby develop`
         tailwind: true, // Enable tailwindcss support
         // whitelist: ['whitelist'], // Don't remove this selector
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
