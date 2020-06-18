@@ -123,11 +123,15 @@ export const query = graphql`
       }
       content {
         ... on DatoCmsText {
+          sectionTitle
+          sectionNode {
+            childMarkdownRemark {
+              html
+            }
+          }
           model {
             apiKey
           }
-          section
-          sectionTitle
         }
         ... on DatoCmsTrennzeichen {
           model {
