@@ -29,7 +29,10 @@ const Components = {
 
 export default function BlogPost({ data }) {
   const post = data.datoCmsBlogpost
-  const { title, subtitle, abstract, content, blogimage, meta } = post
+  const { title, subtitle, abstract, content, blogimage, meta, slug } = post
+  const siteUrl = 'https://tomstagl.com/blog/' + slug
+  const hashTags = ['agility']
+  console.log(siteUrl)
   const mapSections = () => {
     const sections = []
     content.forEach((item, index) => {
@@ -81,19 +84,28 @@ export default function BlogPost({ data }) {
       <div className="flex flex-row-reverse">
         <div className="mr-2">
           <TwitterShareButton
+            url={siteUrl}
             title={subtitle}
-            hashtags="#agility"
-            related="@herrstagl"
+            hashtags={hashTags}
+            related={['@herrstagl']}
           >
-            <TwitterIcon size={45} borderRadius={5} />
+            <TwitterIcon size={30} borderRadius={35} />
           </TwitterShareButton>
         </div>
         <div className="mr-2">
-          <LinkedinShareButton>
-            <LinkedinIcon size={45} borderRadius={5} />
+          <LinkedinShareButton url={siteUrl}>
+            <LinkedinIcon size={30} borderRadius={35} />
           </LinkedinShareButton>
         </div>
-        <FacebookShareButton />
+        <div className="mr-2">
+          <FacebookShareButton
+            url={siteUrl}
+            quote={abstract}
+            hashtag={'#agility'}
+          >
+            <FacebookIcon size={30} borderRadius={35} />
+          </FacebookShareButton>
+        </div>
       </div>
     </Layout>
   )
@@ -112,6 +124,7 @@ export const query = graphql`
       abstract
       title
       subtitle
+      slug
       meta {
         publishedAt(fromNow: true)
       }
