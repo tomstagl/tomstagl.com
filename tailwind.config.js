@@ -1,8 +1,8 @@
 module.exports = {
-  purge: [],
+  purge: ['./src/**/*.js', './src/**/*.jsx'],
   theme: {
     extend: {},
   },
   variants: {},
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }

@@ -11,6 +11,7 @@ import {
   FacebookShareButton,
   FacebookIcon,
 } from 'react-share'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 import BlogTextBlock from '../components/Blog/BlogEntry/blogTextBlock'
 import BlogQuoteBlock from '../components/Blog/BlogEntry/blogQuoteBlock'
@@ -32,7 +33,6 @@ export default function BlogPost({ data }) {
   const { title, subtitle, abstract, content, blogimage, meta, slug } = post
   const siteUrl = 'https://tomstagl.com/blog/' + slug
   const hashTags = ['agility']
-  console.log(siteUrl)
   const mapSections = () => {
     const sections = []
     content.forEach((item, index) => {
@@ -64,20 +64,21 @@ export default function BlogPost({ data }) {
           &lt; Back to Blog
         </Link>
       </span>
-      <article>
+      <article className="prose lg:prose-xl">
+        <HelmetDatoCms seo={post.seoMetaTags} />
         <header>
           <h1>{title}</h1>
           <p className="text-sm text-right font-thin text-gray-500">
             Published {meta.publishedAt}
           </p>
           <h3>{subtitle}</h3>
-          {blogimage && <Img fluid={blogimage.fluid} className="rounded" />}
-          {blogimage.title && (
-            <p className="text-sm font-thin text-gray-500 text-center pb-2">
-              {blogimage.title}
-            </p>
+          {blogimage && (
+            <figure>
+              <Img fluid={blogimage.fluid} className="rounded" />
+              {blogimage.title && <figcaption>{blogimage.title}</figcaption>}
+            </figure>
           )}
-          <p className="font-serif">{abstract}</p>
+          <p>{abstract}</p>
         </header>
         {mapSections()}
       </article>
@@ -125,6 +126,9 @@ export const query = graphql`
       title
       subtitle
       slug
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
       meta {
         publishedAt(fromNow: true)
       }

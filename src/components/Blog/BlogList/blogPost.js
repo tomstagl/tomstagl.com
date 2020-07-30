@@ -21,8 +21,13 @@ const BlogPost = ({ post }) => {
           Published {published_since}
         </p>
       </header>
-      <p className="text-lg font-serif">{abstract}</p>
-      <Link className="text-teal-600 hover:text-teal-500 hover:underline" to={read_more_link}>Read more</Link>
+      <p className="text-base">{abstract}</p>
+      <Link
+        className="text-teal-600 hover:text-teal-500 hover:underline"
+        to={read_more_link}
+      >
+        Read more
+      </Link>
       <hr className="w-2/3 mt-2 mx-auto border-1 border-dotted border-gray-300 bg-opacity-75 max-w-sm object-center" />
     </article>
   )

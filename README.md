@@ -2,9 +2,12 @@
 [![pipeline status](https://gitlab.com/tstagl/tomstagl.com/badges/master/pipeline.svg)](https://gitlab.com/tstagl/tomstagl.com/-/commits/master)
 
 # Setup
+
 ## Commitizen
+
 ´´´npm install -g commitizen´´´
-```commitizen init cz-conventional-changelog --save-dev --save-exact´´´
+
+````commitizen init cz-conventional-changelog --save-dev --save-exact´´´
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
@@ -150,3 +153,4 @@ Looking for more guidance? Full documentation for Gatsby lives
 [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+````
