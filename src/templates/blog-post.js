@@ -30,6 +30,9 @@ const Components = {
 
 export default function BlogPost({ data }) {
   const post = data.datoCmsBlogpost
+
+  console.log(post)
+
   const { title, subtitle, abstract, content, blogimage, meta, slug } = post
   const siteUrl = 'https://tomstagl.com/blog/' + slug
   const hashTags = ['agility']
