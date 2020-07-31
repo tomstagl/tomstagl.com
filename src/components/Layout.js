@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
 import { FaTwitter, FaLinkedin } from 'react-icons/fa'
 
 import Header from './header'
