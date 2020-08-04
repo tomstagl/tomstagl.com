@@ -137,7 +137,7 @@ export const query = graphql`
       }
       blogimage {
         fluid(maxWidth: 640, imgixParams: { fm: "jpg", auto: "compress" }) {
-          ...GatsbyDatoCmsFluid_tracedSVG
+          ...GatsbyDatoCmsFluid
         }
         title
       }
