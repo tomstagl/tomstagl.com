@@ -70,10 +70,10 @@ export default function BlogPost({ data }) {
       <article className="prose lg:prose-xl">
         <HelmetDatoCms seo={post.seoMetaTags} />
         <header>
-          <h1>{title}</h1>
           <p className="text-sm text-right font-thin text-gray-500">
             Published {meta.publishedAt}
           </p>
+          <h1>{title}</h1>
           <h3>{subtitle}</h3>
           {blogimage && (
             <figure>
