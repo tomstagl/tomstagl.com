@@ -30,12 +30,10 @@ const Components = {
 
 export default function BlogPost({ data }) {
   const post = data.datoCmsBlogpost
-
-  console.log(post)
-
   const { title, subtitle, abstract, content, blogimage, meta, slug } = post
   const siteUrl = 'https://tomstagl.com/blog/' + slug
   const hashTags = ['agility']
+
   const mapSections = () => {
     const sections = []
     content.forEach((item, index) => {
@@ -133,7 +131,7 @@ export const query = graphql`
         ...GatsbyDatoCmsSeoMetaTags
       }
       meta {
-        publishedAt(fromNow: true)
+        publishedAt(formatString: "DD. MMM YYYY")
       }
       blogimage {
         fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {

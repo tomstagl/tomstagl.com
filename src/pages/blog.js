@@ -25,6 +25,7 @@ const Blog = (data) => {
           <li>
             About expectations and responsibilities in Agile environments.
           </li>
+          <li>OKRs work well together with SCRUM. A short how to.</li>
         </ul>
       </div>
     </Layout>
