@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
@@ -12,23 +12,15 @@ import {
   FacebookIcon,
 } from 'react-share'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
-import Layout from '../components/layout'
 
-const BlogTextBlock = lazy(() =>
-  import('../components/Blog/BlogEntry/blogTextBlock'),
-)
-const BlogQuoteBlock = lazy(() =>
-  import('../components/Blog/BlogEntry/blogQuoteBlock'),
-)
-const BlogCodeBlock = lazy(() =>
-  import('../components/Blog/BlogEntry/BlogCodeBlock/blogCodeBlock'),
-)
-const BlogImageBlock = lazy(() =>
-  import('../components/Blog/BlogEntry/blogImageBlock'),
-)
-const BlogSeperatorBlock = lazy(() =>
-  import('../components/Blog/BlogEntry/blogSeperatorBlock'),
-)
+/* use loadable components for lazy loading SSR */
+import BlogTextBlock from '../components/Blog/BlogEntry/blogTextBlock'
+import BlogQuoteBlock from '../components/Blog/BlogEntry/blogQuoteBlock'
+import BlogCodeBlock from '../components/Blog/BlogEntry/BlogCodeBlock/blogCodeBlock'
+import BlogImageBlock from '../components/Blog/BlogEntry/blogImageBlock'
+import BlogSeperatorBlock from '../components/Blog/BlogEntry/blogSeperatorBlock'
+
+import Layout from '../components/layout'
 
 const Components = {
   text: BlogTextBlock,
@@ -91,7 +83,7 @@ export default function BlogPost({ data }) {
           )}
           <p>{abstract}</p>
         </header>
-        <Suspense fallback="<div>Loading...</div>">{mapSections()}</Suspense>
+        {mapSections()}
       </article>
       <div className="flex flex-row-reverse">
         <div className="mr-2">
