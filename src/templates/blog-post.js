@@ -136,8 +136,8 @@ export const query = graphql`
         publishedAt(formatString: "DD. MMM YYYY")
       }
       blogimage {
-        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
-          ...GatsbyDatoCmsFluid
+        fluid(maxWidth: 640, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsFluid_tracedSVG
         }
         title
       }
