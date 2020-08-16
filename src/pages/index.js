@@ -23,18 +23,23 @@ const IndexPage = () => (
       off an successful agile transition journey.
     </div>
     <div className="pt-6">
-      <h2>&#128640; My main agile competencies</h2>
+      <h2>&#128640; My main agile competences</h2>
+      <p>
+        I support your organisation with my long standing experience about
+        applying agile practices. Teaching and guiding the effectiveness of
+        agile practices is what I love and what you will start loving soon.
+      </p>
       <ol className="list-inside list-disc">
-        <li>Digitalisation</li>
+        <li>OKR setup</li>
         <li>Agile Transition</li>
         <li>Scrum</li>
         <li>Business Agility</li>
         <li>Team Lift-off</li>
-        <li>Product Ownership</li>
+        <li>Strong techincal skills</li>
       </ol>
     </div>
     <div className="pt-6">
-      <h2>&#x2B50; My leadership competencies</h2>
+      <h2>&#x2B50; My leadership competences</h2>
       <ol className="list-inside list-disc">
         <li>Team composition</li>
         <li>Value stream mapping</li>
