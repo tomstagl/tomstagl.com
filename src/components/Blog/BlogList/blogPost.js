@@ -20,7 +20,7 @@ const BlogPost = ({ post, latest, last, className }) => {
   return (
     <article
       className={`py-4 relative overflow-hidden ${
-        isFirstOrLast(latest, last) ? 'w-full' : 'w-1/2 md:w-full'
+        isFirstOrLast(latest, last) ? 'w-full' : 'w-full md:w-1/2'
       } ${className}`}
     >
       {blogImage && (
@@ -29,7 +29,9 @@ const BlogPost = ({ post, latest, last, className }) => {
           {blogImage.title && <figcaption>{blogImage.title}</figcaption>}
         </figure>
       )}
-      <div className={isFirstOrLast(latest, last) ? 'md:flex py-4 block' : ''}>
+      <div
+        className={isFirstOrLast(latest, last) ? 'block md:flex py-4' : null}
+      >
         <header
           className={
             isFirstOrLast(latest, last)
