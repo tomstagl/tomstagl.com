@@ -52,7 +52,7 @@ const BlogPost = ({ post, latest, last, className }) => {
         <div
           className={
             isFirstOrLast(latest, last)
-              ? 'md:w-1/2 md:pl-2 pl-0 w-full'
+              ? 'md:pt-1 md:w-1/2 md:pl-2 pl-0 w-full'
               : 'w-full'
           }
         >
