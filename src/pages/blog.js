@@ -36,7 +36,6 @@ const Blog = (data) => {
         </div>,
       )
     }
-    console.log(items)
     return items
   }
 

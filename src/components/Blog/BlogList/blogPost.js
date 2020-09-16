@@ -9,7 +9,6 @@ const BlogPost = ({ post, latest, last, className }) => {
   const published_since = post.meta.publishedAt
   const abstract = post.abstract
   const blogImage = post.blogimage
-  console.log(post.title)
 
   const isFirstOrLast = (latestPost, lastPost) => {
     const latest = latestPost || false
