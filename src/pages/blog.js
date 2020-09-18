@@ -28,7 +28,7 @@ const Blog = (data) => {
     const items = []
     for (let iter = 0; iter < blogItems.length; iter += 2) {
       items.push(
-        <div className="md:flex">
+        <div className="md:flex" key={`blogpostDiv-${iter}`}>
           <BlogPost post={blogItems[iter].node} className="md:pr-2" />
           {iter + 1 < blogItems.length && (
             <BlogPost post={blogItems[iter + 1].node} className="md:pl-2" />
