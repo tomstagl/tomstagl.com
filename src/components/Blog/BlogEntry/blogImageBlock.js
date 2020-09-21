@@ -1,12 +1,16 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 
-const BlogImageBlock = (props) => {
+const BlogImageBlock = ({ bild }) => {
   return (
-    <figure>
-      <h1>Image PLEASE IMPLEMENT ME</h1>
+    <figure className="w-full">
+      <Img fluid={bild.fluid} alt={bild.alt} />
     </figure>
   )
 }
 
+BlogImageBlock.propTypes = {
+  bild: PropTypes.object.isRequired,
+}
 export default BlogImageBlock

@@ -67,7 +67,7 @@ export default function BlogPost({ data }) {
           &lt; Back to Blog
         </Link>
       </span>
-      <article className="prose lg:prose-xl">
+      <article className="prose md:mx-auto lg:prose-xl">
         <HelmetDatoCms seo={post.seoMetaTags} />
         <header>
           <p className="text-sm text-right font-thin text-gray-500">
@@ -140,6 +140,7 @@ export const query = graphql`
           ...GatsbyDatoCmsFluid
         }
         title
+        alt
       }
       content {
         ... on DatoCmsText {
@@ -163,6 +164,7 @@ export const query = graphql`
             apiKey
           }
           bild {
+            alt
             title
             fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
               ...GatsbyDatoCmsFluid

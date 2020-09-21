@@ -16,7 +16,7 @@ const IndexPage = () => (
         <span className="font-bold text-teal-500">agile transformation</span>.
       </p>
     </div>
-    <div>
+    <div className="-p-4 rounded-t-lg bg-white">
       Besides helping teams and organisations to see and feel the benefits of{' '}
       <strong>Agile</strong>- and <strong>DevOps</strong> principles, I&apos;m
       also an experienced engineering leader who can help organisations to lift
