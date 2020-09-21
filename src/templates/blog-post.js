@@ -74,7 +74,7 @@ export default function BlogPost({ data }) {
             Published {meta.publishedAt}
           </p>
           <h1>{title}</h1>
-          <h3>{subtitle}</h3>
+          <p>{subtitle}</p>
           {blogimage && (
             <figure>
               <Img fluid={blogimage.fluid} className="rounded" />
