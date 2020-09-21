@@ -21,6 +21,7 @@ import BlogImageBlock from '../components/Blog/BlogEntry/blogImageBlock'
 import BlogSeperatorBlock from '../components/Blog/BlogEntry/blogSeperatorBlock'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const Components = {
   text: BlogTextBlock,
@@ -58,6 +59,7 @@ export default function BlogPost({ data }) {
 
   return (
     <Layout>
+      <SEO />
       <span>
         <Link
           to="/blog/"
