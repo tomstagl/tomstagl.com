@@ -7,7 +7,10 @@ import SEO from '../components/seo'
 
 const Blog = (data) => {
   let lastPost
-  const blogData = data.data.allDatoCmsBlogpost.edges
+  const rawBlogData = data.data.allDatoCmsBlogpost.edges
+  // requires a shallow copy of the array because we shift and pop
+  // which results in a smaller array when site is loaded again
+  const blogData = [...rawBlogData]
   const firstPostData = blogData.shift()
   const firstPost = (
     <BlogPost key="firstPost" post={firstPostData.node} latest={true} />
