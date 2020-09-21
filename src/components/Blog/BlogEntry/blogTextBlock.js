@@ -5,7 +5,7 @@ const BlogTextBlock = (props) => {
   const { sectionTitle, sectionNode } = props
   return (
     <div>
-      <h2>{sectionTitle}</h2>
+      {sectionTitle && <h2>{sectionTitle}</h2>}
       <div
         dangerouslySetInnerHTML={{
           __html: sectionNode.childMarkdownRemark.html,
