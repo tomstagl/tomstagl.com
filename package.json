@@ -2,7 +2,7 @@
   "name": "tom-stagl-blog",
   "private": true,
   "description": "Tom Stagl Agile Coaching Blog - WOL rocks",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Thomas Stagl <thomas.stagl@google.com>",
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
