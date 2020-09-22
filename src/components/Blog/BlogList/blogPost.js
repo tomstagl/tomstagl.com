@@ -24,7 +24,7 @@ const BlogPost = ({ post, latest, last, className }) => {
     >
       {blogImage && (
         <figure>
-          <Img fluid={blogImage.fluid} className="rounded shadow" />
+          <Img fluid={blogImage.fluid} className="rounded shadow" alt={blogImage.alt} />
           {blogImage.title && <figcaption>{blogImage.title}</figcaption>}
         </figure>
       )}
