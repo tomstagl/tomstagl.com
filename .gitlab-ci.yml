@@ -29,11 +29,6 @@ lint:
   script:
     - npm run eslint
 
-audit:
-  stage: lint
-  script:
-    - npm audit --production
-
 test:
   stage: test
   script:
