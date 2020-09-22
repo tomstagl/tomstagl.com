@@ -77,6 +77,7 @@ export const query = graphql`
             fluid(maxWidth: 800, imgixParams: { fm: "jpg", auto: "compress" }) {
               ...GatsbyDatoCmsFluid
             }
+            alt
           }
         }
       }
