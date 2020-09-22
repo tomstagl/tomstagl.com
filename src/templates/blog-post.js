@@ -59,7 +59,7 @@ export default function BlogPost({ data }) {
 
   return (
     <Layout>
-      <SEO />
+      <SEO title={title} />
       <span>
         <Link
           to="/blog/"
