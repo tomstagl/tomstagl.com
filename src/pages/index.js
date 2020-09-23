@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Engineering Leader" />
+    <SEO title="Engineering Leader" description="I'm an experienced engineering leader and Business Agility Coach focusing on New Work, OKRs and SCRUM, " />
     <div>
       <h1>👋 I&apos;m Tom Stagl, business agility coach</h1>
       <p>
