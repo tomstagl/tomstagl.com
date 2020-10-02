@@ -3,29 +3,62 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Card from '../components/Card/card'
 
+const RenderCards = () => {
+  let cards = []
+  const cardContent = [
+    {
+      heading: 'Business Agility with OKRs',
+      text:
+        'Objectives and Key Results offer organisations a very lean tool to start setting goals that matter. Introducing this methodology requires support. I can  do that',
+      image: 'okrs.jpg',
+    },
+    {
+      heading: 'Agile Product Development',
+      text:
+        'SCRUM provides a loose framework which allows inspect and adopt feedback loops and increases focus. I worked as SCRUM master for the last 14 years, amongst other things.',
+      image: 'scrum.jpg',
+    },
+    {
+      heading: 'Agile Product Development',
+      text:
+        'SCRUM provides a loose framework which allows inspect and adopt feedback loops and increases focus. I worked as SCRUM master for the last 14 years, amongst other things.',
+      image: 'scrum.jpg',
+    },
+  ]
+  for (let iter = 0; iter < cardContent.length; iter += 2) {
+    cards.push(
+      <div className="flex py-2">
+        <div className="mr-2 w-1/2">
+          <Card
+            image={cardContent[iter].image}
+            heading={cardContent[iter].heading}
+            text={cardContent[iter].text}
+          />
+        </div>
+        <div className="ml-2 w-1/2">
+          {iter + 1 < cardContent.length && (
+            <Card
+              image={cardContent[iter + 1].image}
+              heading={cardContent[iter].heading}
+              text={cardContent[iter].text}
+            />
+          )}
+        </div>
+      </div>,
+    )
+  }
+  return cards
+}
+
 const About = () => (
   <Layout>
     <SEO title="About" />
     <div>
       <div className="pt-6">
         <h1>My services</h1>
-        <div className="flex">
-          <div className="mr-2 w-1/2">
-            <Card image="okrs.jpg" />
-          </div>
-          <div className="ml-2 w-1/2">
-            <Card image="scrum.jpg" />
-          </div>
-        </div>
-        <ol className="list-inside list-disc">
-          <li>Business Agility - using OKRs to set goals</li>
-          <li>
-            Agile Product Development - using SCRUM to build a solid product
-            pipeline
-          </li>
-          <li></li>
-        </ol>
-        <h2>Principles</h2>
+        {RenderCards()}
+
+        <h2 className="pt-4">Principles</h2>
         <ul className="list-inside list-disc">
           <li>
             If there was a production incident, write a{' '}
