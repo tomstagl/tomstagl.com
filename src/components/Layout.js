@@ -13,14 +13,34 @@ const Layout = ({ children }) => {
       <main className="p-4 max-w-xl md:max-w-3xl lg:max-w-4xl  mx-auto">
         {children}
       </main>
-      <footer className="p-4 mx-auto max-w-xl md:max-w-3xl lg:max-w-4xl content-start text-center">
-        <div className="text-3xl">
-          <ShareArticle />
+      <footer className="bg-white md:bg-gray-200">
+        <div className="flex flex-col-reverse md:flex-row mx-auto max-w-xl md:max-w-3xl lg:max-w-4xl pt-2 p-4">
+          <div className="block w-full md:w-1/3 justify-center md:justify-start p-4 md:p-0">
+            <address className="text-sm not-italic text-center md:text-left">
+              <p>Kontakt</p>
+              <p>Thomas Stagl</p>
+              <p>Berggasse 2</p>
+              <p>2542 Kottingbrunn</p>
+              <p>
+                Email:{' '}
+                <a href="mailto:thomas.stagl@gmail.com">
+                  thomas.stagl@gmail.com
+                </a>
+              </p>
+              <p>
+                Tel: <a href="tel://+436766688722">+43 676 6688722</a>
+              </p>
+            </address>
+          </div>
+          <div className="flex w-full md:w-1/3 justify-center p-4 md:p-0">
+            <Link to="/impressum" className="text-xs">
+              Imprint
+            </Link>
+          </div>
+          <div className="flex w-full md:w-1/3 justify-center md:justify-end p-4 md:p-0">
+            <ShareArticle />
+          </div>
         </div>
-
-        <Link to="/impressum" className="text-xs">
-          Imprint
-        </Link>
       </footer>
     </div>
   )

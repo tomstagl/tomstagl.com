@@ -7,7 +7,7 @@ export const PureAvatar = ({ title, data }) => (
   <div className="flex items-center flex-shrink-0 text-white mr-6">
     <Link to="/" className="flex flex-row items-center text-2xl">
       <Img
-        className="h-16 w-16 mr-4 rounded-full mx-auto border-2 border-teal-400"
+        className="h-16 w-16 mr-4 rounded-full mx-auto border-2 border-teal-400 bg-white"
         fluid={data.avatarImage.childImageSharp.fluid}
         alt="Portrait of Tom Stagl"
       />
