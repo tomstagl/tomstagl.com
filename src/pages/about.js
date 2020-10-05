@@ -27,20 +27,22 @@ const RenderCards = () => {
   ]
   for (let iter = 0; iter < cardContent.length; iter += 2) {
     cards.push(
-      <div className="flex py-2">
+      <div key={`div-${iter}`} className="flex py-2 max-h-48">
         <div className="mr-2 w-1/2">
           <Card
+            key={iter}
             image={cardContent[iter].image}
             heading={cardContent[iter].heading}
             text={cardContent[iter].text}
           />
         </div>
-        <div className="ml-2 w-1/2">
+        <div className="ml-2 w-1/2 max-h-48">
           {iter + 1 < cardContent.length && (
             <Card
+              key={`2-${iter}`}
               image={cardContent[iter + 1].image}
-              heading={cardContent[iter].heading}
-              text={cardContent[iter].text}
+              heading={cardContent[iter + 1].heading}
+              text={cardContent[iter + 1].text}
             />
           )}
         </div>
