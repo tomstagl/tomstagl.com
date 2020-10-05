@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
  * warning, does not return anything if an image is defined twice
  */
 
-const Image = ({ imgName, className }) => (
+const Image = ({ imgName, className, credits }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -25,14 +25,15 @@ const Image = ({ imgName, className }) => (
     render={(data) => {
       const image = data.allImageSharp.edges.find((edge) => {
         if (edge.node.fluid.originalName === imgName) {
-          console.log('hurrra')
           return true
         }
       })
       if (!image) {
         return null
       }
-      return <Img className={className} fluid={image.node.fluid} />
+      return (
+        <Img className={className} fluid={image.node.fluid} alt={credits} />
+      )
     }}
   />
 )

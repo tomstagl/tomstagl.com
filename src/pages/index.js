@@ -2,18 +2,19 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import SmallCard from '../components/SmallCard/SmallCard'
 
 const headerChildren = (
-  <div className="p-32 mx-auto text-center">
-    <h1>👋 I&apos;m Tom Stagl</h1>
-    <h2>business agility coach</h2>
-    <p className="pt-8">
+  <div className="pt-8 md:pb-32 md:pt-16 md:px-32 md:mx-auto md:text-center">
+    <h1>Tom Stagl</h1>
+    <h2 className="text-sm md:text-md">business agility coach</h2>
+    <h3 className="pt-8">
       living and working as a freelance{' '}
       <span className="font-bold text-teal-500">Agile Coach</span> in Austria.
       Focusing on{' '}
       <span className="font-bold text-teal-500">business agility</span> and{' '}
       <span className="font-bold text-teal-500">agile transformation</span>.
-    </p>
+    </h3>
   </div>
 )
 
@@ -29,8 +30,33 @@ const IndexPage = () => (
       also an experienced engineering leader who can help organisations to lift
       off an successful agile transition journey.
     </div>
-    <div className="pt-6">
+    <section className="pt-6">
       <h2>&#128640; My main agile competences</h2>
+      <div className="md:flex">
+        <SmallCard
+          title="Business Agility"
+          text="Guiding organisations with OKR setup and product focused developement. Allowing organisations to become successful."
+          className="w-full md:w-1/2 lg:w-1/3"
+          image="okrs.jpg"
+          imageCredits="asdf"
+        />
+        <SmallCard
+          title="Agile Coaching"
+          text="Supporting whole organisations or single teams during their agility journey. Getting the best out of everyone."
+          image="agile-coaching.jpg"
+          imageCredits="Photo by Jamie Street on Unsplash"
+          className="w-full md:w-1/2 lg:w-1/3"
+        />
+        <SmallCard
+          title="SCRUM"
+          image="scrum.jpg"
+          imageCredits="asdf"
+          text="Agile guidance"
+          className="w-full md:w-1/2 lg:w-1/3"
+        />
+      </div>
+    </section>
+    <section>
       <p>
         I support your organisation with my long standing experience about
         applying agile practices. Teaching and guiding the effectiveness of
@@ -44,15 +70,15 @@ const IndexPage = () => (
         <li>Team Lift-off</li>
         <li>Strong techincal skills</li>
       </ol>
-    </div>
-    <div className="pt-6">
+    </section>
+    <section className="pt-6">
       <h2>&#x2B50; My leadership competences</h2>
       <ol className="list-inside list-disc">
         <li>Team composition</li>
         <li>Value stream mapping</li>
         <li>Talent Acquisition</li>
       </ol>
-    </div>
+    </section>
   </Layout>
 )
 
