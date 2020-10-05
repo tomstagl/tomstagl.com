@@ -1,6 +1,8 @@
 import React from 'react'
+import AboutMe from '../components/AboutMe/AboutMe'
 
 import Layout from '../components/layout'
+import Paragraph from '../components/Paragraph/Paragraph'
 import SEO from '../components/seo'
 import SmallCard from '../components/SmallCard/SmallCard'
 
@@ -21,13 +23,16 @@ const headerChildren = (
 const IndexPage = () => (
   <Layout headerChildren={headerChildren}>
     <SEO
-      title="Engineering Leader"
-      description="I'm an experienced engineering leader and Business Agility Coach focusing on New Work, OKRs and SCRUM, "
+      title="business agility by"
+      description="I'm an experienced business agility by and Business Agility Coach focusing on New Work, OKRs and SCRUM, "
     />
+    <AboutMe />
+    <Paragraph />
     <div className="-p-4 rounded-t-lg bg-white">
+      <span></span>
       Besides helping teams and organisations to see and feel the benefits of{' '}
       <strong>Agile</strong>- and <strong>DevOps</strong> principles, I&apos;m
-      also an experienced engineering leader who can help organisations to lift
+      also an experienced business agility by who can help organisations to lift
       off an successful agile transition journey.
     </div>
     <section className="pt-6">

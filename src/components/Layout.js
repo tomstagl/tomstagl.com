@@ -7,11 +7,13 @@ import './layout.css'
 import ShareArticle from './Footer/ShareArticle/shareArticle'
 
 const Layout = ({ children, headerChildren }) => {
-  const siteTitle = headerChildren ? null : 'Tom Stagl'
+  const renderAvatar = headerChildren ? false : true
 
   return (
     <div className="md:mx-auto antialiased md:subpixel-antialiased">
-      <Header siteTitle={siteTitle}>{headerChildren}</Header>
+      <Header siteTitle="Tom Stagl" renderAvatar={renderAvatar}>
+        {headerChildren}
+      </Header>
       <main className="p-4 max-w-xl md:max-w-3xl lg:max-w-4xl  mx-auto">
         {children}
       </main>
