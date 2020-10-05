@@ -54,6 +54,7 @@ const Layout = ({ children, headerChildren }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  headerChildren: PropTypes.node,
 }
 
 export default Layout
