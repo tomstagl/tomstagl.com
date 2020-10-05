@@ -3,19 +3,26 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
+const headerChildren = (
+  <div className="p-32 mx-auto text-center">
+    <h1>👋 I&apos;m Tom Stagl</h1>
+    <h2>business agility coach</h2>
+    <p className="pt-8">
+      living and working as a freelance{' '}
+      <span className="font-bold text-teal-500">Agile Coach</span> in Austria.
+      Focusing on{' '}
+      <span className="font-bold text-teal-500">business agility</span> and{' '}
+      <span className="font-bold text-teal-500">agile transformation</span>.
+    </p>
+  </div>
+)
+
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Engineering Leader" description="I'm an experienced engineering leader and Business Agility Coach focusing on New Work, OKRs and SCRUM, " />
-    <div>
-      <h1>👋 I&apos;m Tom Stagl, business agility coach</h1>
-      <p>
-        living and working as a freelance{' '}
-        <span className="font-bold text-teal-500">Agile Coach</span> in Austria.
-        Focusing on{' '}
-        <span className="font-bold text-teal-500">business agility</span> and{' '}
-        <span className="font-bold text-teal-500">agile transformation</span>.
-      </p>
-    </div>
+  <Layout headerChildren={headerChildren}>
+    <SEO
+      title="Engineering Leader"
+      description="I'm an experienced engineering leader and Business Agility Coach focusing on New Work, OKRs and SCRUM, "
+    />
     <div className="-p-4 rounded-t-lg bg-white">
       Besides helping teams and organisations to see and feel the benefits of{' '}
       <strong>Agile</strong>- and <strong>DevOps</strong> principles, I&apos;m
