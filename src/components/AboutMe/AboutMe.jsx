@@ -2,11 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Avatar from '../Avatar/avatar'
 import ShareArticle from '../Footer/ShareArticle/shareArticle'
+import { H2 } from '../Container/Headers'
 
 const AboutMe = () => {
   return (
     <div className="justify-center md:text-center">
-      <h2>About Me</h2>
+      <H2>About Me</H2>
       <h3>Some details to get to know me a bit better</h3>
       <div className="py-12">
         <Avatar avatarSize="32" className="justify-center" />

@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { H2 } from '../Container/Headers'
 
 const Paragraph = ({ heading, text }) => {
   return (
     <>
-      <h2 className="lg:pt-12 lg:pb-8 lg:text-center">Who I am</h2>
+      <H2>Who I am</H2>
       <div className="lg: pb-12 lg:flex lg:justify-center">
         <div className="bg-white lg:flex lg:max-w-5xl lg:shadow-lg lg:rounded-lg">
           <div className="lg:w-1/2">

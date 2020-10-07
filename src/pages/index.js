@@ -1,5 +1,6 @@
 import React from 'react'
 import AboutMe from '../components/AboutMe/AboutMe'
+import Section from '../components/Container/Section'
 
 import Layout from '../components/layout'
 import Paragraph from '../components/Paragraph/Paragraph'
@@ -23,19 +24,23 @@ const headerChildren = (
 const IndexPage = () => (
   <Layout headerChildren={headerChildren}>
     <SEO
-      title="business agility by"
-      description="I'm an experienced business agility by and Business Agility Coach focusing on New Work, OKRs and SCRUM, "
+      title="business agility"
+      description="I'm an experienced Business Agility Coach focusing on New Work, OKRs and SCRUM, "
     />
-    <AboutMe />
-    <Paragraph />
-    <div className="-p-4 rounded-t-lg bg-white">
-      <span></span>
-      Besides helping teams and organisations to see and feel the benefits of{' '}
-      <strong>Agile</strong>- and <strong>DevOps</strong> principles, I&apos;m
-      also an experienced business agility by who can help organisations to lift
-      off an successful agile transition journey.
-    </div>
-    <section className="pt-6">
+    <Section>
+      <AboutMe />
+    </Section>
+    <Section className="bg-gray-100">
+      <Paragraph />
+    </Section>
+    <Section>
+      <div className="-p-4 rounded-t-lg bg-white">
+        <span></span>
+        Besides helping teams and organisations to see and feel the benefits of{' '}
+        <strong>Agile</strong>- and <strong>DevOps</strong> principles, I&apos;m
+        also an experienced business agility by who can help organisations to
+        lift off an successful agile transition journey.
+      </div>
       <h2>&#128640; My main agile competences</h2>
       <div className="md:flex">
         <SmallCard
@@ -60,8 +65,8 @@ const IndexPage = () => (
           className="w-full md:w-1/2 lg:w-1/3"
         />
       </div>
-    </section>
-    <section>
+    </Section>
+    <Section>
       <p>
         I support your organisation with my long standing experience about
         applying agile practices. Teaching and guiding the effectiveness of
@@ -75,15 +80,16 @@ const IndexPage = () => (
         <li>Team Lift-off</li>
         <li>Strong techincal skills</li>
       </ol>
-    </section>
-    <section className="pt-6">
+    </Section>
+
+    <Section>
       <h2>&#x2B50; My leadership competences</h2>
       <ol className="list-inside list-disc">
         <li>Team composition</li>
         <li>Value stream mapping</li>
         <li>Talent Acquisition</li>
       </ol>
-    </section>
+    </Section>
   </Layout>
 )
 

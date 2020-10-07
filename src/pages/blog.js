@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import BlogPost from '../components/Blog/BlogList/blogPost'
 import SEO from '../components/seo'
+import Section from '../components/Container/Section'
 
 const Blog = (data) => {
   let lastPost
@@ -44,8 +45,11 @@ const Blog = (data) => {
 
   return (
     <Layout>
-      <SEO title="Blog" description="Blog Post about all different aspects of agility. Fokusing on easy to follow how to's and best practices." />
-      <div>
+      <SEO
+        title="Blog"
+        description="Blog Post about all different aspects of agility. Fokusing on easy to follow how to's and best practices."
+      />
+      <Section>
         <h1>Blog posts about agility and DevOps</h1>
         <div>
           {firstPost}
@@ -53,7 +57,7 @@ const Blog = (data) => {
           {blogPosts(blogData)}
           {lastPost && lastPost}
         </div>
-      </div>
+      </Section>
     </Layout>
   )
 }
