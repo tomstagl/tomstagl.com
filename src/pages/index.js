@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import Paragraph from '../components/Paragraph/Paragraph'
 import SEO from '../components/seo'
 import SmallCard from '../components/SmallCard/SmallCard'
+import { H2 } from '../components/Container/Headers'
 
 const headerChildren = (
   <div className="pt-8 md:pb-32 md:pt-16 md:px-32 md:mx-auto md:text-center">
@@ -30,18 +31,17 @@ const IndexPage = () => (
     <Section>
       <AboutMe />
     </Section>
-    <Section className="bg-gray-100">
+    <Section dark>
       <Paragraph />
     </Section>
     <Section>
-      <div className="-p-4 rounded-t-lg bg-white">
-        <span></span>
+      <H2>&#128640; My main agile competences</H2>
+      {/* <div className="-p-4 rounded-t-lg bg-white">
         Besides helping teams and organisations to see and feel the benefits of{' '}
         <strong>Agile</strong>- and <strong>DevOps</strong> principles, I&apos;m
         also an experienced business agility by who can help organisations to
         lift off an successful agile transition journey.
-      </div>
-      <h2>&#128640; My main agile competences</h2>
+      </div> */}
       <div className="md:flex">
         <SmallCard
           title="Business Agility"
@@ -66,7 +66,7 @@ const IndexPage = () => (
         />
       </div>
     </Section>
-    <Section>
+    <Section dark>
       <p>
         I support your organisation with my long standing experience about
         applying agile practices. Teaching and guiding the effectiveness of
@@ -80,9 +80,7 @@ const IndexPage = () => (
         <li>Team Lift-off</li>
         <li>Strong techincal skills</li>
       </ol>
-    </Section>
 
-    <Section>
       <h2>&#x2B50; My leadership competences</h2>
       <ol className="list-inside list-disc">
         <li>Team composition</li>
