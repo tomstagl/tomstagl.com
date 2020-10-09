@@ -15,4 +15,4 @@ H1.propTypes = {
   children: PropTypes.node.isRequired,
 }
 H2.propTypes = H1.propTypes
-H3.prototype = H1.propTypes
+H3.propTypes = H1.propTypes
