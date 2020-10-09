@@ -14,10 +14,11 @@ const Layout = ({ children, headerChildren }) => {
       <Header siteTitle="Tom Stagl" renderAvatar={renderAvatar}>
         {headerChildren}
       </Header>
-      <main className="p-4 max-w-xl md:max-w-3xl lg:max-w-4xl  mx-auto">
+      <main>
+        {/* <main className="p-4 max-w-xl md:max-w-3xl lg:max-w-4xl  mx-auto"> */}
         {children}
       </main>
-      <footer className="bg-white md:bg-gray-800 md:text-gray-400">
+      <footer className="bg-white md:bg-gray-800 md:text-gray-400 md:from-gray-800 md:via-gray-700 md:to-gray-800 md:bg-gradient-to-r">
         <div className="flex flex-col-reverse md:flex-row mx-auto max-w-xl md:max-w-3xl lg:max-w-4xl pt-2 p-4">
           <div className="block w-full md:w-1/3 justify-center md:justify-start p-4 md:p-0">
             <address className="text-sm not-italic text-center md:text-left">

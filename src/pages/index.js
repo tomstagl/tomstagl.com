@@ -1,10 +1,12 @@
 import React from 'react'
 import AboutMe from '../components/AboutMe/AboutMe'
+import Section from '../components/Container/Section'
 
 import Layout from '../components/layout'
 import Paragraph from '../components/Paragraph/Paragraph'
 import SEO from '../components/seo'
 import SmallCard from '../components/SmallCard/SmallCard'
+import { H2 } from '../components/Container/Headers'
 
 const headerChildren = (
   <div className="pt-8 md:pb-32 md:pt-16 md:px-32 md:mx-auto md:text-center">
@@ -23,20 +25,23 @@ const headerChildren = (
 const IndexPage = () => (
   <Layout headerChildren={headerChildren}>
     <SEO
-      title="business agility by"
-      description="I'm an experienced business agility by and Business Agility Coach focusing on New Work, OKRs and SCRUM, "
+      title="business agility"
+      description="I'm an experienced Business Agility Coach focusing on New Work, OKRs and SCRUM, "
     />
-    <AboutMe />
-    <Paragraph />
-    <div className="-p-4 rounded-t-lg bg-white">
-      <span></span>
-      Besides helping teams and organisations to see and feel the benefits of{' '}
-      <strong>Agile</strong>- and <strong>DevOps</strong> principles, I&apos;m
-      also an experienced business agility by who can help organisations to lift
-      off an successful agile transition journey.
-    </div>
-    <section className="pt-6">
-      <h2>&#128640; My main agile competences</h2>
+    <Section>
+      <AboutMe />
+    </Section>
+    <Section dark>
+      <Paragraph />
+    </Section>
+    <Section>
+      <H2>&#128640; My main agile competences</H2>
+      {/* <div className="-p-4 rounded-t-lg bg-white">
+        Besides helping teams and organisations to see and feel the benefits of{' '}
+        <strong>Agile</strong>- and <strong>DevOps</strong> principles, I&apos;m
+        also an experienced business agility by who can help organisations to
+        lift off an successful agile transition journey.
+      </div> */}
       <div className="md:flex">
         <SmallCard
           title="Business Agility"
@@ -60,8 +65,8 @@ const IndexPage = () => (
           className="w-full md:w-1/2 lg:w-1/3"
         />
       </div>
-    </section>
-    <section>
+    </Section>
+    <Section dark>
       <p>
         I support your organisation with my long standing experience about
         applying agile practices. Teaching and guiding the effectiveness of
@@ -75,15 +80,14 @@ const IndexPage = () => (
         <li>Team Lift-off</li>
         <li>Strong techincal skills</li>
       </ol>
-    </section>
-    <section className="pt-6">
+
       <h2>&#x2B50; My leadership competences</h2>
       <ol className="list-inside list-disc">
         <li>Team composition</li>
         <li>Value stream mapping</li>
         <li>Talent Acquisition</li>
       </ol>
-    </section>
+    </Section>
   </Layout>
 )
 

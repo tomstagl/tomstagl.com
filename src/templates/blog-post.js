@@ -22,6 +22,7 @@ import BlogSeperatorBlock from '../components/Blog/BlogEntry/blogSeperatorBlock'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Section from '../components/Container/Section'
 
 const Components = {
   text: BlogTextBlock,
@@ -60,59 +61,63 @@ export default function BlogPost({ data }) {
   return (
     <Layout>
       <SEO title={title} />
-      <span>
-        <Link
-          to="/blog/"
-          className="font-light text-sm text-gray-700 hover:text-teal-500"
-          activeClassName="text-teal-500 underline "
-        >
-          &lt; Back to Blog
-        </Link>
-      </span>
-      <article className="prose md:mx-auto lg:prose-xl">
-        <HelmetDatoCms seo={post.seoMetaTags} />
-        <header>
-          <p className="text-sm text-right font-thin text-gray-500">
-            Published {meta.publishedAt}
-          </p>
-          <h1>{title}</h1>
-          <p>{subtitle}</p>
-          {blogimage && (
-            <figure>
-              <Img fluid={blogimage.fluid} className="rounded" />
-              {blogimage.title && <figcaption>{blogimage.title}</figcaption>}
-            </figure>
-          )}
-          <p>{abstract}</p>
-        </header>
-        {mapSections()}
-      </article>
-      <div className="flex flex-row-reverse">
-        <div className="mr-2">
-          <TwitterShareButton
-            url={siteUrl}
-            title={subtitle}
-            hashtags={hashTags}
-            related={['@herrstagl']}
+      <Section>
+        <span>
+          <Link
+            to="/blog/"
+            className="font-light text-sm text-gray-700 hover:text-teal-500"
+            activeClassName="text-teal-500 underline "
           >
-            <TwitterIcon size={30} borderRadius={35} />
-          </TwitterShareButton>
+            &lt; Back to Blog
+          </Link>
+        </span>
+        <article className="prose md:mx-auto lg:prose-xl">
+          <HelmetDatoCms seo={post.seoMetaTags} />
+          <header>
+            <p className="text-sm text-right font-thin text-gray-500">
+              Published {meta.publishedAt}
+            </p>
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
+            {blogimage && (
+              <figure>
+                <Img fluid={blogimage.fluid} className="rounded" />
+                {blogimage.title && <figcaption>{blogimage.title}</figcaption>}
+              </figure>
+            )}
+            <p>{abstract}</p>
+          </header>
+          {mapSections()}
+        </article>
+      </Section>
+      <Section>
+        <div className="flex flex-row-reverse">
+          <div className="mr-2">
+            <TwitterShareButton
+              url={siteUrl}
+              title={subtitle}
+              hashtags={hashTags}
+              related={['@herrstagl']}
+            >
+              <TwitterIcon size={30} borderRadius={35} />
+            </TwitterShareButton>
+          </div>
+          <div className="mr-2">
+            <LinkedinShareButton url={siteUrl}>
+              <LinkedinIcon size={30} borderRadius={35} />
+            </LinkedinShareButton>
+          </div>
+          <div className="mr-2">
+            <FacebookShareButton
+              url={siteUrl}
+              quote={abstract}
+              hashtag={'#agility'}
+            >
+              <FacebookIcon size={30} borderRadius={35} />
+            </FacebookShareButton>
+          </div>
         </div>
-        <div className="mr-2">
-          <LinkedinShareButton url={siteUrl}>
-            <LinkedinIcon size={30} borderRadius={35} />
-          </LinkedinShareButton>
-        </div>
-        <div className="mr-2">
-          <FacebookShareButton
-            url={siteUrl}
-            quote={abstract}
-            hashtag={'#agility'}
-          >
-            <FacebookIcon size={30} borderRadius={35} />
-          </FacebookShareButton>
-        </div>
-      </div>
+      </Section>
     </Layout>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Card from '../components/Card/card'
+import Section from '../components/Container/Section'
 
 const RenderCards = () => {
   let cards = []
@@ -55,7 +56,7 @@ const RenderCards = () => {
 const About = () => (
   <Layout>
     <SEO title="About" />
-    <div>
+    <Section>
       <div className="pt-6">
         <h1>My services</h1>
         {RenderCards()}
@@ -88,7 +89,7 @@ const About = () => (
           </li>
         </ul>
       </div>
-    </div>
+    </Section>
   </Layout>
 )
 
