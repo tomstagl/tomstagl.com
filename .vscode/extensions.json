@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "sdras.night-owl",
+    "alfnielsen.vsc-organize-imports",
+    "bradlc.vscode-tailwindcss",
+    "2gua.rainbow-brackets",
+    "esbenp.prettier-vscode",
+    "wix.vscode-import-cost",
+    "graphql.vscode-graphql"
+  ]
+}
