@@ -12,8 +12,8 @@ const AboutMe = () => {
       <div className="py-12">
         <Avatar avatarSize="32" className="justify-center" />
       </div>
-      <div className="pb-4">
-        <ShareArticle />
+      <div className="pb-4 md:mx-auto content-center">
+        <ShareArticle className="justify-center" />
       </div>
       <div>
         I am a self employed business agility coach dedicated to promote agile
