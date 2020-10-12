@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaTwitter, FaLinkedin } from 'react-icons/fa'
+import { FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 const ShareArticle = () => {
   return (

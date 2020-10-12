@@ -1,12 +1,12 @@
 import React from 'react'
-import AboutMe from '../components/AboutMe/AboutMe'
-import Section from '../components/Container/Section'
 
+import AboutMe from '../components/AboutMe/AboutMe'
+import { H2 } from '../components/Container/Headers'
+import Section from '../components/Container/Section'
 import Layout from '../components/layout'
 import Paragraph from '../components/Paragraph/Paragraph'
 import SEO from '../components/seo'
 import SmallCard from '../components/SmallCard/SmallCard'
-import { H2 } from '../components/Container/Headers'
 
 const headerChildren = (
   <div className="pt-8 md:pb-32 md:pt-16 md:px-32 md:mx-auto md:text-center">

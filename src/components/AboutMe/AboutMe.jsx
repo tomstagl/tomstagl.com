@@ -1,8 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 import Avatar from '../Avatar/avatar'
-import ShareArticle from '../Footer/ShareArticle/shareArticle'
 import { H2 } from '../Container/Headers'
+import ShareArticle from '../Footer/ShareArticle/shareArticle'
 
 const AboutMe = () => {
   return (

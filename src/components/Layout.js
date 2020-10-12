@@ -1,10 +1,11 @@
-import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-import Header from './header'
-import './layout.css'
 import ShareArticle from './Footer/ShareArticle/shareArticle'
+import Header from './header'
+
+import './layout.css'
 
 const Layout = ({ children, headerChildren }) => {
   const renderAvatar = headerChildren ? false : true
