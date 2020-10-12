@@ -6,6 +6,7 @@
     "2gua.rainbow-brackets",
     "esbenp.prettier-vscode",
     "wix.vscode-import-cost",
-    "graphql.vscode-graphql"
+    "graphql.vscode-graphql",
+    "mikestead.dotenv"
   ]
 }
