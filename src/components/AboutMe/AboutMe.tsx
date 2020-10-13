@@ -18,9 +18,9 @@ const AboutMe: FunctionComponent = () => {
       <div>
         I am a self employed business agility coach dedicated to promote agile
         practices from organisational level up until development best practices.{' '}
-        After working as Software Engineer and Program Manager I've got in touch
-        with SCRUM in 2004. Since then I've held leadership positions in
-        different business areas. With teams spread around the globe. My main
+        After working as Software Engineer and Program Manager I&apos;ve got in
+        touch with SCRUM in 2004. Since then I&apos;ve held leadership positions
+        in different business areas. With teams spread around the globe. My main
         vision is to make my experience available for your organisation to
         become <strike className="font-light text-gray-500">agile</strike>{' '}
         successful.
