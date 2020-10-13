@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react'
 import PropTypes from 'prop-types'
+import React, { FunctionComponent } from 'react'
 
 type TimeLineProps = {
   header?: string
