@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import Img, { FluidObject } from 'gatsby-image'
 import PropTypes from 'prop-types'
 
-export const PureAvatar = ({ title, data, avatarSize, className }) => (
+type AvatarProps = {
+  title?: string
+  data: {
+    avatarImage: {
+      childImageSharp: {
+        fluid: FluidObject
+      }
+    }
+  }
+  avatarSize?: number
+  className?: string
+}
+export const PureAvatar: FunctionComponent<AvatarProps> = ({
+  title,
+  data,
+  avatarSize = 16,
+  className = 'mr-6',
+}) => (
   <div className={`flex items-center flex-shrink-0 text-white ${className}`}>
     <Link
       to="/"
@@ -26,7 +43,8 @@ export const PureAvatar = ({ title, data, avatarSize, className }) => (
   </div>
 )
 
-const Avatar = (props) => {
+const Avatar: FunctionComponent<AvatarProps> = (props) => {
+  const { title, ...rest } = props
   const data = useStaticQuery(graphql`
     query {
       avatarImage: file(relativePath: { eq: "avatar.png" }) {
@@ -38,24 +56,17 @@ const Avatar = (props) => {
       }
     }
   `)
-  return <PureAvatar {...props} data={data}></PureAvatar>
-}
-
-PureAvatar.propTypes = {
-  title: PropTypes.string,
-  data: PropTypes.object,
-  avatarSize: PropTypes.string,
-  className: PropTypes.string,
+  return <PureAvatar {...rest} title={title} data={data}></PureAvatar>
 }
 
 Avatar.propTypes = {
   title: PropTypes.string,
 }
 
-PureAvatar.defaultProps = {
-  title: '',
-  data: {},
-  avatarSize: 16,
-  className: 'mr-6',
+PureAvatar.propTypes = {
+  title: PropTypes.string,
+  avatarSize: PropTypes.number,
+  className: PropTypes.string,
+  data: PropTypes.object,
 }
 export default Avatar

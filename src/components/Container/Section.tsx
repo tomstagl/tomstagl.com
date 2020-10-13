@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import PropTypes from 'prop-types'
 
-const Section = ({ children, className, dark }) => {
-  console.log(dark)
+type SectionProps = {
+  className?: string
+  dark?: boolean
+}
+
+const Section: FunctionComponent<SectionProps> = ({
+  children,
+  className = '',
+  dark = false,
+}) => {
   const css = className || ''
   const darkerBackground = dark ? 'bg-gray-100' : ''
   return (
@@ -15,15 +23,9 @@ const Section = ({ children, className, dark }) => {
 }
 
 Section.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.node,
   className: PropTypes.string,
   dark: PropTypes.bool,
-}
-
-Section.defaultProps = {
-  children: {},
-  className: '',
-  dark: false,
 }
 
 export default Section

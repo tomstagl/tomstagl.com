@@ -1,6 +1,9 @@
 [![coverage report](https://gitlab.com/tstagl/tomstagl.com/badges/master/coverage.svg)](https://gitlab.com/tstagl/tomstagl.com/-/commits/master)
 [![pipeline status](https://gitlab.com/tstagl/tomstagl.com/badges/master/pipeline.svg)](https://gitlab.com/tstagl/tomstagl.com/-/commits/master)
 
+# TODO
+- enable jsx-a11y
+
 # Setup
 
 ## Commitizen

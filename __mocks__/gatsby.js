@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const React = require('react')
 const gatsby = jest.requireActual('gatsby')
 

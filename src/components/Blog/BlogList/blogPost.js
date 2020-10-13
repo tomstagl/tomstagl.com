@@ -24,7 +24,11 @@ const BlogPost = ({ post, latest, last, className }) => {
     >
       {blogImage && (
         <figure>
-          <Img fluid={blogImage.fluid} className="rounded shadow" alt={blogImage.alt} />
+          <Img
+            fluid={blogImage.fluid}
+            className="rounded shadow"
+            alt={blogImage.alt}
+          />
           {blogImage.title && <figcaption>{blogImage.title}</figcaption>}
         </figure>
       )}
@@ -43,7 +47,7 @@ const BlogPost = ({ post, latest, last, className }) => {
             activeClassName="underline"
             to={read_more_link}
           >
-            <h2>{post.title}</h2>
+            <h2 className="text-2xl">{post.title}</h2>
           </Link>
           <p className="flex text-gray-500 text-sm font-light">
             Published {published_since}

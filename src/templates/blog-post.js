@@ -1,28 +1,26 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import PropTypes from 'prop-types'
-import {
-  TwitterShareButton,
-  TwitterIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
-  FacebookShareButton,
-  FacebookIcon,
-} from 'react-share'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
-
-/* use loadable components for lazy loading SSR */
-import BlogTextBlock from '../components/Blog/BlogEntry/blogTextBlock'
-import BlogQuoteBlock from '../components/Blog/BlogEntry/blogQuoteBlock'
+import PropTypes from 'prop-types'
+import React from 'react'
+import {
+  FacebookIcon,
+  FacebookShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+} from 'react-share'
 import BlogCodeBlock from '../components/Blog/BlogEntry/BlogCodeBlock/blogCodeBlock'
 import BlogImageBlock from '../components/Blog/BlogEntry/blogImageBlock'
+import BlogQuoteBlock from '../components/Blog/BlogEntry/blogQuoteBlock'
 import BlogSeperatorBlock from '../components/Blog/BlogEntry/blogSeperatorBlock'
-
+/* use loadable components for lazy loading SSR */
+import BlogTextBlock from '../components/Blog/BlogEntry/blogTextBlock'
+import Section from '../components/Container/Section'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Section from '../components/Container/Section'
+import { H1 } from '../components/Container/Headers'
 
 const Components = {
   text: BlogTextBlock,
@@ -77,7 +75,7 @@ export default function BlogPost({ data }) {
             <p className="text-sm text-right font-thin text-gray-500">
               Published {meta.publishedAt}
             </p>
-            <h1>{title}</h1>
+            <H1>{title}</H1>
             <p>{subtitle}</p>
             {blogimage && (
               <figure>

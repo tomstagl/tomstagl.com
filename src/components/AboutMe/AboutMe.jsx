@@ -10,7 +10,7 @@ const AboutMe = () => {
       <H2>About Me</H2>
       <h3>Some details to get to know me a bit better</h3>
       <div className="py-12">
-        <Avatar avatarSize="32" className="justify-center" />
+        <Avatar avatarSize={32} className="justify-center" />
       </div>
       <div className="pb-4 md:mx-auto content-center">
         <ShareArticle className="justify-center" />
@@ -22,7 +22,8 @@ const AboutMe = () => {
         with SCRUM in 2004. Since then I've held leadership positions in
         different business areas. With teams spread around the globe. My main
         vision is to make my experience available for your organisation to
-        become <strikethrough>agile</strikethrough>successful.
+        become <strike className="font-light text-gray-500">agile</strike>{' '}
+        successful.
       </div>
     </div>
   )

@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import PropTypes from 'prop-types'
 
-const BlogCodeBlock = (props) => {
+type BlogCodeBlockTypes = {
+  language: string
+  codeblock: string
+}
+
+const BlogCodeBlock: FunctionComponent<BlogCodeBlockTypes> = (props) => {
   const { language, codeblock } = props
   return (
     <pre
