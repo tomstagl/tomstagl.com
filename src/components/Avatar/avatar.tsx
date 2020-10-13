@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import Img, { FluidObject } from 'gatsby-image'
 import PropTypes from 'prop-types'
+import React, { FunctionComponent } from 'react'
 
 type AvatarProps = {
   title?: string
@@ -21,25 +21,27 @@ export const PureAvatar: FunctionComponent<AvatarProps> = ({
   avatarSize = 16,
   className = 'mr-6',
 }) => (
-  <div className={`flex items-center flex-shrink-0 text-white ${className}`}>
-    <Link
-      to="/"
-      className="flex flex-row items-center text-2xl md:text-gray-400"
-    >
-      <Img
-        className={`h-${avatarSize} w-${avatarSize} mr-4 rounded-full mx-auto border-2 border-teal-400 bg-white`}
-        fluid={data.avatarImage.childImageSharp.fluid}
-        alt="Portrait of Tom Stagl"
-      />
-      {title && (
-        <span
-          className="font-semibold text-xl tracking-tight"
-          data-testid="avatar-title"
-        >
-          {title}
-        </span>
-      )}
-    </Link>
+  <div className={`h-${avatarSize}`}>
+    <div className={`flex items-center flex-shrink-0 text-white ${className}`}>
+      <Link
+        to="/"
+        className="flex flex-row items-center text-2xl text-gray-400"
+      >
+        <Img
+          className={`h-${avatarSize} w-${avatarSize} mr-4 rounded-full mx-auto border-2 border-teal-400 bg-white`}
+          fluid={data.avatarImage.childImageSharp.fluid}
+          alt="Portrait of Tom Stagl"
+        />
+        {title && (
+          <span
+            className="font-semibold text-xl tracking-tight"
+            data-testid="avatar-title"
+          >
+            {title}
+          </span>
+        )}
+      </Link>
+    </div>
   </div>
 )
 

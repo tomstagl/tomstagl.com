@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 
 import Avatar from '../Avatar/avatar'
 import { H2 } from '../Container/Headers'
 import ShareArticle from '../Footer/ShareArticle/shareArticle'
 
-const AboutMe = () => {
+const AboutMe: FunctionComponent = () => {
   return (
     <div className="justify-center md:text-center">
-      <H2>About Me</H2>
-      <h3>Some details to get to know me a bit better</h3>
+      <H2>Tom Stagl</H2>
+      <h3>Business Agility Coach</h3>
       <div className="py-12">
         <Avatar avatarSize={32} className="justify-center" />
       </div>
