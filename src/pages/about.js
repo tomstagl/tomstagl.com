@@ -1,8 +1,10 @@
 import React from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+
 import Card from '../components/Card/card'
 import Section from '../components/Container/Section'
+import FrequentlyAskedQuestions from '../components/FrequentlyAskedQuestions/FrequentlyAskedQuestions'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const RenderCards = () => {
   let cards = []
@@ -89,6 +91,9 @@ const About = () => (
           </li>
         </ul>
       </div>
+    </Section>
+    <Section dark>
+      <FrequentlyAskedQuestions />
     </Section>
   </Layout>
 )
