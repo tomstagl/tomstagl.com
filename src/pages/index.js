@@ -58,7 +58,7 @@ const IndexPage = () => (
       <Paragraph />
     </Section>
     <Section>
-      <TimeLine />
+      <TimeLine timeLineData={timeLineData} />
     </Section>
     <Section dark>
       <p>
@@ -84,5 +84,52 @@ const IndexPage = () => (
     </Section>
   </Layout>
 )
+
+const timeLineData = [
+  {
+    left: {
+      header: 'SCRUM',
+      text:
+        'First time got in touch with SCRUM while I was working as Programm Manager for QPass. Took my first SCRUM master course',
+      blueTag: 'blue',
+    },
+    line: {
+      year: 2006,
+    },
+  },
+  {
+    line: {
+      year: 2020,
+    },
+  },
+  {
+    left: {
+      header: 'Bla',
+      text: 'blu',
+      blueTag: 'blue',
+    },
+    line: {
+      year: 2020,
+    },
+    right: {
+      header: 'bla2',
+      text: 'blabla',
+    },
+  },
+  {
+    left: {
+      header: 'Bla',
+      text: 'blu',
+      blueTag: 'blue',
+    },
+    line: {
+      year: 2020,
+    },
+    right: {
+      header: 'bla2',
+      text: 'blabla',
+    },
+  },
+]
 
 export default IndexPage

@@ -13,7 +13,7 @@ const TimeLineRightColumn: FunctionComponent<TimeLineProps> = ({
   return (
     <div className="w-2/5 px-2 py-10 ">
       {(header || text) && (
-        <div className="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
+        <div className="flex flex-col w-full rounded-lg shadow-lg bg-white px-4 py-5">
           {header && (
             <div className="text-gray-600 mb-2 flex justify-between">
               <div className="font-bold">{header}</div>
