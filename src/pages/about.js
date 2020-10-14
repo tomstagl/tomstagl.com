@@ -29,14 +29,14 @@ const About = () => (
         after 2003 I&apos;ve moved also into the SCRUM master role.
       </p>
       <p className="py-4">
-        A couple of years ago, I&apos;ve seen the talk "Agile is dead", at least
-        that&apos;s what Prgramatic Dave said a couple of years ago on a
-        conference talk. And I agree. Agile just turned into a business,
-        focusing mainly on the tools and processes available. Each one promising
-        to be a silver bullet. But the core of talk was to focus on your needs,
-        focus on the things which work for your organisation. Continue doing
-        them, and stop all the things which are blocking you. Acting with
-        agility makes you agile, and most importantly successful.
+        A couple of years ago, I&apos;ve seen the talk &ldquo;Agile is
+        dead&rdquo;, at least that&apos;s what Prgramatic Dave said a couple of
+        years ago on a conference talk. And I agree. Agile just turned into a
+        business, focusing mainly on the tools and processes available. Each one
+        promising to be a silver bullet. But the core of talk was to focus on
+        your needs, focus on the things which work for your organisation.
+        Continue doing them, and stop all the things which are blocking you.
+        Acting with agility makes you agile, and most importantly successful.
       </p>
       <p className="py-4">
         I have guided a couple of agile transitions. Most of them successfull
