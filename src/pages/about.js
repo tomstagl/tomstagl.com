@@ -1,8 +1,9 @@
 import React from 'react'
+
 import Card from '../components/Card/card'
+import { H2, H3 } from '../components/Container/Headers'
 import Section from '../components/Container/Section'
 import FrequentlyAskedQuestions from '../components/FrequentlyAskedQuestions/FrequentlyAskedQuestions'
-import GridList from '../components/GridList/GridList'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TimeLine from '../components/Timeline/Timeline'
@@ -11,13 +12,40 @@ const About = () => (
   <Layout>
     <SEO title="About" />
     <Section>
-      <GridList />
-    </Section>
-    <Section dark>
-      <TimeLine timeLineData={timeLineData} />
-    </Section>
-    <Section>
-      <h2 className="pt-4">Principles</h2>
+      <H2>About Me</H2>
+      <p className="py-4">
+        I was born back in 1972 as the youngest of three kids. So I learned very
+        early how to inspect and adopt. And that is also what I&apos;ve
+        continued doing all the years. During my carreer my main focus was on
+        agile practices. Mainly to unlock the potential of each and everyone.
+        Helping each person to find the right spot in a team.
+      </p>
+      <p className="py-4">
+        During my professional carreer I&apos;ve had the very early chance to
+        get in touch with Scrum. That was back in 2003, where engineers in my
+        team wanted to try out this new way of organising work. At this time my
+        role was programm manager trying hardly to wire together multiple
+        Microsoft Project plans to steer multiple parallel projects. Shortly
+        after 2003 I&apos;ve moved also into the SCRUM master role.
+      </p>
+      <p className="py-4">
+        A couple of years ago, I&apos;ve seen the talk "Agile is dead", at least
+        that&apos;s what Prgramatic Dave said a couple of years ago on a
+        conference talk. And I agree. Agile just turned into a business,
+        focusing mainly on the tools and processes available. Each one promising
+        to be a silver bullet. But the core of talk was to focus on your needs,
+        focus on the things which work for your organisation. Continue doing
+        them, and stop all the things which are blocking you. Acting with
+        agility makes you agile, and most importantly successful.
+      </p>
+      <p className="py-4">
+        I have guided a couple of agile transitions. Most of them successfull
+        and there were also the ones which failed, and provided a huge learning
+        opportunity for me. Get in touch with me, to learn, how I can help you.
+      </p>
+      <p className="py-4">Wo bitte get in touch</p>
+
+      <H3 className="pt-4">Some of My Principles</H3>
       <ul className="list-inside list-disc">
         <li>
           If there was a production incident, write a{' '}
@@ -35,7 +63,7 @@ const About = () => (
           meeting minutes are taken and shared afterwards.{' '}
           <strong>Always!</strong>
         </li>
-        <li>If not sure, ask the team</li>
+        <li>Ask the team, they know better</li>
         <li>
           Watch the baton, not the runner. Focus on outcome, not on output
         </li>
@@ -43,8 +71,17 @@ const About = () => (
           Metrics are important indicators for business performance and used to
           ask questions. Nothing more!
         </li>
+        <li>
+          If you don&apos;t like the style of your manager or team lead,
+          it&apos;s your fault: Provide constructive feedback to your team lead.
+          Allow her/him to get better.
+        </li>
       </ul>
     </Section>
+    <Section dark>
+      <TimeLine timeLineData={timeLineData} />
+    </Section>
+
     <Section dark>
       <FrequentlyAskedQuestions />
     </Section>
@@ -105,7 +142,7 @@ const timeLineData = [
     left: {
       header: 'SCRUM',
       text:
-        'First time got in touch with SCRUM while I was working as Programm Manager for QPass. Took my first SCRUM master course with Boris Gloger.',
+        'First time got in touch with SCRUM in 2003 while I was working as Programm Manager for QPass. Took my first SCRUM master course with Boris Gloger in Manchester 2004.',
     },
     line: {
       year: 2004,
