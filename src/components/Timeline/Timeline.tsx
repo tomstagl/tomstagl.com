@@ -22,18 +22,8 @@ const Timeline: FunctionComponent = () => {
           </div>
 
           <div className="flex flex-row w-full">
-            {/* <!-- left col --> */}
-
-            <div className="w-2/5 px-2 py-10"></div>
-            {/* <!--line column--> */}
-            <div className="w-1/5  flex justify-center">
-              <div className="relative flex h-full w-1 bg-green-300 items-center justify-center">
-                <div className="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-green-300 leading-none text-center z-10 bg-white font-thin">
-                  <div>20</div>
-                  <div>сентября</div>
-                </div>
-              </div>
-            </div>
+            <TimeLineLeftColumn />
+            <TimeLineLineColumn year={2020} />
             {/* <!--right column--> */}
             <TimeLineRightColumn
               header="Svetlana Torn"
