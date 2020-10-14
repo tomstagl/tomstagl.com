@@ -3,75 +3,106 @@ import { H2 } from '../Container/Headers'
 import TimeLineLeftColumn from './TimeLineLeftColumn'
 import TimeLineLineColumn from './TimeLineLineColumn'
 import TimeLineRightColumn from './TimeLineRightColumn'
+import PropTypes from 'prop-types'
 
-const Timeline: FunctionComponent = () => {
+const timelineData = [
+  {
+    left: {
+      header: 'Bla',
+      text: 'blu',
+      blueTag: 'blue',
+    },
+    line: {
+      year: 2020,
+    },
+    right: {
+      header: 'bla2',
+      text: 'blabla',
+    },
+  },
+  {
+    left: {
+      header: 'Bla',
+      text: 'blu',
+      blueTag: 'blue',
+    },
+    line: {
+      year: 2020,
+    },
+    right: {
+      header: 'bla2',
+      text: 'blabla',
+    },
+  },
+  {
+    left: {
+      header: 'Bla',
+      text: 'blu',
+      blueTag: 'blue',
+    },
+    line: {
+      year: 2020,
+    },
+    right: {
+      header: 'bla2',
+      text: 'blabla',
+    },
+  },
+  {
+    left: {
+      header: 'Bla',
+      text: 'blu',
+      blueTag: 'blue',
+    },
+    line: {
+      year: 2020,
+    },
+    right: {
+      header: 'bla2',
+      text: 'blabla',
+    },
+  },
+]
+
+type TimeLineProps = {
+  timeLineData: array
+}
+
+const TimeLine: FunctionComponent<TimeLineProps> = ({
+  timeLineData = timelineData,
+}) => {
   return (
     <div className="min-h-screen">
       <H2>My timeline</H2>
       <div className="min-h-screen flex justify-center">
         <div className="w-full md:w-2/3 mx-auto">
-          <div className="flex flex-row w-full">
-            <TimeLineLeftColumn
-              header="bla"
-              text="blue"
-              blueTag="blue"
-              redTag="red"
-            />
-            <TimeLineLineColumn year={2020} />
-            <TimeLineRightColumn />
-          </div>
-
-          <div className="flex flex-row w-full">
-            <TimeLineLeftColumn />
-            <TimeLineLineColumn year={2020} />
-            {/* <!--right column--> */}
-            <TimeLineRightColumn
-              header="Svetlana Torn"
-              text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis enim esse fuga modi quisquam veritatis? Привет Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad corporis culpa deserunt, dignissimos dolor esse fugit ipsam minus odit officiis placeat qui, quidem quis soluta vero? Adipisci alias eius et iure nam nihil reiciendis saepe, voluptatem. Alias c"
-            />
-          </div>
-          <div className="flex flex-row w-full">
-            {/* <!-- left col --> */}
-
-            <div className="w-2/5 px-2 py-10">
-              <div className="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
-                <div className="text-gray-600 mb-2 flex justify-between">
-                  <div className="font-bold">Svjatoslav Torn</div>
-                  <div className="flex flex-row">
-                    <button className="text-blue-500 mr-2 hover:text-blue-300 transition duration-200">
-                      <i className="far fa-edit"></i>
-                    </button>
-                    <button className="text-red-500 hover:text-red-300 transition duration-200">
-                      <i className="far fa-trash-alt"></i>
-                    </button>
-                  </div>
-                </div>
-                <div className="text-gray-600">
-                  Привет Lorem ipsum dolor sit amet, consectetur adipisicing
-                  elit. Ad corporis culpa deserunt, dignissimos dolor esse fugit
-                  ipsam minus odit officiis placeat qui, quidem quis soluta
-                  vero? Adipisci alias eius et iure nam nihil reiciendis saepe,
-                  voluptatem. Alias cumque dicta dignissimos ea et laborum,
-                  minima similique.
-                </div>
-              </div>
+          {timeLineData.forEach((entry: any, idx: number) => (
+            <div key={idx} className="flex flex-row w-full">
+              {console.log(entry)}
+              {entry.left && (
+                <TimeLineLeftColumn
+                  header={entry.left.header}
+                  text={entry.left.text}
+                  blueTag={entry.left.blueTag}
+                  redTag={entry.left.redTag}
+                />
+              )}
+              {entry.line && <TimeLineLineColumn year={entry.line.year} />}
+              {entry.right && (
+                <TimeLineRightColumn
+                  header={entry.right.header}
+                  text={entry.right.text}
+                />
+              )}
             </div>
-            {/* <!--line column--> */}
-            <div className="w-1/5  flex justify-center">
-              <div className="relative flex h-full w-1 bg-green-300 items-center justify-center">
-                <div className="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-green-300 leading-none text-center z-10 bg-white font-thin">
-                  <div>20</div>
-                  <div>сентября</div>
-                </div>
-              </div>
-            </div>
-            {/* <!--right column--> */}
-            <div className="w-2/5 px-2 py-10 "></div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   )
 }
 
-export default Timeline
+TimeLine.propTypes = {
+  timeLineData: PropTypes.array,
+}
+export default TimeLine

@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 import Paragraph from '../components/Paragraph/Paragraph'
 import SEO from '../components/seo'
 import SmallCard from '../components/SmallCard/SmallCard'
-import Timeline from '../components/Timeline/Timeline'
+import TimeLine from '../components/Timeline/Timeline'
 
 const headerChildren = (
   <Section className="-mt-8 md:m-0">
@@ -58,7 +58,7 @@ const IndexPage = () => (
       <Paragraph />
     </Section>
     <Section>
-      <Timeline />
+      <TimeLine />
     </Section>
     <Section dark>
       <p>
