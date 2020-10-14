@@ -15,7 +15,7 @@ const Paragraph: FunctionComponent<ParagraphProps> = ({
   return (
     <>
       <H2>{heading}</H2>
-      <div className="lg: pb-12 lg:flex lg:justify-center">
+      <div className="lg:flex lg:justify-center">
         <div className="bg-white lg:flex lg:max-w-5xl lg:shadow-lg lg:rounded-lg">
           <div className="lg:w-1/2">
             <div

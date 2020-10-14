@@ -9,7 +9,7 @@ export const H2: FunctionComponent = ({ children }) => (
 )
 
 export const H3: FunctionComponent = ({ children }) => (
-  <h3 className="text-2xl uppercase">{children}</h3>
+  <h3 className="text-2xl lg:text-center uppercase">{children}</h3>
 )
 
 H1.propTypes = {

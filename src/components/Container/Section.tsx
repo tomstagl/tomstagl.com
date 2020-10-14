@@ -14,7 +14,7 @@ const Section: FunctionComponent<SectionProps> = ({
   const css = className || ''
   const darkerBackground = dark ? 'bg-gray-100 md:border' : ''
   return (
-    <section className={`p-4 lg:p-8 ${css} ${darkerBackground}`}>
+    <section className={`py-4 lg:py-12 ${css} ${darkerBackground}`}>
       <div className="max-w-xl md:max-w-3xl lg:max-w-4xl mx-auto">
         {children}
       </div>

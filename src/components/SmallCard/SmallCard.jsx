@@ -7,10 +7,10 @@ const SmallCard = ({ title, text, image, imageCredits, className }) => {
     <div
       className={`max-w-xs rounded overflow-hidden shadow-lg m-2 ${className}`}
     >
-      <div className="h-48">
+      <div className="h-56">
         <Image imgName={image} className="h-full" credits={imageCredits} />
       </div>
-      <div className="px-6 py-4 h-48">
+      <div className="px-6 py-4 h-56">
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className="text-grey-darker text-base">{text}</p>
       </div>

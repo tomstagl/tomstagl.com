@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
 
-import { H2 } from '../Container/Headers'
+import { H2, H3 } from '../Container/Headers'
 import TimeLineLeftColumn from './TimeLineLeftColumn'
 import TimeLineLineColumn from './TimeLineLineColumn'
 import TimeLineRightColumn from './TimeLineRightColumn'
@@ -37,6 +37,7 @@ const TimeLine: FunctionComponent<TimeLineProps> = ({ timeLineData }) => {
           ))}
         </div>
       </div>
+      <H3>Become a part of this story</H3>
     </div>
   )
 }

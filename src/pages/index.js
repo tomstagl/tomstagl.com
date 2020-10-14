@@ -3,11 +3,11 @@ import React from 'react'
 import AboutMe from '../components/AboutMe/AboutMe'
 import { H2 } from '../components/Container/Headers'
 import Section from '../components/Container/Section'
+import GridList from '../components/GridList/GridList'
 import Layout from '../components/layout'
 import Paragraph from '../components/Paragraph/Paragraph'
 import SEO from '../components/seo'
 import SmallCard from '../components/SmallCard/SmallCard'
-import TimeLine from '../components/Timeline/Timeline'
 
 const headerChildren = (
   <Section className="-mt-8 md:m-0">
@@ -24,12 +24,6 @@ const IndexPage = () => (
 
     <Section>
       <H2>&#128640; Main Agile Competences</H2>
-      {/* <div className="-p-4 rounded-t-lg bg-white">
-        Besides helping teams and organisations to see and feel the benefits of{' '}
-        <strong>Agile</strong>- and <strong>DevOps</strong> principles, I&apos;m
-        also an experienced business agility by who can help organisations to
-        lift off an successful agile transition journey.
-      </div> */}
       <div className="md:flex">
         <SmallCard
           title="Business Agility"
@@ -58,78 +52,9 @@ const IndexPage = () => (
       <Paragraph />
     </Section>
     <Section>
-      <TimeLine timeLineData={timeLineData} />
-    </Section>
-    <Section dark>
-      <p>
-        I support your organisation with my long standing experience about
-        applying agile practices. Teaching and guiding the effectiveness of
-        agile practices is what I love and what you will start loving soon.
-      </p>
-      <ol className="list-inside list-disc">
-        <li>OKR setup</li>
-        <li>Agile Transition</li>
-        <li>Scrum</li>
-        <li>Business Agility</li>
-        <li>Team Lift-off</li>
-        <li>Strong techincal skills</li>
-      </ol>
-
-      <h2>&#x2B50; My leadership competences</h2>
-      <ol className="list-inside list-disc">
-        <li>Team composition</li>
-        <li>Value stream mapping</li>
-        <li>Talent Acquisition</li>
-      </ol>
+      <GridList />
     </Section>
   </Layout>
 )
-
-const timeLineData = [
-  {
-    left: {
-      header: 'SCRUM',
-      text:
-        'First time got in touch with SCRUM while I was working as Programm Manager for QPass. Took my first SCRUM master course',
-      blueTag: 'blue',
-    },
-    line: {
-      year: 2006,
-    },
-  },
-  {
-    line: {
-      year: 2020,
-    },
-  },
-  {
-    left: {
-      header: 'Bla',
-      text: 'blu',
-      blueTag: 'blue',
-    },
-    line: {
-      year: 2020,
-    },
-    right: {
-      header: 'bla2',
-      text: 'blabla',
-    },
-  },
-  {
-    left: {
-      header: 'Bla',
-      text: 'blu',
-      blueTag: 'blue',
-    },
-    line: {
-      year: 2020,
-    },
-    right: {
-      header: 'bla2',
-      text: 'blabla',
-    },
-  },
-]
 
 export default IndexPage
