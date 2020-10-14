@@ -11,18 +11,16 @@ const Timeline: FunctionComponent = () => {
       <div className="min-h-screen flex justify-center">
         <div className="w-full md:w-2/3 mx-auto">
           <div className="flex flex-row w-full">
-            {/* <!-- left col --> */}
             <TimeLineLeftColumn
               header="bla"
               text="blue"
               blueTag="blue"
               redTag="red"
             />
-            {/* <!--line column--> */}
             <TimeLineLineColumn year={2020} />
-            {/* <!--right column--> */}
             <TimeLineRightColumn />
           </div>
+
           <div className="flex flex-row w-full">
             {/* <!-- left col --> */}
 
