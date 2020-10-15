@@ -19,7 +19,7 @@ const Layout = ({ children, headerChildren }) => {
         {/* <main className="p-4 max-w-xl md:max-w-3xl lg:max-w-4xl  mx-auto"> */}
         {children}
       </main>
-      <footer className="bg-white md:bg-gray-800 md:text-gray-400 md:from-gray-800 md:via-gray-700 md:to-gray-800 md:bg-gradient-to-r">
+      <footer className="bg-gray-800 text-gray-400 pt-4 md:from-gray-700 md:to-gray-800 md:bg-gradient-to-r">
         <div className="flex flex-col-reverse md:flex-row mx-auto max-w-xl md:max-w-3xl lg:max-w-4xl pt-2 p-4">
           <div className="block w-full md:w-1/3 justify-center md:justify-start p-4 md:p-0">
             <address className="text-sm not-italic text-center md:text-left">
@@ -31,14 +31,14 @@ const Layout = ({ children, headerChildren }) => {
                 Email:{' '}
                 <a
                   href="mailto:thomas.stagl@gmail.com"
-                  className="md:text-gray-400"
+                  className="text-teal-400"
                 >
                   thomas.stagl@gmail.com
                 </a>
               </p>
               <p>
                 Tel:{' '}
-                <a href="tel://+436766688722" className="md:text-gray-400">
+                <a href="tel://+436766688722" className="text-teal-400">
                   +43 676 6688722
                 </a>
               </p>

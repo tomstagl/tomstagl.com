@@ -12,7 +12,7 @@ const AboutMe: FunctionComponent = () => {
       <div className="py-12">
         <Avatar avatarSize={32} className="justify-center" />
       </div>
-      <div className="pb-4 md:mx-auto content-center">
+      <div className="pb-4 md:mx-auto content-center ">
         <ShareArticle className="justify-center" />
       </div>
       <div>

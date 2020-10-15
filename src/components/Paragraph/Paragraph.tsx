@@ -16,7 +16,7 @@ const Paragraph: FunctionComponent<ParagraphProps> = ({
 }) => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "success.jpg" }) {
+      image: file(relativePath: { eq: "running.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid

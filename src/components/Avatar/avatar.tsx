@@ -33,13 +33,13 @@ export const PureAvatar: FunctionComponent<AvatarProps> = ({
           className="flex flex-row items-center text-2xl text-gray-400"
         >
           <Img
-            className={`${avatarSizeHeight} ${avatarSizeWidth} mr-4 rounded-full mx-auto border-2 border-teal-400 bg-white`}
+            className={`${avatarSizeHeight} ${avatarSizeWidth} rounded-full mx-auto border-2 border-teal-400 bg-white`}
             fluid={data.avatarImage.childImageSharp.fluid}
             alt="Portrait of Tom Stagl"
           />
           {title && (
             <span
-              className="font-semibold text-xl tracking-tight"
+              className="font-semibold text-xl tracking-tight ml-4"
               data-testid="avatar-title"
             >
               {title}

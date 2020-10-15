@@ -50,7 +50,8 @@ const GridList = () => {
                   change to truly empower your employees.{' '}
                 </p>
                 <p className="font-bold text-teal-800">
-                  I will guide you to find this setup.
+                  I will guide you to take the right steps during your agile
+                  transition journey.
                 </p>
               </div>
             </div>
@@ -86,7 +87,7 @@ const GridList = () => {
                   agile framework.
                 </p>
                 <p className="font-bold text-teal-800">
-                  I support you with the setup and during the execution.
+                  I support you with the setup and during the execution of OKRs.
                 </p>
               </div>
             </div>
@@ -112,10 +113,16 @@ const GridList = () => {
               </div>
               <div className="ml-4">
                 <h4 className="text-lg leading-6 font-medium text-gray-900">
-                  hmm
+                  Connecting the dots
                 </h4>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  sagte der bär
+                  Starting with SCRUM requires some roles to be filled. Usually
+                  it takes some time for recruiting a SCRUM Master and turning
+                  one team member into a SCRUM Master is not the best idea.
+                </p>
+                <p>
+                  I can take over the role as a SCRUM Master and also support
+                  your recruiting process.
                 </p>
               </div>
             </div>
