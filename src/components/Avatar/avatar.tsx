@@ -69,6 +69,6 @@ PureAvatar.propTypes = {
   title: PropTypes.string,
   avatarSize: PropTypes.number,
   className: PropTypes.string,
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
 }
 export default Avatar

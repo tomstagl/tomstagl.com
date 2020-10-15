@@ -43,7 +43,6 @@ const About = () => (
         and there were also the ones which failed, and provided a huge learning
         opportunity for me. Get in touch with me, to learn, how I can help you.
       </p>
-      <p className="py-4">Wo bitte get in touch</p>
 
       <H3 className="pt-4">Some of My Principles</H3>
       <ul className="p-6 list-outside list-disc">
@@ -92,7 +91,7 @@ const timeLineData = [
         'First time got in touch with SCRUM in 2003 while I was working as Programm Manager for QPass. Took my first SCRUM master course with Boris Gloger in Manchester 2004.',
     },
     line: {
-      year: 2004,
+      year: 2003,
     },
   },
   {
@@ -132,7 +131,7 @@ const timeLineData = [
     left: {
       header: 'CTO - durchblicker.at',
       text:
-        'Started an agile transition together with an external partner where we started off with one SCRUM team and built out a second one after a couple of months. One of my other responsibilities was attracting new talent for our teams.',
+        'Started an agile transition with the help an external partner where we started off with one SCRUM team and built out a second one after a couple of months. One of my other responsibilities was attracting new talent for our teams.',
     },
   },
   {

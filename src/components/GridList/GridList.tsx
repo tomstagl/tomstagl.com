@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { H2, H3 } from '../Container/Headers'
 
 const GridList = () => {
@@ -7,10 +8,13 @@ const GridList = () => {
       <div className="lg:text-center">
         <H2>My Services</H2>
         <h4>
-          Starting agile transitions should only have one goal; to make your
-          company more successful. Making a company successful requires
-          different disciplines. Each one applied carefully will lead to an
-          organisition which is acting with agility.
+          Starting agile transitions should only have one goal; to{' '}
+          <span className="text-teal-600 font-bold">
+            make your company successful
+          </span>
+          . Making a company successful requires different disciplines. Each one
+          applied carefully will lead to an organisition which is acting with
+          agility.
         </h4>
       </div>
 
@@ -108,12 +112,10 @@ const GridList = () => {
               </div>
               <div className="ml-4">
                 <h4 className="text-lg leading-6 font-medium text-gray-900">
-                  Zentrale Verwaltung
+                  hmm
                 </h4>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  Jegliche Kommunikation und Interaktion zum Angebot ist
-                  f&uuml;r das Team transparent in projectpool ersichtlich. Da
-                  weiss man, wo man gerade im Projekt steht.
+                  sagte der bär
                 </p>
               </div>
             </div>
