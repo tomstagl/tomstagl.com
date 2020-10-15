@@ -26,7 +26,7 @@ export const PureAvatar: FunctionComponent<AvatarProps> = ({
   return (
     <div className={avatarSizeHeight}>
       <div
-        className={`flex items-center flex-shrink-0 text-white ${className}`}
+        className={`px-4 flex items-center flex-shrink-0 text-white ${className}`}
       >
         <Link
           to="/"

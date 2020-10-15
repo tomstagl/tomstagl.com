@@ -15,7 +15,7 @@ const FrequentlyAskedQuestions: FunctionComponent = () => {
       <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
         <div className="w-full lg:w-1/2 px-4 py-2">
           <details className="mb-4">
-            <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+            <summary className="font-semibold  bg-gray-200 rounded py-2 px-4">
               How Long is this site live?
             </summary>
 
@@ -26,7 +26,7 @@ const FrequentlyAskedQuestions: FunctionComponent = () => {
             </span>
           </details>
           <details className="mb-4">
-            <summary className="font-semibold bg-gray-200 rounded-md py-2 px-4">
+            <summary className="font-semibold bg-gray-200 rounded py-2 px-4">
               Can I install/upload anything I want on there?
             </summary>
 
@@ -37,7 +37,7 @@ const FrequentlyAskedQuestions: FunctionComponent = () => {
             </span>
           </details>
           <details className="mb-4">
-            <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+            <summary className="font-semibold  bg-gray-200 rounded py-2 px-4">
               How can I migrate to another site?
             </summary>
 
@@ -50,7 +50,7 @@ const FrequentlyAskedQuestions: FunctionComponent = () => {
         </div>
         <div className="w-full lg:w-1/2 px-4 py-2">
           <details className="mb-4">
-            <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+            <summary className="font-semibold  bg-gray-200 rounded py-2 px-4">
               Can I change the domain you give me?
             </summary>
 
@@ -61,7 +61,7 @@ const FrequentlyAskedQuestions: FunctionComponent = () => {
             </span>
           </details>
           <details className="mb-4">
-            <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+            <summary className="font-semibold  bg-gray-200 rounded py-2 px-4">
               How many sites I can create at once?
             </summary>
 
@@ -72,7 +72,7 @@ const FrequentlyAskedQuestions: FunctionComponent = () => {
             </span>
           </details>
           <details className="mb-4">
-            <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+            <summary className="font-semibold  bg-gray-200 rounded py-2 px-4">
               How can I communicate with you?
             </summary>
 

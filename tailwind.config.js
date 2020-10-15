@@ -2,7 +2,10 @@ module.exports = {
   future: {
     purgeLayersByDefault: true,
   },
-  purge: ['./src/**/*.js', './src/**/*.jsx'],
+  purge: {
+    options: { whitelistPatterns: [/^h-.*/, /^w-.*/] },
+    content: ['./src/**/*.js', './src/**/*.jsx', './src/**/*.tsx'],
+  },
   theme: {
     extend: {},
   },

@@ -24,7 +24,7 @@ const IndexPage = () => (
 
     <Section>
       <H2>&#128640; Main Agile Competences</H2>
-      <div className="md:flex">
+      <div className="md:flex mx-auto">
         <SmallCard
           title="Business Agility"
           text="Guiding organisations from vision, mission and OKR setup and product focused developement. Allowing organisations to become successful."

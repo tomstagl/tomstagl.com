@@ -7,7 +7,7 @@ const ShareArticle = ({ className }) => {
     <div className={`flex items-center text-3xl ${className}`}>
       <a
         aria-label="twitter"
-        className="px-2"
+        className="pr-2"
         rel="noopener noreferrer"
         target="_blank"
         href="https://twitter.com/herrstagl"
@@ -16,7 +16,7 @@ const ShareArticle = ({ className }) => {
       </a>
       <a
         aria-label="linked In"
-        className="px-2"
+        className="pl-2"
         rel="noopener noreferrer"
         target="_blank"
         href="https://at.linkedin.com/in/herrstagl"

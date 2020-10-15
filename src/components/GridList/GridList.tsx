@@ -23,7 +23,7 @@ const GridList = () => {
           <li>
             <div className="flex">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white">
+                <div className="flex items-center justify-center h-12 w-12 rounded bg-teal-500 text-white">
                   <svg
                     className="h-6 w-6"
                     fill="none"
@@ -48,9 +48,9 @@ const GridList = () => {
                   existing processes but mainly on the people and interactions
                   in your company. An agile transition also requires a culture
                   change to truly empower your employees.{' '}
-                  <p className="font-bold text-teal-800">
-                    I will guide you to find this setup.
-                  </p>
+                </p>
+                <p className="font-bold text-teal-800">
+                  I will guide you to find this setup.
                 </p>
               </div>
             </div>
@@ -58,7 +58,7 @@ const GridList = () => {
           <li className="mt-10 md:mt-0">
             <div className="flex">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white">
+                <div className="flex items-center justify-center h-12 w-12 rounded bg-teal-500 text-white">
                   <svg
                     className="h-6 w-6"
                     fill="none"
@@ -84,9 +84,9 @@ const GridList = () => {
                   Using OKRs is one of the powerful ways to set your big and
                   bold goals which then can be transformed into your preferred
                   agile framework.
-                  <p className="font-bold text-teal-800">
-                    I support you with the setup and during the execution.
-                  </p>
+                </p>
+                <p className="font-bold text-teal-800">
+                  I support you with the setup and during the execution.
                 </p>
               </div>
             </div>
@@ -94,7 +94,7 @@ const GridList = () => {
           <li className="mt-10 md:mt-0">
             <div className="flex">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white">
+                <div className="flex items-center justify-center h-12 w-12 rounded bg-teal-500 text-white">
                   <svg
                     className="h-6 w-6"
                     fill="none"
@@ -123,7 +123,7 @@ const GridList = () => {
           <li className="mt-10 md:mt-0">
             <div className="flex">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white">
+                <div className="flex items-center justify-center h-12 w-12 rounded bg-teal-500 text-white">
                   <svg
                     className="h-6 w-6"
                     fill="none"
@@ -147,10 +147,10 @@ const GridList = () => {
                   Getting a good set of action items during the agile transition
                   retrospective is quiet easy, executing them falls short from
                   time to time.
-                  <p className="font-bold text-teal-800">
-                    I keep nodging so that you can keep up your pace and
-                    continue improving.
-                  </p>
+                </p>
+                <p className="font-bold text-teal-800">
+                  I keep nodging so that you can keep up your pace and continue
+                  improving.
                 </p>
               </div>
             </div>

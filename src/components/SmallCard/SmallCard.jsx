@@ -5,7 +5,7 @@ import Image from '../Card/image'
 const SmallCard = ({ title, text, image, imageCredits, className }) => {
   return (
     <div
-      className={`max-w-xs rounded overflow-hidden shadow-lg m-2 ${className}`}
+      className={`rounded overflow-hidden shadow-lg my-2 md:m-2 ${className}`}
     >
       <div className="h-56">
         <Image imgName={image} className="h-full" credits={imageCredits} />
