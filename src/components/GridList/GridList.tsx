@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 
-import { H2, H3 } from '../Container/Headers'
+import { H2 } from '../Container/Headers'
 
-const GridList = () => {
+const GridList: FunctionComponent = () => {
   return (
     <>
       <div className="lg:text-center">
@@ -13,8 +13,8 @@ const GridList = () => {
             make your company successful
           </span>
           . Making a company successful requires different disciplines. Each one
-          applied carefully will lead to an organisition which is acting with
-          agility.
+          applied carefully will lead to a resilient organisition which is
+          acting with agility.
         </h4>
       </div>
 
@@ -43,7 +43,7 @@ const GridList = () => {
                 <h4 className="text-lg leading-6 font-medium text-gray-900">
                   There is more than processes and tools
                 </h4>
-                <p className="mt-2 text-base leading-6 text-gray-500">
+                <p className="mt-2 text-base leading-6 text-gray-700">
                   A carefully started agile transition focuses not only on
                   existing processes but mainly on the people and interactions
                   in your company. An agile transition also requires a culture
@@ -79,12 +79,12 @@ const GridList = () => {
                 <h4 className="text-lg leading-6 font-medium text-gray-900">
                   Balance between goals and execution
                 </h4>
-                <p className="mt-2 text-base leading-6 text-gray-500">
+                <p className="mt-2 text-base leading-6 text-gray-700">
                   Goal setting in an agile environment has to help you to find
-                  your north start, and the goals also needs to stay adjustable.
+                  your north start, and the goals also need to stay adjustable.
                   Using OKRs is one of the powerful ways to set your big and
                   bold goals which then can be transformed into your preferred
-                  agile framework.
+                  agile framework to make them real.
                 </p>
                 <p className="font-bold text-teal-800">
                   I support you with the setup and during the execution of OKRs.
@@ -115,12 +115,12 @@ const GridList = () => {
                 <h4 className="text-lg leading-6 font-medium text-gray-900">
                   Connecting the dots
                 </h4>
-                <p className="mt-2 text-base leading-6 text-gray-500">
+                <p className="mt-2 text-base leading-6 text-gray-700">
                   Starting with SCRUM requires some roles to be filled. Usually
                   it takes some time for recruiting a SCRUM Master and turning
                   one team member into a SCRUM Master is not the best idea.
                 </p>
-                <p>
+                <p className="font-bold text-teal-800">
                   I can take over the role as a SCRUM Master and also support
                   your recruiting process.
                 </p>
@@ -150,7 +150,7 @@ const GridList = () => {
                 <h4 className="text-lg leading-6 font-medium text-gray-900">
                   Effective Communications
                 </h4>
-                <p className="mt-2 text-base leading-6 text-gray-500">
+                <p className="mt-2 text-base leading-6 text-gray-700">
                   Getting a good set of action items during the agile transition
                   retrospective is quiet easy, executing them falls short from
                   time to time.

@@ -11,6 +11,7 @@ import {
   TwitterIcon,
   TwitterShareButton,
 } from 'react-share'
+
 import BlogCodeBlock from '../components/Blog/BlogEntry/BlogCodeBlock/blogCodeBlock'
 import BlogImageBlock from '../components/Blog/BlogEntry/blogImageBlock'
 import BlogQuoteBlock from '../components/Blog/BlogEntry/blogQuoteBlock'
@@ -20,7 +21,6 @@ import BlogTextBlock from '../components/Blog/BlogEntry/blogTextBlock'
 import Section from '../components/Container/Section'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { H1 } from '../components/Container/Headers'
 
 const Components = {
   text: BlogTextBlock,
@@ -75,7 +75,7 @@ export default function BlogPost({ data }) {
             <p className="text-sm text-right font-thin text-gray-500">
               Published {meta.publishedAt}
             </p>
-            <H1>{title}</H1>
+            <h1>{title}</h1>
             <p>{subtitle}</p>
             {blogimage && (
               <figure>

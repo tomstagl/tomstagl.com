@@ -64,11 +64,13 @@
   "license": "MIT",
   "scripts": {
     "dev": "gatsby develop",
+    "dev-r": "gatsby develop -H 0.0.0.0",
     "clean": "gatsby clean",
     "build": "npm run clean && gatsby build",
     "deploy": "npm run clean && gatsby build",
     "deploy-s3": "npm run deploy && AWS_PROFILE=gatsby gatsby-plugin-s3 deploy --yes",
     "serve": "gatsby serve",
+    "serve-r": "gatsby serve -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "eslint": "eslint --ignore-path .eslintignore .",
     "test": "NODE_ENV=test jest --coverage"

@@ -3,7 +3,7 @@ import Img, { FluidObject } from 'gatsby-image'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
 
-type AvatarProps = {
+type PureAvatarProps = {
   title?: string
   data: {
     avatarImage: {
@@ -15,7 +15,12 @@ type AvatarProps = {
   avatarSize?: number
   className?: string
 }
-export const PureAvatar: FunctionComponent<AvatarProps> = ({
+type AvatarProps = {
+  title?: string
+  avatarSize?: number
+  className?: string
+}
+export const PureAvatar: FunctionComponent<PureAvatarProps> = ({
   title,
   data,
   avatarSize = 16,

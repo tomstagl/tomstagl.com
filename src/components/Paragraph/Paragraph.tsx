@@ -12,7 +12,7 @@ type ParagraphProps = {
 
 const Paragraph: FunctionComponent<ParagraphProps> = ({
   heading = 'What drives me',
-  text = 'I love to see organisations, teams and individuals suceed in what they do. That is why I live and breathe agile practices; to unleash the very best in everyone. An agile transition requires a lot of practical and methodical know how, but even more than this, it requires experience. I bring with me more than 15 years experience as SCRUM master.',
+  text = 'I love to see organisations, teams and individuals suceed in what they do. That is why I live and breathe agile practices; to unleash the very best in everyone. An agile transition requires a lot of practical and methodical know how, but even more than this, it requires experience. I have more than 14 years experience as SCRUM master and Agile Coach and I will make all my experience evailable for your organisation and teams.',
 }) => {
   const { image } = useStaticQuery(graphql`
     query {
@@ -38,10 +38,10 @@ const Paragraph: FunctionComponent<ParagraphProps> = ({
               imgStyle={{ objectFit: 'cover', objectPosition: '0% 25%' }}
             />
           </div>
-          <div className="py-6 px-6 lg:py-12 max-w-xl lg:max-w-5xl lg:w-1/2">
-            <h2 className="text-3xl text-gray-800 font-bold">
-              Reaching <span className="text-teal-600">your</span> goals!
-            </h2>
+          <div className="py-6 px-6 lg:py-12 lg:max-w-5xl lg:w-1/2">
+            <h3 className="text-3xl text-gray-800 font-bold">
+              Reaching <span className="text-teal-600">your</span> goals
+            </h3>
             <p className="mt-4 text-gray-600">{text}</p>
             {/* <div className="mt-8">
               <a

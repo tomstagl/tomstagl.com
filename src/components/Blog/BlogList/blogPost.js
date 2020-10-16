@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import BlogReadMoreLink from './blogReadMoreLink'
 
 const BlogPost = ({ post, latest, last, className }) => {
-  const read_more_link = '/blog/' + post.slug
+  const read_more_link = `/blog/${post.slug}/`
   const published_since = post.meta.publishedAt
   const abstract = post.abstract
   const blogImage = post.blogimage

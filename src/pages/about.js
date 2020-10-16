@@ -1,9 +1,7 @@
 import React from 'react'
 
-import Card from '../components/Card/card'
-import { H2, H3 } from '../components/Container/Headers'
+import { H1, H2 } from '../components/Container/Headers'
 import Section from '../components/Container/Section'
-import FrequentlyAskedQuestions from '../components/FrequentlyAskedQuestions/FrequentlyAskedQuestions'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TimeLine from '../components/Timeline/Timeline'
@@ -12,7 +10,7 @@ const About = () => (
   <Layout>
     <SEO title="About" />
     <Section>
-      <H2>About Me</H2>
+      <H1>About Me</H1>
       <p className="py-4">
         I was born back in 1972 as the youngest of three kids. So I learned very
         early how to inspect and adopt. And that is also what I&apos;ve
@@ -23,28 +21,38 @@ const About = () => (
       <p className="py-4">
         During my professional carreer I&apos;ve had the very early chance to
         get in touch with Scrum. That was back in 2003, where engineers in my
-        team wanted to try out this new way of organising work. At this time my
-        role was programm manager trying hardly to wire together multiple
-        Microsoft Project plans to steer multiple parallel projects. Shortly
-        after 2003 I&apos;ve moved also into the SCRUM master role.
+        team wanted to try out this new way of organising the work. At this time
+        my role was programm manager trying hardly to wire together multiple
+        Microsoft Project plans to steer multiple parallel projects. SCRUM
+        sounded to me like the way to go. The thing which finally can add focus
+        and transperancy to the work we did. Shortly after 2003 I&apos;ve moved
+        also into the SCRUM master role, ... and loved it!
       </p>
       <p className="py-4">
         A couple of years ago, I&apos;ve seen the talk &ldquo;Agile is
         dead&rdquo;, at least that&apos;s what Prgramatic Dave said a couple of
-        years ago on a conference talk. And I agree. Agile just turned into a
-        business, focusing mainly on the tools and processes available. Each one
-        promising to be a silver bullet. But the core of talk was to focus on
-        your needs, focus on the things which work for your organisation.
-        Continue doing them, and stop all the things which are blocking you.
+        years ago on a conference talk. And I agree. What I&apos;ve seen during
+        all those years is, that Agile just turned into a business, focusing
+        mainly on the tools and processes available. Each one promising to be a
+        silver bullet. But the core of the talk was to{' '}
+        <span className="text-teal-700">
+          focus on your needs, focus on the things which work for your
+          organisation
+        </span>
+        . Continue doing them, and stop all the things which are blocking you.
         Acting with agility makes you agile, and most importantly successful.
       </p>
-      <p className="py-4">
-        I have guided a couple of agile transitions. Most of them successfull
-        and there were also the ones which failed, and provided a huge learning
-        opportunity for me. Get in touch with me, to learn, how I can help you.
+      <p className="py-4 text-center text-lg underline">
+        Working together with me will help you to unleash the power of your
+        teams.
       </p>
+    </Section>
 
-      <H3 className="pt-4">Some of My Principles</H3>
+    <Section dark>
+      <TimeLine timeLineData={timeLineData} />
+    </Section>
+    <Section>
+      <H2 className="pt-4">Some of My Principles</H2>
       <ul className="p-6 list-outside list-disc">
         <li>
           If there was a production incident, write a{' '}
@@ -76,9 +84,6 @@ const About = () => (
           Allow her/him to get better.
         </li>
       </ul>
-    </Section>
-    <Section dark>
-      <TimeLine timeLineData={timeLineData} />
     </Section>
   </Layout>
 )

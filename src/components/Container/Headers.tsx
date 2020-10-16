@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
 
-export const H1: FunctionComponent = ({ children }) => <h1>{children}</h1>
+export const H1: FunctionComponent = ({ children }) => (
+  <h1 className="pb-4 text-3xl lg:text-center uppercase">{children}</h1>
+)
 // TODO: make header for blog list. Original was:h2 {@apply text-2xl;}
 
 export const H2: FunctionComponent = ({ children }) => (

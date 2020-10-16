@@ -23,18 +23,18 @@ const IndexPage = () => (
     />
 
     <Section>
-      <H2>&#128640; Main Agile Competences</H2>
+      <H2>Main Agile Competences</H2>
       <div className="md:flex mx-auto">
         <SmallCard
           title="Business Agility"
-          text="Guiding organisations from vision, mission and OKR setup and product focused developement. Allowing organisations to become successful."
+          text="Guiding organisations from vision, mission and OKR setup to product focused developement. Allowing organisations to feel the benefits of true agility."
           className="w-full md:w-1/2 lg:w-1/3"
           image="okrs.jpg"
           imageCredits="asdf"
         />
         <SmallCard
           title="Agile Coaching"
-          text="Supporting whole organisations or single teams during their agility journey. Getting the best out of everyone."
+          text="I'm guiding whole organisations or single teams during their agility journey. Getting the best out of everyone."
           image="agile-coaching.jpg"
           imageCredits="Photo by Jamie Street on Unsplash"
           className="w-full md:w-1/2 lg:w-1/3"
@@ -43,7 +43,7 @@ const IndexPage = () => (
           title="SCRUM"
           image="scrum.jpg"
           imageCredits="asdf"
-          text="A proper trained and guides SCRUM Setup is the foundation for a swift start into a agile transition journey. I bring with me over 14 years of experience as acting SCRUM Master."
+          text="A proper trained and guided SCRUM Setup is the foundation for a swift start into an agile transition journey. I contribute over 14 years of experience as acting SCRUM Master."
           className="w-full md:w-1/2 lg:w-1/3"
         />
       </div>
