@@ -13,7 +13,7 @@ const About = () => (
       <H1>About Me</H1>
       <p className="py-4">
         I was born back in 1972 as the youngest of three kids. So I learned very
-        early how to inspect and adopt. And that is also what I&apos;ve
+        early how to inspect and adapt. And that is also what I&apos;ve
         continued doing all the years. During my carreer my main focus was on
         agile practices. Mainly to unlock the potential of each and everyone.
         Helping each person to find the right spot in a team.
@@ -29,12 +29,12 @@ const About = () => (
         also into the SCRUM master role, ... and loved it!
       </p>
       <p className="py-4">
-        A couple of years ago, I&apos;ve seen the talk &ldquo;Agile is
-        dead&rdquo;, at least that&apos;s what Prgramatic Dave said a couple of
-        years ago on a conference talk. And I agree. What I&apos;ve seen during
-        all those years is, that Agile just turned into a business, focusing
-        mainly on the tools and processes available. Each one promising to be a
-        silver bullet. But the core of the talk was to{' '}
+        A couple of years ago, I saw the talk &ldquo;Agile is dead&rdquo;, at
+        least that&apos;s what Pragramatic Dave said a couple of years ago on a
+        conference talk. And I agree. What I&apos;ve seen during all those years
+        is, that Agile just turned into a business, focusing mainly on the tools
+        and processes available. Each one promising to be a silver bullet. But
+        the core of the talk was to{' '}
         <span className="text-teal-700">
           focus on your needs, focus on the things which work for your
           organisation
