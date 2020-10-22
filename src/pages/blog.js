@@ -46,7 +46,7 @@ const Blog = (data) => {
   return (
     <Layout>
       <SEO
-        title="Blog"
+        title="Blog posts about agility and DevOps"
         description="Blog Post about all different aspects of agility. Fokusing on easy to follow how to's and best practices."
       />
       <Section>
