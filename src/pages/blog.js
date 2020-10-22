@@ -1,10 +1,10 @@
-import React from 'react'
 import { graphql } from 'gatsby'
+import React from 'react'
 
-import Layout from '../components/layout'
 import BlogPost from '../components/Blog/BlogList/blogPost'
-import SEO from '../components/seo'
 import Section from '../components/Container/Section'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const Blog = (data) => {
   let lastPost
