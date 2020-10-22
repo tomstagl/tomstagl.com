@@ -19,7 +19,7 @@ const IndexPage = () => (
   <Layout headerChildren={headerChildren}>
     <SEO
       title="business agility"
-      description="I'm an experienced Business Agility Coach focusing on New Work, OKRs and SCRUM, "
+      description="I'm an experienced Business Agility Coach focusing on New Work, OKRs and SCRUM."
     />
 
     <Section>

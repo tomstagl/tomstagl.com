@@ -8,7 +8,10 @@ import TimeLine from '../components/Timeline/Timeline'
 
 const About = () => (
   <Layout>
-    <SEO title="About" />
+    <SEO
+      title="About"
+      description="All about my carreer, achievements and what I am doing from a professional perspective. In short, here you find also my CV."
+    />
     <Section>
       <H1>About Me</H1>
       <p className="py-4">
