@@ -7,8 +7,12 @@ import ShareArticle from '../Footer/ShareArticle/shareArticle'
 const AboutMe: FunctionComponent = () => {
   return (
     <div className="justify-center md:text-center">
-      <H1>Tom Stagl</H1>
-      <h3>Business Agility Coach</h3>
+      <H1>
+        Tom Stagl{' '}
+        <span className="block normal-case text-base">
+          Business Agility Coach
+        </span>
+      </H1>
       <div className="py-12">
         <Avatar avatarSize={32} className="justify-center" />
       </div>
