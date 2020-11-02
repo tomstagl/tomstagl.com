@@ -12,7 +12,7 @@ type ParagraphProps = {
 
 const Paragraph: FunctionComponent<ParagraphProps> = ({
   heading = 'What drives me',
-  text = 'I love to see organisations, teams and individuals suceed in what they do. That is why I live and breathe agile practices; to unleash the very best in everyone. An agile transition requires a lot of practical and methodical know how, but even more than this, it requires experience. I have more than 14 years experience as SCRUM master and Agile Coach and I will make all my experience evailable for your organisation and teams.',
+  text = 'I love to see organisations, teams and individuals succeed in what they do. That is why I live and breathe agile practices; to unleash the very best in everyone. An agile transition requires a lot of practical and methodical know how, but even more than this, it requires experience. I have more than 14 years experience as SCRUM master and Agile Coach and I will make all my experience evailable for your organisation and teams.',
 }) => {
   const { image } = useStaticQuery(graphql`
     query {

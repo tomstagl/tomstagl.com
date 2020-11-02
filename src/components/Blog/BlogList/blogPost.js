@@ -2,8 +2,8 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import React from 'react'
-
 import BlogReadMoreLink from './blogReadMoreLink'
+
 
 const BlogPost = ({ post, latest, last, className }) => {
   const read_more_link = `/blog/${post.slug}/`

@@ -27,7 +27,7 @@ const IndexPage = () => (
       <div className="md:flex mx-auto">
         <SmallCard
           title="Business Agility"
-          text="Guiding organisations from vision, mission and OKR setup to product focused developement. Allowing organisations to feel the benefits of true agility."
+          text="Guiding organisations from vision, mission and OKR setup to product focused development. Allowing organisations to feel the benefits of true agility."
           className="w-full md:w-1/2 lg:w-1/3"
           image="okrs.jpg"
           imageCredits="asdf"
