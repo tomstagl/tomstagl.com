@@ -76,6 +76,7 @@ export const query = graphql`
           slug
           meta {
             firstPublishedAt(formatString: "DD. MMM YYYY")
+            htmlFirstPublishedAt: firstPublishedAt(formatString: "YYYY-MM-DD")
           }
           blogimage {
             fluid(maxWidth: 800, imgixParams: { fm: "jpg", auto: "compress" }) {

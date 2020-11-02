@@ -51,7 +51,13 @@ const BlogPost = ({ post, latest, last, className }) => {
             <h2 className="text-2xl">{post.title}</h2>
           </Link>
           <p className="flex text-gray-500 text-sm font-light">
-            Published {published_since}
+            Published{' '}
+            <time
+              itemProp="datePublished"
+              dateTime={post.meta.htmlFirstPublishedAt}
+            >
+              {published_since}
+            </time>
           </p>
         </header>
         <div
