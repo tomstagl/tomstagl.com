@@ -10,19 +10,19 @@ const About = () => (
   <Layout>
     <SEO
       title="About"
-      description="All about my carreer, achievements and what I am doing from a professional perspective. In short, here you find also my CV."
+      description="All about my career, achievements and what I am doing from a professional perspective. In short, here you find also my CV."
     />
     <Section>
       <H1>About Me</H1>
       <p className="py-4">
         I was born back in 1972 as the youngest of three kids. So I learned very
         early how to inspect and adapt. And that is also what I&apos;ve
-        continued doing all the years. During my carreer my main focus was on
+        continued doing all the years. During my career my main focus was on
         agile practices. Mainly to unlock the potential of each and everyone.
         Helping each person to find the right spot in a team.
       </p>
       <p className="py-4">
-        During my professional carreer I&apos;ve had the very early chance to
+        During my professional career I&apos;ve had the very early chance to
         get in touch with Scrum. That was back in 2003, where engineers in my
         team wanted to try out this new way of organising the work. At this time
         my role was programm manager trying hardly to wire together multiple
