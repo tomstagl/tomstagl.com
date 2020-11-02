@@ -1,12 +1,13 @@
-import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
+import React from 'react'
+
 import BlogReadMoreLink from './blogReadMoreLink'
 
 const BlogPost = ({ post, latest, last, className }) => {
   const read_more_link = `/blog/${post.slug}/`
-  const published_since = post.meta.publishedAt
+  const published_since = post.meta.firstPublishedAt
   const abstract = post.abstract
   const blogImage = post.blogimage
 

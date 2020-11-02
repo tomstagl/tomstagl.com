@@ -73,7 +73,7 @@ export default function BlogPost({ data }) {
           <HelmetDatoCms seo={post.seoMetaTags} />
           <header>
             <p className="text-sm text-right font-thin text-gray-500">
-              Published {meta.publishedAt}
+              Published {meta.firstPublishedAt}
             </p>
             <h1>{title}</h1>
             <p>{subtitle}</p>
@@ -138,7 +138,7 @@ export const query = graphql`
         ...GatsbyDatoCmsSeoMetaTags
       }
       meta {
-        publishedAt(formatString: "DD. MMM YYYY")
+        firstPublishedAt(formatString: "DD. MMM YYYY")
       }
       blogimage {
         fluid(maxWidth: 640, imgixParams: { fm: "jpg", auto: "compress" }) {

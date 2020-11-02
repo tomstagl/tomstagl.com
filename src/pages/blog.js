@@ -66,7 +66,7 @@ export const query = graphql`
   {
     allDatoCmsBlogpost(
       filter: { meta: { status: { eq: "published" } } }
-      sort: { fields: meta___publishedAt, order: DESC }
+      sort: { fields: meta___firstPublishedAt, order: DESC }
     ) {
       edges {
         node {
@@ -75,7 +75,7 @@ export const query = graphql`
           subtitle
           slug
           meta {
-            publishedAt(formatString: "DD. MMM YYYY")
+            firstPublishedAt(formatString: "DD. MMM YYYY")
           }
           blogimage {
             fluid(maxWidth: 800, imgixParams: { fm: "jpg", auto: "compress" }) {
