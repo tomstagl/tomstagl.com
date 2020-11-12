@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Tom Stagl`,
-    description: `Experienced business agility by, Agile Coach, Interim CTO - Tom Stagl`,
+    description: `Experienced business agility - and Agile Coach, Interim CTO - Tom Stagl`,
     author: `@herrstagl`,
     siteUrl: `https://tomstagl.com`,
   },

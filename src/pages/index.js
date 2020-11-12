@@ -18,7 +18,7 @@ const headerChildren = (
 const IndexPage = () => (
   <Layout headerChildren={headerChildren}>
     <SEO
-      title="business agility"
+      title="Business Agility Coach"
       description="I'm an experienced Business Agility Coach focusing on New Work, OKRs and SCRUM."
     />
 
