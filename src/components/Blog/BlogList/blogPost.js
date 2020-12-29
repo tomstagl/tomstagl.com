@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import BlogReadMoreLink from './blogReadMoreLink'
 
-
 const BlogPost = ({ post, latest, last, className }) => {
   const read_more_link = `/blog/${post.slug}/`
   const published_since = post.meta.firstPublishedAt
@@ -29,6 +28,7 @@ const BlogPost = ({ post, latest, last, className }) => {
             fluid={blogImage.fluid}
             className="rounded shadow"
             alt={blogImage.alt}
+            title={post.title}
           />
           {blogImage.title && <figcaption>{blogImage.title}</figcaption>}
         </figure>

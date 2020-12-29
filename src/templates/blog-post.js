@@ -85,7 +85,12 @@ export default function BlogPost({ data }) {
             <p>{subtitle}</p>
             {blogimage && (
               <figure>
-                <Img fluid={blogimage.fluid} className="rounded" />
+                <Img
+                  fluid={blogimage.fluid}
+                  className="rounded"
+                  title={post.title}
+                  alt={blogimage.alt}
+                />
                 {blogimage.title && <figcaption>{blogimage.title}</figcaption>}
               </figure>
             )}
