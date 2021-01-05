@@ -9,6 +9,13 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-splitbee`,
+      options: {
+        includeInDevelopment: false,
+        delayTimeout: 0,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
