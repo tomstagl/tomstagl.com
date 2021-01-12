@@ -74,13 +74,13 @@ const data = {
       question:
         'How can an Business Agility Coach help our organisation to become successful?',
       answer:
-        'As an agile coach will work with you and your teams so that you can come up with the solutions, which suite best your needs. This is supported by active coaching on team and on one on one level and by providing necessary trainings.',
+        'As an agile coach I will work with you and your teams so that you can come up with the solutions, which suite best your needs. This is supported by active coaching on team and on one on one level and by providing necessary trainings.',
     },
     {
       question:
         'Is it necessary to have an Agile Coach as a permanent role in the organisation?',
       answer:
-        'Yes, at the beginning it is highly recommended to work with a already experienced person, either internal or external. The role of this person should include training and coaching of persons who want to step into the agile coach carreer path..',
+        'Yes, at the beginning it is highly recommended to work with a already experienced person, either internal or external. The role of this person should include training and coaching of persons who want to step into the agile coach carreer path. But it also depends upon other facts as well.',
     },
   ],
 }
