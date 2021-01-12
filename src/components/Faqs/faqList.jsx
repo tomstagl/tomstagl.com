@@ -2,6 +2,7 @@ import { Collapse } from 'antd'
 import PropTypes from 'prop-types'
 import React from 'react'
 
+import FaqStructuredData from './faqStructuredData'
 import FaqTitle from './faqTitle'
 
 import 'antd/lib/collapse/style/index.css'
@@ -31,6 +32,7 @@ const FaqList = ({ data }) => {
           )
         })}
       </Collapse>
+      <FaqStructuredData data={data} />
     </>
   )
 }
