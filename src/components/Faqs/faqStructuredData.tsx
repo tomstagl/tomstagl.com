@@ -4,13 +4,12 @@ import { JsonLd } from 'react-schemaorg'
 import { Answer, FAQPage, Question } from 'schema-dts'
 
 export default function FaqStructuredData({ data }) {
-  const entities = data.items.map((item, id) => {
+  const mainEntity = data.items.map((item, id) => {
     const entity = {
       '@type': 'Question',
       name: item.question,
       acceptedAnswer: { '@type': 'Answer', text: item.answer },
     }
-    console.log(entity)
     return entity
   })
 
@@ -19,7 +18,7 @@ export default function FaqStructuredData({ data }) {
       item={{
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: { entities },
+        mainEntity,
       }}
     />
   )
