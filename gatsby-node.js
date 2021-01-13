@@ -12,7 +12,7 @@ exports.createPages = async function ({ actions, graphql }) {
   `)
   data.allDatoCmsBlogpost.edges.forEach((edge) => {
     const slug = edge.node.slug
-    const path = '/blog/' + slug
+    const path = '/blog/' + slug + '/'
     actions.createPage({
       path: path,
       component: require.resolve(`./src/templates/blog-post.js`),

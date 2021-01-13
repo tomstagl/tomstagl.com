@@ -45,7 +45,7 @@ const Layout = ({ children, headerChildren }) => {
             </address>
           </div>
           <div className="flex w-full md:w-1/3 justify-center p-4 md:p-0">
-            <Link to="/impressum" className="text-xs md:text-gray-400">
+            <Link to="/impressum/" className="text-xs md:text-gray-400">
               Imprint
             </Link>
           </div>
