@@ -40,7 +40,8 @@ export const PureAvatar: FunctionComponent<PureAvatarProps> = ({
           <Img
             className={`${avatarSizeHeight} ${avatarSizeWidth} rounded-full mx-auto border-2 border-teal-400 bg-white`}
             fluid={data.avatarImage.childImageSharp.fluid}
-            alt="Portrait of Tom Stagl"
+            alt="Portrait of Tom Stagl - Business Agility Coach"
+            title="Business Agility Coach, OKR coach, SCRUM master - Tom Stagl"
           />
           {title && (
             <span
