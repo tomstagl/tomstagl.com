@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import PropTypes from 'prop-types'
 import React from 'react'
 import BlogReadMoreLink from './blogReadMoreLink'
@@ -24,12 +24,11 @@ const BlogPost = ({ post, latest, last, className }) => {
     >
       {blogImage && (
         <figure>
-          <Img
-            fluid={blogImage.fluid}
+          <GatsbyImage
+            image={blogImage.gatsbyImageData}
             className="rounded shadow"
             alt={blogImage.alt}
-            title={post.title}
-          />
+            title={post.title} />
           {blogImage.title && <figcaption>{blogImage.title}</figcaption>}
         </figure>
       )}
@@ -74,7 +73,7 @@ const BlogPost = ({ post, latest, last, className }) => {
       </div>
       <hr className="w-2/3 mt-2 mx-auto border-1 border-dotted border-gray-300 bg-opacity-75 max-w-sm object-center" />
     </article>
-  )
+  );
 }
 
 BlogPost.propTypes = {

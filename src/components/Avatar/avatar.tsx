@@ -1,5 +1,5 @@
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import Img, { FluidObject } from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
 
@@ -37,11 +37,10 @@ export const PureAvatar: FunctionComponent<PureAvatarProps> = ({
           to="/"
           className="flex flex-row items-center text-2xl text-gray-400"
         >
-          <Img
+          <GatsbyImage
+            image={data.avatarImage.childImageSharp.gatsbyImageData}
             className={`${avatarSizeHeight} ${avatarSizeWidth} rounded-full mx-auto border-2 border-teal-400 bg-white`}
-            fluid={data.avatarImage.childImageSharp.fluid}
-            alt="Portrait of Tom Stagl"
-          />
+            alt="Portrait of Tom Stagl" />
           {title && (
             <span
               className="font-semibold text-xl tracking-tight ml-4"
@@ -53,22 +52,19 @@ export const PureAvatar: FunctionComponent<PureAvatarProps> = ({
         </Link>
       </div>
     </div>
-  )
+  );
 }
 
 const Avatar: FunctionComponent<AvatarProps> = (props) => {
   const { title, ...rest } = props
-  const data = useStaticQuery(graphql`
-    query {
-      avatarImage: file(relativePath: { eq: "avatar.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  avatarImage: file(relativePath: {eq: "avatar.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 300, layout: CONSTRAINED)
     }
-  `)
+  }
+}
+`)
   return <PureAvatar {...rest} title={title} data={data}></PureAvatar>
 }
 

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import Img, { FluidObject } from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import PropTypes from 'prop-types'
 
 type BlogImageBlockProps = {
@@ -12,9 +12,9 @@ type BlogImageBlockProps = {
 const BlogImageBlock: FunctionComponent<BlogImageBlockProps> = ({ bild }) => {
   return (
     <figure className="w-full">
-      <Img fluid={bild.fluid} alt={bild.alt} />
+      <GatsbyImage image={bild.gatsbyImageData} alt={bild.alt} />
     </figure>
-  )
+  );
 }
 
 BlogImageBlock.propTypes = {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { StaticQuery, graphql } from 'gatsby'
 
 /*
@@ -32,8 +32,11 @@ const Image = ({ imgName, className, credits }) => (
         return null
       }
       return (
-        <Img className={className} fluid={image.node.fluid} alt={credits} />
-      )
+        <GatsbyImage
+          image={image.childImageSharp.gatsbyImageData}
+          className={className}
+          alt={credits} />
+      );
     }}
   />
 )

@@ -1,5 +1,5 @@
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -85,12 +85,11 @@ export default function BlogPost({ data }) {
             <p>{subtitle}</p>
             {blogimage && (
               <figure>
-                <Img
-                  fluid={blogimage.fluid}
+                <GatsbyImage
+                  image={blogimage.gatsbyImageData}
                   className="rounded"
                   title={post.title}
-                  alt={blogimage.alt}
-                />
+                  alt={blogimage.alt} />
                 {blogimage.title && <figcaption>{blogimage.title}</figcaption>}
               </figure>
             )}
@@ -128,7 +127,7 @@ export default function BlogPost({ data }) {
         </div>
       </Section>
     </Layout>
-  )
+  );
 }
 
 BlogPost.propTypes = {
