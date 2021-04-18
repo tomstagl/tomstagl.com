@@ -57,7 +57,7 @@ export const PureAvatar: FunctionComponent<PureAvatarProps> = ({
   )
 }
 
-const Avatar: FunctionComponent<AvatarProps> = (props) => {
+const Avatar = (props: AvatarProps): JSX.Element => {
   const { title, ...rest } = props
   const data = useStaticQuery(graphql`
     query {
