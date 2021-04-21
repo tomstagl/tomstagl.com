@@ -73,7 +73,7 @@
     "clean": "gatsby clean",
     "build": "npm run clean && gatsby build",
     "deploy": "npm run clean && gatsby build",
-    "deploy-s3": "npm run deploy && AWS_PROFILE=gatsby gatsby-plugin-s3 deploy --yes",
+    "deploy-s3": "NODE_ENV=production && npm run deploy && AWS_PROFILE=gatsby gatsby-plugin-s3 deploy --yes",
     "serve": "gatsby serve",
     "serve-r": "gatsby serve -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",

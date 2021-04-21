@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV || 'develop'}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Tom Stagl`,
@@ -49,7 +53,7 @@ module.exports = {
       options: {
         // You can find your read-only API token under the Settings > API tokens
         // section of your administrative area:
-        apiToken: `641e4f5f7b118f5c4e07fc26263b42`,
+        apiToken: process.env.DATO_CMS_API_TOKEN,
         // If you are working on development/staging environment, you might want to
         // preview the latest version of records instead of the published one:
         previewMode: false,
