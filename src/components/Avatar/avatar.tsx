@@ -39,7 +39,7 @@ export const PureAvatar: FunctionComponent<PureAvatarProps> = ({
         >
           <GatsbyImage
             image={data.avatarImage.childImageSharp.gatsbyImageData}
-            className={`${avatarSizeHeight} ${avatarSizeWidth} rounded-full mx-auto border-2 border-teal-400 bg-white`}
+            className={`${avatarSizeHeight} ${avatarSizeWidth} rounded-full mx-auto border-2 border-teal-400 bg-white z-0`}
             alt="Portrait of Tom Stagl - Engineering Leader"
           />
           {title && (
