@@ -63,7 +63,7 @@ const Avatar = (props: AvatarProps): JSX.Element => {
       avatarImage: file(relativePath: { eq: "avatar.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
+            width: 150
             layout: CONSTRAINED
             placeholder: TRACED_SVG
           )
