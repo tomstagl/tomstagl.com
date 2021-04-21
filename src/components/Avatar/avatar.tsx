@@ -40,7 +40,7 @@ export const PureAvatar: FunctionComponent<PureAvatarProps> = ({
           <GatsbyImage
             image={data.avatarImage.childImageSharp.gatsbyImageData}
             className={`${avatarSizeHeight} ${avatarSizeWidth} rounded-full mx-auto border-2 border-teal-400 bg-white`}
-            alt="Portrait of Tom Stagl"
+            alt="Portrait of Tom Stagl - Engineering Leader"
           />
           {title && (
             <span
@@ -56,7 +56,7 @@ export const PureAvatar: FunctionComponent<PureAvatarProps> = ({
   )
 }
 
-const Avatar: FunctionComponent<AvatarProps> = (props) => {
+const Avatar = (props: AvatarProps): JSX.Element => {
   const { title, ...rest } = props
   const data = useStaticQuery(graphql`
     {

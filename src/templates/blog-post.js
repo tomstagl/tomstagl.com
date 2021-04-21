@@ -34,7 +34,7 @@ export default function BlogPost({ data }) {
   const post = data.datoCmsBlogpost
   const { title, subtitle, abstract, content, blogimage, meta, slug } = post
   const gatsbyBlogImage = getImage(blogimage)
-  const siteUrl = 'https://tomstagl.com/blog/' + slug
+  const siteUrl = 'https://tomstagl.com/blog/' + slug + '/'
   const hashTags = ['agility']
 
   const mapSections = () => {
