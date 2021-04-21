@@ -1,10 +1,9 @@
 module.exports = {
   purge: {
-    options: { whitelistPatterns: [/^h-.*/, /^w-.*/] },
     content: ['./src/**/*.js', './src/**/*.jsx', './src/**/*.tsx'],
-  },
-  theme: {
-    extend: {},
+    options: {
+      safelist: [/^h-.*/, /^w-.*/],
+    },
   },
   variants: {},
   plugins: [require('@tailwindcss/typography')],
