@@ -1,5 +1,5 @@
 import React from 'react'
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { StaticQuery, graphql } from 'gatsby'
 
 /*
@@ -13,10 +13,10 @@ const Image = ({ imgName, className, credits }) => (
         allImageSharp {
           edges {
             node {
-              fluid(maxWidth: 500) {
-                ...GatsbyImageSharpFluid
+              fluid {
                 originalName
               }
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: TRACED_SVG)
             }
           }
         }
@@ -31,12 +31,14 @@ const Image = ({ imgName, className, credits }) => (
       if (!image) {
         return null
       }
+
       return (
         <GatsbyImage
-          image={image.childImageSharp.gatsbyImageData}
+          image={image.node.gatsbyImageData}
           className={className}
-          alt={credits} />
-      );
+          alt={credits}
+        />
+      )
     }}
   />
 )

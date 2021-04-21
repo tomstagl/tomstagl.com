@@ -79,9 +79,11 @@ export const query = graphql`
             htmlFirstPublishedAt: firstPublishedAt(formatString: "YYYY-MM-DD")
           }
           blogimage {
-            fluid(maxWidth: 800, imgixParams: { fm: "jpg", auto: "compress" }) {
-              ...GatsbyDatoCmsFluid
-            }
+            gatsbyImageData(
+              width: 800
+              placeholder: TRACED_SVG
+              layout: FULL_WIDTH
+            )
             alt
           }
         }

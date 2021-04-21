@@ -1,5 +1,5 @@
 import { graphql, Link } from 'gatsby'
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -33,6 +33,7 @@ const Components = {
 export default function BlogPost({ data }) {
   const post = data.datoCmsBlogpost
   const { title, subtitle, abstract, content, blogimage, meta, slug } = post
+  const gatsbyBlogImage = getImage(blogimage)
   const siteUrl = 'https://tomstagl.com/blog/' + slug
   const hashTags = ['agility']
 
@@ -83,13 +84,14 @@ export default function BlogPost({ data }) {
             </p>
             <h1>{title}</h1>
             <p>{subtitle}</p>
-            {blogimage && (
+            {gatsbyBlogImage && (
               <figure>
                 <GatsbyImage
-                  image={blogimage.gatsbyImageData}
+                  image={gatsbyBlogImage}
                   className="rounded"
                   title={post.title}
-                  alt={blogimage.alt} />
+                  alt={blogimage.alt}
+                />
                 {blogimage.title && <figcaption>{blogimage.title}</figcaption>}
               </figure>
             )}
@@ -127,7 +129,7 @@ export default function BlogPost({ data }) {
         </div>
       </Section>
     </Layout>
-  );
+  )
 }
 
 BlogPost.propTypes = {
@@ -152,9 +154,7 @@ export const query = graphql`
         htmlFirstPublishedAt: firstPublishedAt(formatString: "YYYY-MM-DD")
       }
       blogimage {
-        fluid(maxWidth: 640, imgixParams: { fm: "jpg", auto: "compress" }) {
-          ...GatsbyDatoCmsFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: TRACED_SVG)
         title
         alt
       }
