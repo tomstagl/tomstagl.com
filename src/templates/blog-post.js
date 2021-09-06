@@ -30,7 +30,7 @@ const Components = {
   code: BlogCodeBlock,
 };
 
-export default function BlogPost({ data }) {
+function BlogPost({ data }) {
   const post = data.datoCmsBlogpost;
   const { title, subtitle, abstract, content, blogimage, meta, slug } = post;
   const gatsbyBlogImage = getImage(blogimage);
@@ -60,7 +60,7 @@ export default function BlogPost({ data }) {
         <span>
           <Link
             to="/blog/"
-            className="font-light text-sm text-gray-700 hover:text-teal-500"
+            className="text-sm font-light text-gray-700 hover:text-teal-500"
             activeClassName="text-teal-500 underline "
           >
             &lt; Back to Blog
@@ -69,7 +69,7 @@ export default function BlogPost({ data }) {
         <article className="prose md:mx-auto lg:prose-xl">
           <HelmetDatoCms seo={post.seoMetaTags} />
           <header>
-            <p className="text-sm text-right font-thin text-gray-500">
+            <p className="text-sm font-thin text-right text-gray-500">
               Published{' '}
               <time itemProp="datePublished" dateTime={meta.htmlFirstPublishedAt}>
                 {meta.firstPublishedAt}
@@ -206,3 +206,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default React.memo(BlogPost);
