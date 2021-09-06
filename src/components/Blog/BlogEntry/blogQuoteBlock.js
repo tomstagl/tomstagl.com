@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const BlogQuoteBlock = ({ quote, author }) => {
   return (
@@ -7,12 +7,12 @@ const BlogQuoteBlock = ({ quote, author }) => {
       <p className="italic">{quote}</p>
       {author && <p className="text-xs font-light text-right">--{author}</p>}
     </blockquote>
-  )
-}
+  );
+};
 
 BlogQuoteBlock.propTypes = {
   quote: PropTypes.string.isRequired,
   author: PropTypes.string,
-}
+};
 
-export default BlogQuoteBlock
+export default BlogQuoteBlock;

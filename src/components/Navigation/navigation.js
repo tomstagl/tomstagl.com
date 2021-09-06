@@ -1,19 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-import NavItem from './navItem'
+import NavItem from './navItem';
 
 const links = [
   { to: '/', name: 'Start' },
   { to: '/blog/', name: 'Blog' },
   { to: '/about/', name: 'About' },
-]
+];
 
-const navItems = links.map((item, index) => (
-  <NavItem key={index} to={item.to} name={item.name} />
-))
+const navItems = links.map((item, index) => <NavItem key={index} to={item.to} name={item.name} />);
 
 const Navigation = () => {
-  const [burgerMenuVisible, setBurgerMenuVisible] = React.useState(false)
+  const [burgerMenuVisible, setBurgerMenuVisible] = React.useState(false);
   return (
     <>
       <div className="block lg:hidden " id="mobile-nav-toggle">
@@ -43,7 +41,7 @@ const Navigation = () => {
         </ul>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

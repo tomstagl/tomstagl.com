@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 const BlogSeperatorBlock = () => {
   return (
-    <div className="p-1 flex flex-grow justify-center text-gray-400 lg:p-4 ">
+    <div className="flex justify-center flex-grow p-1 text-gray-400 lg:p-4 ">
       <svg
-        className="fill-current h-10 w-30"
+        className="h-10 fill-current w-30"
         version="1.1"
         id="Capa_1"
         xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ const BlogSeperatorBlock = () => {
         </g>
       </svg>
     </div>
-  )
-}
+  );
+};
 
-export default BlogSeperatorBlock
+export default BlogSeperatorBlock;

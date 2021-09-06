@@ -1,14 +1,14 @@
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
-import React from 'react'
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import ShareArticle from './Footer/ShareArticle/shareArticle'
-import Header from './header'
+import ShareArticle from './Footer/ShareArticle/shareArticle';
+import Header from './header';
 
-import './layout.css'
+import './layout.css';
 
 const Layout = ({ children, headerChildren }) => {
-  const renderAvatar = headerChildren ? false : true
+  const renderAvatar = headerChildren ? false : true;
 
   return (
     <div className="md:mx-auto antialiased md:subpixel-antialiased">
@@ -29,10 +29,7 @@ const Layout = ({ children, headerChildren }) => {
               <p>2542 Kottingbrunn</p>
               <p>
                 Email:{' '}
-                <a
-                  href="mailto:thomas.stagl@gmail.com"
-                  className="text-teal-400"
-                >
+                <a href="mailto:thomas.stagl@gmail.com" className="text-teal-400">
                   thomas.stagl@gmail.com
                 </a>
               </p>
@@ -55,12 +52,12 @@ const Layout = ({ children, headerChildren }) => {
         </div>
       </footer>
     </div>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   headerChildren: PropTypes.node,
-}
+};
 
-export default Layout
+export default Layout;

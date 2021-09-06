@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Image from './image'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Image from './image';
 
 const Card = ({ heading, text, image }) => {
   return (
@@ -18,20 +18,19 @@ const Card = ({ heading, text, image }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Card.propTypes = {
   heading: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-}
+};
 
 Card.defaultProps = {
   heading: 'Can coffee make you a better developer?',
-  text:
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque,exercitationem praesentium nihil.',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque,exercitationem praesentium nihil.',
   image: 'okrs.jpg',
-}
+};
 
-export default Card
+export default Card;

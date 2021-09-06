@@ -1,6 +1,6 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import React from 'react';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -27,14 +27,9 @@ const Image = (): JSX.Element => {
         }
       }
     }
-  `)
+  `);
 
-  return (
-    <GatsbyImage
-      image={data.placeholderImage.childImageSharp.gatsbyImageData}
-      alt="Image"
-    />
-  )
-}
+  return <GatsbyImage image={data.placeholderImage.childImageSharp.gatsbyImageData} alt="Image" />;
+};
 
-export default Image
+export default Image;

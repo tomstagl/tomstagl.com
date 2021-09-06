@@ -1,35 +1,26 @@
-import { graphql } from 'gatsby'
-import React from 'react'
+import { graphql } from 'gatsby';
+import React from 'react';
 
-import BlogPost from '../components/Blog/BlogList/blogPost'
-import Section from '../components/Container/Section'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import BlogPost from '../components/Blog/BlogList/blogPost';
+import Section from '../components/Container/Section';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const Blog = (data) => {
-  let lastPost
-  const rawBlogData = data.data.allDatoCmsBlogpost.edges
+  let lastPost;
+  const rawBlogData = data.data.allDatoCmsBlogpost.edges;
   // requires a shallow copy of the array because we shift and pop
   // which results in a smaller array when site is loaded again
-  const blogData = [...rawBlogData]
-  const firstPostData = blogData.shift()
-  const firstPost = (
-    <BlogPost key="firstPost" post={firstPostData.node} latest={true} />
-  )
+  const blogData = [...rawBlogData];
+  const firstPostData = blogData.shift();
+  const firstPost = <BlogPost key="firstPost" post={firstPostData.node} latest={true} />;
   if (blogData.length % 2 === 1) {
-    const lastPostData = blogData.pop()
-    lastPost = (
-      <BlogPost
-        key="lastPost"
-        post={lastPostData.node}
-        latest={false}
-        last={true}
-      />
-    )
+    const lastPostData = blogData.pop();
+    lastPost = <BlogPost key="lastPost" post={lastPostData.node} latest={false} last={true} />;
   }
 
   const blogPosts = (blogItems) => {
-    const items = []
+    const items = [];
     for (let iter = 0; iter < blogItems.length; iter += 2) {
       items.push(
         <div className="md:flex" key={`blogpostDiv-${iter}`}>
@@ -38,10 +29,10 @@ const Blog = (data) => {
             <BlogPost post={blogItems[iter + 1].node} className="md:pl-2" />
           )}
         </div>,
-      )
+      );
     }
-    return items
-  }
+    return items;
+  };
 
   return (
     <Layout>
@@ -59,8 +50,8 @@ const Blog = (data) => {
         </div>
       </Section>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   {
@@ -79,17 +70,13 @@ export const query = graphql`
             htmlFirstPublishedAt: firstPublishedAt(formatString: "YYYY-MM-DD")
           }
           blogimage {
-            gatsbyImageData(
-              width: 800
-              placeholder: TRACED_SVG
-              layout: FULL_WIDTH
-            )
+            gatsbyImageData(width: 800, placeholder: TRACED_SVG, layout: FULL_WIDTH)
             alt
           }
         }
       }
     }
   }
-`
+`;
 
-export default Blog
+export default Blog;
