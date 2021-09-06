@@ -4,7 +4,7 @@ module.exports = {
     project: './**/tsconfig.json',
   },
   ignorePatterns: ['*.js', '**/*.stories.js', 'next-env.d.ts'],
-  plugins: ['react', '@typescript-eslint', 'sonarjs', 'prettier', 'jest', 'jsx-a11y'],
+  plugins: ['import', 'react', '@typescript-eslint', 'sonarjs', 'prettier', 'jest', 'jsx-a11y'],
   extends: [
     'airbnb-typescript',
     'plugin:sonarjs/recommended',
