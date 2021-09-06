@@ -10,7 +10,7 @@ const BlogPost = ({ post, latest, last, className }) => {
   const abstract = post.abstract
   const blogImage = post.blogimage
 
-  const isFirstOrLast = (latestPost, lastPost) => {
+  const isFirstOrLast = (latestPost: boolean, lastPost: boolean) => {
     const latest = latestPost || false
     const last = lastPost || false
     return latest || last
@@ -34,7 +34,9 @@ const BlogPost = ({ post, latest, last, className }) => {
         </figure>
       )}
       <div
-        className={isFirstOrLast(latest, last) ? 'block md:flex py-4' : null}
+        className={
+          isFirstOrLast(latest, last) ? 'block md:flex py-4' : undefined
+        }
       >
         <header
           className={
@@ -44,13 +46,13 @@ const BlogPost = ({ post, latest, last, className }) => {
           }
         >
           <Link
-            className="text-teal-600 font-bold hover:text-teal-500"
+            className="font-bold text-teal-600 hover:text-teal-500"
             activeClassName="underline"
             to={read_more_link}
           >
             <h2 className="text-2xl">{post.title}</h2>
           </Link>
-          <p className="flex text-gray-500 text-sm font-light">
+          <p className="flex text-sm font-light text-gray-500">
             Published{' '}
             <time
               itemProp="datePublished"
@@ -72,7 +74,7 @@ const BlogPost = ({ post, latest, last, className }) => {
           <BlogReadMoreLink link={read_more_link} />
         </div>
       </div>
-      <hr className="w-2/3 mt-2 mx-auto border-1 border-dotted border-gray-300 bg-opacity-75 max-w-sm object-center" />
+      <hr className="object-center w-2/3 max-w-sm mx-auto mt-2 bg-opacity-75 border-gray-300 border-dotted border-1" />
     </article>
   )
 }

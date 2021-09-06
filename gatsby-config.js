@@ -1,5 +1,5 @@
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV || 'develop'}`,
+  path: `.env`,
 })
 
 module.exports = {
@@ -27,8 +27,8 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {
