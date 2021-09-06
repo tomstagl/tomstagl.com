@@ -4,7 +4,7 @@ import { JsonLd } from 'react-schemaorg';
 import { FAQPage } from 'schema-dts';
 
 export default function FaqStructuredData({ data }) {
-  const mainEntity = data.items.map((item, id) => {
+  const mainEntity = data.items.map((item) => {
     return {
       '@type': 'Question',
       name: item.question,

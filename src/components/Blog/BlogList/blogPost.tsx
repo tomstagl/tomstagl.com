@@ -11,9 +11,9 @@ const BlogPost = ({ post, latest, last, className }) => {
   const blogImage = post.blogimage;
 
   const isFirstOrLast = (latestPost: boolean, lastPost: boolean) => {
-    const latest = latestPost || false;
-    const last = lastPost || false;
-    return latest || last;
+    const latestPostInstance = latestPost || false;
+    const lastPostInstance = lastPost || false;
+    return latestPostInstance || lastPostInstance;
   };
 
   return (
