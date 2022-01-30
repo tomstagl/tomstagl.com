@@ -1,8 +1,8 @@
-import '@testing-library/jest-dom'
-import React from 'react'
-import { render } from '@testing-library/react'
+import '@testing-library/jest-dom';
+import React from 'react';
+import { render } from '@testing-library/react';
 
-import { PureAvatar as Avatar } from './avatar'
+import { PureAvatar as Avatar } from './avatar';
 
 describe('Avatar', () => {
   it('renders the correct title', () => {
@@ -20,8 +20,8 @@ describe('Avatar', () => {
           },
         },
       },
-    }
-    const { getByTestId } = render(<Avatar title="Test" data={data} />)
-    expect(getByTestId('avatar-title')).toHaveTextContent('Test')
-  })
-})
+    };
+    const { getByTestId } = render(<Avatar title="Test" data={data} />);
+    expect(getByTestId('avatar-title')).toHaveTextContent('Test');
+  });
+});

@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Tom Stagl`,
@@ -23,8 +27,8 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {
@@ -37,8 +41,8 @@ module.exports = {
         name: `tom-stagl-agile-coach`,
         short_name: `tomstagl.com`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#414857`,
+        theme_color: `#414857`,
         display: `minimal-ui`,
         icon: `src/images/avatar.png`, // This path is relative to the root of the site.
       },
@@ -49,7 +53,7 @@ module.exports = {
       options: {
         // You can find your read-only API token under the Settings > API tokens
         // section of your administrative area:
-        apiToken: `641e4f5f7b118f5c4e07fc26263b42`,
+        apiToken: process.env.DATO_CMS_API_TOKEN,
         // If you are working on development/staging environment, you might want to
         // preview the latest version of records instead of the published one:
         previewMode: false,
@@ -150,4 +154,4 @@ module.exports = {
       },
     },
   ],
-}
+};

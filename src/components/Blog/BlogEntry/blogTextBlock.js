@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const BlogTextBlock = (props) => {
-  const { sectionTitle, sectionNode } = props
+  const { sectionTitle, sectionNode } = props;
   return (
     <div>
       {sectionTitle && <h2>{sectionTitle}</h2>}
@@ -12,12 +12,12 @@ const BlogTextBlock = (props) => {
         }}
       ></div>
     </div>
-  )
-}
+  );
+};
 
 BlogTextBlock.propTypes = {
   sectionTitle: PropTypes.string,
   sectionNode: PropTypes.object.isRequired,
-}
+};
 
-export default BlogTextBlock
+export default BlogTextBlock;

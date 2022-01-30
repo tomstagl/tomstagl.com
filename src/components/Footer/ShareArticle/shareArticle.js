@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import { FaLinkedin, FaTwitter } from 'react-icons/fa'
+import PropTypes from 'prop-types';
+import React from 'react';
+import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const ShareArticle = ({ className }) => {
   return (
@@ -24,14 +24,14 @@ const ShareArticle = ({ className }) => {
         <FaLinkedin className="text-teal-500" />
       </a>
     </div>
-  )
-}
+  );
+};
 
 ShareArticle.propTypes = {
   className: PropTypes.string,
-}
+};
 
 ShareArticle.defaultProps = {
   className: 'justify-end',
-}
-export default ShareArticle
+};
+export default ShareArticle;

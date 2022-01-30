@@ -1,8 +1,8 @@
-import { graphql, Link } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { HelmetDatoCms } from 'gatsby-source-datocms'
-import PropTypes from 'prop-types'
-import React from 'react'
+import { graphql, Link } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { HelmetDatoCms } from 'gatsby-source-datocms';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {
   FacebookIcon,
   FacebookShareButton,
@@ -10,17 +10,17 @@ import {
   LinkedinShareButton,
   TwitterIcon,
   TwitterShareButton,
-} from 'react-share'
+} from 'react-share';
 
-import BlogCodeBlock from '../components/Blog/BlogEntry/BlogCodeBlock/blogCodeBlock'
-import BlogImageBlock from '../components/Blog/BlogEntry/blogImageBlock'
-import BlogQuoteBlock from '../components/Blog/BlogEntry/blogQuoteBlock'
-import BlogSeperatorBlock from '../components/Blog/BlogEntry/blogSeperatorBlock'
+import BlogCodeBlock from '../components/Blog/BlogEntry/BlogCodeBlock/blogCodeBlock';
+import BlogImageBlock from '../components/Blog/BlogEntry/blogImageBlock';
+import BlogQuoteBlock from '../components/Blog/BlogEntry/blogQuoteBlock';
+import BlogSeperatorBlock from '../components/Blog/BlogEntry/blogSeperatorBlock';
 /* use loadable components for lazy loading SSR */
-import BlogTextBlock from '../components/Blog/BlogEntry/blogTextBlock'
-import Section from '../components/Container/Section'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import BlogTextBlock from '../components/Blog/BlogEntry/blogTextBlock';
+import Section from '../components/Container/Section';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const Components = {
   text: BlogTextBlock,
@@ -28,34 +28,30 @@ const Components = {
   trennzeichen: BlogSeperatorBlock,
   bild: BlogImageBlock,
   code: BlogCodeBlock,
-}
+};
 
-export default function BlogPost({ data }) {
-  const post = data.datoCmsBlogpost
-  const { title, subtitle, abstract, content, blogimage, meta, slug } = post
-  const gatsbyBlogImage = getImage(blogimage)
-  const siteUrl = 'https://tomstagl.com/blog/' + slug + '/'
-  const hashTags = ['agility']
+function BlogPost({ data }) {
+  const post = data.datoCmsBlogpost;
+  const { title, subtitle, abstract, content, blogimage, meta, slug } = post;
+  const gatsbyBlogImage = getImage(blogimage);
+  const siteUrl = 'https://tomstagl.com/blog/' + slug + '/';
+  const hashTags = ['agility'];
 
   const mapSections = () => {
-    const sections = []
+    const sections = [];
     content.forEach((item, index) => {
       // TODO: check optional chaining posibility
-      if (
-        item.model &&
-        item.model.apiKey &&
-        item.model.apiKey !== 'undefined'
-      ) {
-        const blockApiKey = item.model.apiKey
+      if (item.model && item.model.apiKey && item.model.apiKey !== 'undefined') {
+        const blockApiKey = item.model.apiKey;
         sections.push(
           <section key={index + blockApiKey}>
             {React.createElement(Components[blockApiKey], { ...item })}
           </section>,
-        )
+        );
       }
-    })
-    return sections
-  }
+    });
+    return sections;
+  };
 
   return (
     <Layout>
@@ -64,7 +60,7 @@ export default function BlogPost({ data }) {
         <span>
           <Link
             to="/blog/"
-            className="font-light text-sm text-gray-700 hover:text-teal-500"
+            className="text-sm font-light text-gray-700 hover:text-teal-500"
             activeClassName="text-teal-500 underline "
           >
             &lt; Back to Blog
@@ -73,12 +69,9 @@ export default function BlogPost({ data }) {
         <article className="prose md:mx-auto lg:prose-xl">
           <HelmetDatoCms seo={post.seoMetaTags} />
           <header>
-            <p className="text-sm text-right font-thin text-gray-500">
+            <p className="text-sm font-thin text-right text-gray-500">
               Published{' '}
-              <time
-                itemProp="datePublished"
-                dateTime={meta.htmlFirstPublishedAt}
-              >
+              <time itemProp="datePublished" dateTime={meta.htmlFirstPublishedAt}>
                 {meta.firstPublishedAt}
               </time>
             </p>
@@ -118,30 +111,23 @@ export default function BlogPost({ data }) {
             </LinkedinShareButton>
           </div>
           <div className="mr-2">
-            <FacebookShareButton
-              url={siteUrl}
-              quote={abstract}
-              hashtag={'#agility'}
-            >
+            <FacebookShareButton url={siteUrl} quote={abstract} hashtag={'#agility'}>
               <FacebookIcon size={30} borderRadius={35} />
             </FacebookShareButton>
           </div>
         </div>
       </Section>
     </Layout>
-  )
+  );
 }
 
 BlogPost.propTypes = {
   data: PropTypes.object.isRequired,
-}
+};
 
 export const query = graphql`
-  query($slug: String!) {
-    datoCmsBlogpost(
-      slug: { eq: $slug }
-      meta: { status: { eq: "published" } }
-    ) {
+  query ($slug: String!) {
+    datoCmsBlogpost(slug: { eq: $slug }, meta: { status: { eq: "published" } }) {
       abstract
       title
       subtitle
@@ -219,4 +205,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
+
+export default React.memo(BlogPost);

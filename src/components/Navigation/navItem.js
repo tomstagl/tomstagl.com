@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
 const NavItem = (props) => {
-  const { to, name } = props
+  const { to, name } = props;
 
   return (
     <li className="block my-1 text-xl lg:mr-6 lg:my-auto lg:text-base">
@@ -15,12 +15,12 @@ const NavItem = (props) => {
         {name}
       </Link>
     </li>
-  )
-}
+  );
+};
 
 NavItem.propTypes = {
   to: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-}
+};
 
-export default NavItem
+export default NavItem;

@@ -1,12 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Image from '../Card/image'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Image from '../Card/image';
 
 const SmallCard = ({ title, text, image, imageCredits, className }) => {
   return (
-    <div
-      className={`rounded overflow-hidden shadow-lg my-2 md:m-2 ${className}`}
-    >
+    <div className={`rounded overflow-hidden shadow-lg my-2 md:m-2 ${className}`}>
       <div className="h-56">
         <Image imgName={image} className="h-full" credits={imageCredits} />
       </div>
@@ -15,8 +13,8 @@ const SmallCard = ({ title, text, image, imageCredits, className }) => {
         <p className="text-grey-darker text-base">{text}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 SmallCard.propTypes = {
   title: PropTypes.string.isRequired,
@@ -24,15 +22,14 @@ SmallCard.propTypes = {
   image: PropTypes.string.isRequired,
   imageCredits: PropTypes.string,
   className: PropTypes.string,
-}
+};
 
 SmallCard.defaultProps = {
   title: 'Dummy title',
-  text:
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil',
   image: 'okrs.jpg',
   imageCredits: '',
   className: '',
-}
+};
 
-export default SmallCard
+export default SmallCard;
