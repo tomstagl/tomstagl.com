@@ -1,5 +1,6 @@
-import { Link } from 'gatsby';
+import { withPrefix, Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 import React from 'react';
 
 import ShareArticle from './Footer/ShareArticle/shareArticle';
@@ -8,20 +9,23 @@ import Header from './header';
 import './layout.css';
 
 const Layout = ({ children, headerChildren }) => {
-  const renderAvatar = headerChildren ? false : true;
+  const renderAvatar = !headerChildren
 
   return (
-    <div className="md:mx-auto antialiased md:subpixel-antialiased">
+    <div className="antialiased md:mx-auto md:subpixel-antialiased">
+      <Helmet>
+        <script async src={withPrefix('dynatrace.js')} type="text/javascript" />
+      </Helmet>
       <Header siteTitle="Tom Stagl" renderAvatar={renderAvatar}>
         {headerChildren}
       </Header>
       <main>
-        {/* <main className="p-4 max-w-xl md:max-w-3xl lg:max-w-4xl  mx-auto"> */}
+        {/* <main className="max-w-xl p-4 mx-auto md:max-w-3xl lg:max-w-4xl"> */}
         {children}
       </main>
-      <footer className="bg-gray-800 text-gray-400 pt-4 md:from-gray-700 md:to-gray-800 md:bg-gradient-to-r">
-        <div className="flex flex-col-reverse md:flex-row mx-auto max-w-xl md:max-w-3xl lg:max-w-4xl pt-2 p-4">
-          <div className="block w-full md:w-1/3 justify-center md:justify-start p-4 md:p-0">
+      <footer className="pt-4 text-gray-400 bg-gray-800 md:from-gray-700 md:to-gray-800 md:bg-gradient-to-r">
+        <div className="flex flex-col-reverse max-w-xl p-4 pt-2 mx-auto md:flex-row md:max-w-3xl lg:max-w-4xl">
+          <div className="justify-center block w-full p-4 md:w-1/3 md:justify-start md:p-0">
             <address className="text-sm not-italic text-center md:text-left">
               <p className="font-bold">Kontakt</p>
               <p>Thomas Stagl</p>
@@ -41,12 +45,12 @@ const Layout = ({ children, headerChildren }) => {
               </p>
             </address>
           </div>
-          <div className="flex w-full md:w-1/3 justify-center p-4 md:p-0">
+          <div className="flex justify-center w-full p-4 md:w-1/3 md:p-0">
             <Link to="/impressum/" className="text-xs md:text-gray-400">
               Imprint
             </Link>
           </div>
-          <div className="flex w-full md:w-1/3 justify-center md:items-start md:justify-end p-4 md:p-0">
+          <div className="flex justify-center w-full p-4 md:w-1/3 md:items-start md:justify-end md:p-0">
             <ShareArticle />
           </div>
         </div>
