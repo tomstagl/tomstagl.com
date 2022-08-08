@@ -2,9 +2,9 @@ import React from 'react';
 
 import { H1, H2 } from '../components/Container/Headers';
 import Section from '../components/Container/Section';
-import Layout from '../components/layout';
 import SEO from '../components/seo';
 import TimeLine from '../components/Timeline/Timeline';
+import Layout from '../components/Layout/layout';
 
 const About = () => (
   <Layout>

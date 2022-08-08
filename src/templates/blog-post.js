@@ -19,8 +19,8 @@ import BlogSeperatorBlock from '../components/Blog/BlogEntry/blogSeperatorBlock'
 /* use loadable components for lazy loading SSR */
 import BlogTextBlock from '../components/Blog/BlogEntry/blogTextBlock';
 import Section from '../components/Container/Section';
-import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Layout from '../components/Layout/layout';
 
 const Components = {
   text: BlogTextBlock,

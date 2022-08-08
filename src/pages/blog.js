@@ -2,38 +2,13 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import BlogPost from '../components/Blog/BlogList/blogPost';
+//import BlogPost from '../components/Blog/BlogList/blogPost';
 import Section from '../components/Container/Section';
-import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Layout from '../components/Layout/layout';
 
 const Blog = (data) => {
-  let lastPost;
-  const rawBlogData = data.data.allDatoCmsBlogpost.edges;
-  // requires a shallow copy of the array because we shift and pop
-  // which results in a smaller array when site is loaded again
-  const blogData = [...rawBlogData];
-  const firstPostData = blogData.shift();
-  const firstPost = <BlogPost key="firstPost" post={firstPostData.node} latest={true} />;
-  if (blogData.length % 2 === 1) {
-    const lastPostData = blogData.pop();
-    lastPost = <BlogPost key="lastPost" post={lastPostData.node} latest={false} last={true} />;
-  }
-
-  const blogPosts = (blogItems) => {
-    const items = [];
-    for (let iter = 0; iter < blogItems.length; iter += 2) {
-      items.push(
-        <div className="md:flex" key={`blogpostDiv-${iter}`}>
-          <BlogPost post={blogItems[iter].node} className="md:pr-2" />
-          {iter + 1 < blogItems.length && (
-            <BlogPost post={blogItems[iter + 1].node} className="md:pl-2" />
-          )}
-        </div>,
-      );
-    }
-    return items;
-  };
-
+  const blogData = data.data.allDatoCmsBlogpost.edges;
   return (
     <Layout>
       <SEO
@@ -41,12 +16,12 @@ const Blog = (data) => {
         description="Blog Post about all different aspects of agility. Fokusing on easy to follow how to's and best practices."
       />
       <Section>
-        <h1>Blog posts about agility and DevOps</h1>
+        <h1 className={'heading'}>Blog posts</h1>
+        <p> about agility and DevOps</p>
         <div>
-          {firstPost}
-          <h2>Older Posts</h2>
-          {blogPosts(blogData)}
-          {lastPost && lastPost}
+          {blogData.map((post) => {
+            return <BlogPost post={post.node} key={post.node.slug} />;
+          })}
         </div>
       </Section>
     </Layout>

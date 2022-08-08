@@ -6,12 +6,8 @@ const NavItem = (props) => {
   const { to, name } = props;
 
   return (
-    <li className="block my-1 text-xl lg:mr-6 lg:my-auto lg:text-base">
-      <Link
-        className="text-gray-700 lg:text-gray-400 hover:text-teal-500"
-        activeClassName="text-teal-500 underline"
-        to={to}
-      >
+    <li className="pr-1">
+      <Link className="nav-tab" to={to}>
         {name}
       </Link>
     </li>

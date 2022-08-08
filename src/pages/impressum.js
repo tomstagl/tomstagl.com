@@ -2,8 +2,8 @@ import React from 'react';
 
 import { H1 } from '../components/Container/Headers';
 import Section from '../components/Container/Section';
-import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Layout from '../components/Layout/layout';
 
 const Impressum = () => (
   <Layout>
