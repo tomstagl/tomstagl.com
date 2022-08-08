@@ -7,8 +7,8 @@ import Layout from '../components/Layout/layout';
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Business Agility Coach"
-      description="I'm an experienced Business Agility Coach focusing on New Work, OKRs and SCRUM."
+      title="Software engineering leader"
+      description="I love software development, all things ending with OPS and I like to work with people."
     />
     <Cover />
   </Layout>

@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Tom Stagl`,
-    description: `Experienced business agility - and Agile Coach, Interim CTO - Tom Stagl`,
+    description: `Software Engineering leader - Tom Stagl`,
     author: `@herrstagl`,
     siteUrl: `https://tomstagl.com`,
   },
