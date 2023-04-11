@@ -1,20 +1,24 @@
-import { withPrefix } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 function Cover() {
   return (
-    <div className="content leading-relaxed">
-      <div className="pr-32 md:pr-56 text-right mb--4">
-        <img
-          src={withPrefix('regex.png')}
+    <div className="leading-relaxed content">
+      <div className="pr-32 text-right md:pr-56 mb--4">
+        <StaticImage
+          src="../../../static/regex.png"
           alt="The James Williamson Possum Balloon"
           className="inline-block filter-bw-800"
+          loading="eager"
+          layout="constrained"
+          placeholder="blurred"
+          height={600}
         />
       </div>
-      <div className="p-6 bg-teal-500 text-white">
-        <h1 className="text-6xl pb-6 border-b-2 border-white leading-none font-serif">
+      <div className="p-6 text-white bg-teal-500">
+        <h1 className="pb-6 font-serif text-6xl leading-none border-b-2 border-white">
           Googling for the regex
         </h1>
-        <p className="text-xl mt-2 leading-tight">Every. Damn. Time.</p>
+        <p className="mt-2 text-xl leading-tight">Every. Damn. Time.</p>
       </div>
     </div>
   );

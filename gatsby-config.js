@@ -41,8 +41,8 @@ module.exports = {
         name: `tom-stagl-agile-coach`,
         short_name: `tomstagl.com`,
         start_url: `/`,
-        background_color: `#414857`,
-        theme_color: `#414857`,
+        background_color: `#38b2ac`,
+        theme_color: `#38b2ac`,
         display: `minimal-ui`,
         icon: `src/images/avatar.png`, // This path is relative to the root of the site.
       },
