@@ -9,14 +9,14 @@ const IndexPage = () => (
   <Layout>
     <SEO
       title="Engineering Leader"
-      description="Engineer turned engineering leader. Senior Director Software Engineering at Dynatrace, running a 350-person unit."
+      description="Engineer turned engineering leader. Senior Director Software Engineering at Dynatrace."
     />
     <Cover />
     <section className="px-4 py-12 md:py-16">
       <div className="max-w-2xl mx-auto">
         <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
           <span className="font-semibold text-slate-900">Engineer turned engineering leader.</span>
-          {' '}Running a 350-person unit at Dynatrace.
+          {' '}Senior Director Software Engineering at Dynatrace.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link to="/about/" className="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-md hover:bg-blue-100 transition-colors border-0">
