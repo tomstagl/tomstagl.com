@@ -64,6 +64,10 @@ public
 # Mac files
 .DS_Store
 
+# Editor/tool artifacts
+.dccache
+.history/
+
 # Yarn
 yarn-error.log
 .pnp/
