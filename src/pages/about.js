@@ -142,8 +142,8 @@ const timeLineData = [
   },
   {
     right: {
-      header: 'Director II - Dynatrace (HUB + Platform Engineering + AppSec)',
-      text: 'Scope expanded to include Platform Engineering and Application Security on top of the HUB. Leading multiple teams across tooling and infrastructure that other engineering teams depend on daily.',
+      header: 'Director of Engineering - Dynatrace',
+      text: 'Scope expanded beyond the HUB to include Platform Engineering and Application Security. Running multiple teams, responsible for tooling and infrastructure that the rest of engineering depends on.',
     },
     line: {
       year: 2023,
@@ -152,7 +152,7 @@ const timeLineData = [
   {
     left: {
       header: 'Senior Director Software Engineering - Dynatrace',
-      text: 'Leading a 350-person unit building tooling, platforms, and infrastructure for 2,000+ Dynatrace engineers. Now driving an active AI adoption stream — the team is building AI-powered developer tooling and making AI agents first-class citizens on the developer platform.',
+      text: 'Leading a 350-person unit responsible for the tooling and infrastructure that 2,000+ Dynatrace engineers depend on. Also working out how AI fits into a developer platform — building it in rather than bolting it on.',
     },
     line: {
       year: 2024,
