@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 
-const ShareArticle = ({ className }) => {
+const ShareArticle = ({ className = 'justify-end' }) => {
   return (
     <div className={`flex items-center text-3xl ${className}`}>
       <a
@@ -31,7 +31,4 @@ ShareArticle.propTypes = {
   className: PropTypes.string,
 };
 
-ShareArticle.defaultProps = {
-  className: 'justify-end',
-};
 export default ShareArticle;

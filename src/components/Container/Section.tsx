@@ -8,7 +8,7 @@ type SectionProps = {
 
 const Section: FunctionComponent<SectionProps> = ({ children, className = '', dark = false }) => {
   const css = className || '';
-  const darkerBackground = dark ? 'bg-gray-100 md:border' : '';
+  const darkerBackground = dark ? 'bg-slate-100 md:border border-slate-200' : '';
   return (
     <section className={`p-4 lg:py-12 ${css} ${darkerBackground}`}>
       <div className="container max-w-xl mx-auto md:max-w-3xl lg:max-w-4xl">{children}</div>

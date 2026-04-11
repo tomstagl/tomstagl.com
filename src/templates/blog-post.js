@@ -4,8 +4,6 @@ import { HelmetDatoCms } from 'gatsby-source-datocms';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
-  FacebookIcon,
-  FacebookShareButton,
   LinkedinIcon,
   LinkedinShareButton,
   TwitterIcon,
@@ -94,27 +92,18 @@ function BlogPost({ data }) {
         </article>
       </Section>
       <Section>
-        <div className="flex flex-row-reverse">
-          <div className="mr-2">
-            <TwitterShareButton
-              url={siteUrl}
-              title={subtitle}
-              hashtags={hashTags}
-              related={['@herrstagl']}
-            >
-              <TwitterIcon size={30} borderRadius={35} />
-            </TwitterShareButton>
-          </div>
-          <div className="mr-2">
-            <LinkedinShareButton url={siteUrl}>
-              <LinkedinIcon size={30} borderRadius={35} />
-            </LinkedinShareButton>
-          </div>
-          <div className="mr-2">
-            <FacebookShareButton url={siteUrl} quote={abstract} hashtag={'#platformengineering'}>
-              <FacebookIcon size={30} borderRadius={35} />
-            </FacebookShareButton>
-          </div>
+        <div className="flex gap-2 justify-end">
+          <LinkedinShareButton url={siteUrl}>
+            <LinkedinIcon size={30} borderRadius={35} />
+          </LinkedinShareButton>
+          <TwitterShareButton
+            url={siteUrl}
+            title={subtitle}
+            hashtags={hashTags}
+            related={['@herrstagl']}
+          >
+            <TwitterIcon size={30} borderRadius={35} />
+          </TwitterShareButton>
         </div>
       </Section>
     </Layout>

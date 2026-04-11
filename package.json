@@ -1,9 +1,9 @@
 {
   "name": "tom-stagl-blog",
   "private": true,
-  "description": "Tom Stagl Agile Coaching Blog - WOL rocks",
+  "description": "tomstagl.com — personal site of Tom Stagl, Senior Director Software Engineering at Dynatrace",
   "version": "1.0.0",
-  "author": "Thomas Stagl <thomas.stagl@google.com>",
+  "author": "Thomas Stagl",
   "resolutions": {
     "punycode": "^2.3.1",
     "@typescript-eslint/eslint-plugin": "^6.0.0"
@@ -11,8 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.5",
     "@tailwindcss/typography": "^0.5.15",
-    "antd": "^5.22.2",
-    "babel-preset-gatsby": "^3.16.0",
+"babel-preset-gatsby": "^3.16.0",
     "gatsby": "^5.16.0",
     "gatsby-plugin-csp": "^1.1.4",
     "gatsby-plugin-image": "^3.16.0",

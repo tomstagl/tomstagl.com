@@ -16,10 +16,10 @@ const About = () => (
       <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8">About Me</h1>
       <div className="space-y-6">
         <p className="text-lg text-slate-600 leading-relaxed">
-          I build the machine that builds the software. As Senior Director of Software Engineering
-          at Dynatrace, I lead a 350-person unit building the tooling, platforms, and infrastructure
-          that 2,000+ engineers depend on every day. Now I&apos;m leading the shift to AI-first
-          developer tooling — making AI agents first-class citizens on our developer platform.
+          I&apos;ve been in software since the 90s — as a programmer, a SCRUM pioneer, a CTO,
+          and now as Senior Director running a 350-person engineering unit at Dynatrace. My team
+          builds the tooling and infrastructure for 2,000+ engineers. The job is mostly about
+          people and structure. The engineering background is why it works.
         </p>
         <p className="text-lg text-slate-600 leading-relaxed">
           My path here wasn&apos;t a straight line. I started writing code, fell into SCRUM in 2003
@@ -31,10 +31,8 @@ const About = () => (
         <p className="text-lg text-slate-600 leading-relaxed">
           The through-line across 20+ years:{' '}
           <span className="font-medium text-slate-900">
-            build the systems and teams that let engineers do their best work
+            build the systems and teams that let engineers do their best work.
           </span>
-          . That used to mean better processes. Now it means better platforms, better tooling, and
-          figuring out how AI changes the game for developer productivity at scale.
         </p>
       </div>
       <p className="text-center text-xl font-medium text-slate-800 py-4 border-y border-slate-200 mt-8">
