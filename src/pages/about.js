@@ -10,7 +10,7 @@ const About = () => (
   <Layout>
     <SEO
       title="About"
-      description="Senior Director Software Engineering at Dynatrace. Leading 350 engineers building tooling, platforms, and infrastructure for 2000+ engineers. From writing code to leading at scale — now driving the shift to AI-first developer tooling."
+      description="Senior Director Software Engineering at Dynatrace. 20+ years building and leading engineering teams at scale."
     />
     <Section>
       <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8">About Me</h1>
@@ -61,15 +61,15 @@ const About = () => (
           Meetings start on time, have an agenda - issued days before - and meeting minutes are
           taken and shared afterwards. <strong>Always!</strong>
         </li>
-        <li>Ask the team, they know better</li>
+        <li>The people closest to the work usually know best — ask them first</li>
         <li>Watch the baton, not the runner. Focus on outcome, not on output</li>
         <li>
-          Metrics are important indicators for business performance and used to ask questions.
-          Nothing more!
+          Metrics are indicators, not answers. Use them to ask better questions, not to close
+          conversations.
         </li>
         <li>
-          If you don&apos;t like the style of your manager or team lead, it&apos;s your fault:
-          Provide constructive feedback to your team lead. Allow her/him to get better.
+          If you don&apos;t like how your team lead operates, say so directly. Feedback is how
+          leaders get better — withholding it helps no one.
         </li>
       </ul>
     </Section>

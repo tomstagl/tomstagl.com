@@ -16,12 +16,12 @@ Tracks what's been done on the site and what's queued, in relation to the brand 
 - [x] About page: full Dynatrace career arc (Dir SE → Dir of Engineering → Sr Dir, 2021–2024)
 - [x] Removed headcount reference from homepage
 - [x] Dropped dead/unused components
+- [x] About page SEO description: replaced AI-first framing with "20+ years building and leading engineering teams at scale." (2026-04-11)
+- [x] Principles section: tightened "Ask the team" bullet, improved metrics framing, rewrote feedback principle (removed "it's your fault" framing and gendered language) (2026-04-11)
+- [x] Cover component: reviewed — "Googling for the regex / Every. Damn. Time." is clean and on-brand, no changes needed (2026-04-11)
 
 ## Known Issues / Flagged
 
-- [ ] About page SEO description still says "driving the shift to AI-first developer tooling" — stale, contradicts current positioning
-- [ ] Principles section on About page: dated/generic — worth revisiting
-- [ ] Cover component copy: not yet reviewed in context of current positioning
 - [ ] Blog content: thin, needs a content strategy before adding more
 
 ## Queued (awaiting strategy)
