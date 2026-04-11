@@ -12,7 +12,7 @@ const ShareArticle = ({ className }) => {
         target="_blank"
         href="https://twitter.com/herrstagl"
       >
-        <FaTwitter className="text-teal-500" />
+        <FaTwitter className="text-slate-500 hover:text-slate-700 transition-colors" />
       </a>
       <a
         aria-label="linked In"
@@ -21,7 +21,7 @@ const ShareArticle = ({ className }) => {
         target="_blank"
         href="https://at.linkedin.com/in/herrstagl"
       >
-        <FaLinkedin className="text-teal-500" />
+        <FaLinkedin className="text-slate-500 hover:text-slate-700 transition-colors" />
       </a>
     </div>
   );

@@ -4,7 +4,6 @@
 - add proper fav icons, determine needed sizes before!
 - cleanup, especially the file and folder structure
 - linting
-- writing tests
 - autodeploy to prod and ....
 - add Semantic Release support [https://www.npmjs.com/package/semantic-release]
 - In progress - together with `commitizen`

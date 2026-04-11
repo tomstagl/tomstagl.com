@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Tom Stagl`,
-    description: `Software Engineering leader - Tom Stagl`,
+    description: `Senior Director Software Engineering at Dynatrace. Building tooling, platforms, and infrastructure for 2,000+ engineers. Leading the shift to AI-first developer tooling.`,
     author: `@herrstagl`,
     siteUrl: `https://tomstagl.com`,
   },
@@ -38,11 +38,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `tom-stagl-agile-coach`,
+        name: `tom-stagl-platform-engineering-leader`,
         short_name: `tomstagl.com`,
         start_url: `/`,
-        background_color: `#38b2ac`,
-        theme_color: `#38b2ac`,
+        background_color: `#0f172a`,
+        theme_color: `#0f172a`,
         display: `minimal-ui`,
         icon: `src/images/avatar.png`, // This path is relative to the root of the site.
       },

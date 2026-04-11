@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { H1, H2 } from '../components/Container/Headers';
+import { H2 } from '../components/Container/Headers';
 import Section from '../components/Container/Section';
 import SEO from '../components/seo';
 import TimeLine from '../components/Timeline/Timeline';
@@ -10,39 +10,35 @@ const About = () => (
   <Layout>
     <SEO
       title="About"
-      description="All about my career, achievements and what I am doing from a professional perspective. In short, here you find also my CV."
+      description="Senior Director Software Engineering at Dynatrace. Leading 350 engineers building tooling, platforms, and infrastructure for 2000+ engineers. From writing code to leading at scale — now driving the shift to AI-first developer tooling."
     />
     <Section>
-      <H1>About Me</H1>
-      <p className="py-4">
-        I was born back in 1972 as the youngest of three kids. So I learned very early how to
-        inspect and adapt. And that is also what I&apos;ve continued doing all the years. During my
-        career my main focus was on agile practices. Mainly to unlock the potential of each and
-        everyone. Helping each person to find the right spot in a team.
-      </p>
-      <p className="py-4">
-        During my professional career I&apos;ve had the very early chance to get in touch with
-        Scrum. That was back in 2003, where engineers in my team wanted to try out this new way of
-        organising the work. At this time my role was programm manager trying hardly to wire
-        together multiple Microsoft Project plans to steer multiple parallel projects. SCRUM sounded
-        to me like the way to go. The thing which finally can add focus and transperancy to the work
-        we did. Shortly after 2003 I&apos;ve moved also into the SCRUM master role, ... and loved
-        it!
-      </p>
-      <p className="py-4">
-        A couple of years ago, I saw the talk &ldquo;Agile is dead&rdquo;, at least that&apos;s what
-        Pragramatic Dave said a couple of years ago on a conference talk. And I agree. What
-        I&apos;ve seen during all those years is, that Agile just turned into a business, focusing
-        mainly on the tools and processes available. Each one promising to be a silver bullet. But
-        the core of the talk was to{' '}
-        <span className="text-teal-700">
-          focus on your needs, focus on the things which work for your organisation
-        </span>
-        . Continue doing them, and stop all the things which are blocking you. Acting with agility
-        makes you agile, and most importantly successful.
-      </p>
-      <p className="py-4 text-center text-lg underline">
-        Working together with me will help you to unleash the power of your teams.
+      <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8">About Me</h1>
+      <div className="space-y-6">
+        <p className="text-lg text-slate-600 leading-relaxed">
+          I build the machine that builds the software. As Senior Director of Software Engineering
+          at Dynatrace, I lead a 350-person unit building the tooling, platforms, and infrastructure
+          that 2,000+ engineers depend on every day. Now I&apos;m leading the shift to AI-first
+          developer tooling — making AI agents first-class citizens on our developer platform.
+        </p>
+        <p className="text-lg text-slate-600 leading-relaxed">
+          My path here wasn&apos;t a straight line. I started writing code, fell into SCRUM in 2003
+          when it was still the weird new thing, ran engineering teams for in-game commerce serving
+          Riot Games and Rockstar, took a CTO seat at an Austrian scale-up, and spent time as a
+          freelance coach. Every stop taught me something about what makes engineering organisations
+          actually work — and what doesn&apos;t.
+        </p>
+        <p className="text-lg text-slate-600 leading-relaxed">
+          The through-line across 20+ years:{' '}
+          <span className="font-medium text-slate-900">
+            build the systems and teams that let engineers do their best work
+          </span>
+          . That used to mean better processes. Now it means better platforms, better tooling, and
+          figuring out how AI changes the game for developer productivity at scale.
+        </p>
+      </div>
+      <p className="text-center text-xl font-medium text-slate-800 py-4 border-y border-slate-200 mt-8">
+        Still Googles for the regex. Still trusts the team.
       </p>
     </Section>
 
@@ -131,10 +127,37 @@ const timeLineData = [
   {
     right: {
       header: 'Freelancing Business Agility Coach',
-      text: 'I am now working with small and medium sized commpanies to suppor their agile journey with the main goal to help them become successful.',
+      text: 'Worked with small and medium-sized companies to support their journey toward business agility, helping teams find the practices that actually worked for them.',
     },
     line: {
       year: 2020,
+    },
+  },
+  {
+    left: {
+      header: 'Director Software Engineering - Dynatrace',
+      text: 'Joined Dynatrace to build and lead the engineering team behind the Dynatrace HUB — the platform\'s extension and app ecosystem. Built the team and the product from the ground up.',
+    },
+    line: {
+      year: 2021,
+    },
+  },
+  {
+    right: {
+      header: 'Director II - Dynatrace (HUB + Platform Engineering + AppSec)',
+      text: 'Scope expanded to include Platform Engineering and Application Security on top of the HUB. Leading multiple teams across tooling and infrastructure that other engineering teams depend on daily.',
+    },
+    line: {
+      year: 2023,
+    },
+  },
+  {
+    left: {
+      header: 'Senior Director Software Engineering - Dynatrace',
+      text: 'Leading a 350-person unit building tooling, platforms, and infrastructure for 2,000+ Dynatrace engineers. Now driving an active AI adoption stream — the team is building AI-powered developer tooling and making AI agents first-class citizens on the developer platform.',
+    },
+    line: {
+      year: 2024,
     },
   },
 ];

@@ -3,7 +3,8 @@ import React from 'react';
 import NavItem from './navItem';
 
 const links = [
-  { to: '/', name: 'Start' },
+  { to: '/', name: 'Home' },
+  { to: '/about/', name: 'About' },
   { to: '/blog/', name: 'Blog' },
 ];
 

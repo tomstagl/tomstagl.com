@@ -2,7 +2,7 @@ import React from 'react';
 
 const BlogSeperatorBlock = () => {
   return (
-    <div className="flex justify-center flex-grow p-1 text-gray-400 lg:p-4 ">
+    <div className="flex justify-center flex-grow p-1 text-slate-300 lg:p-4 ">
       <svg
         className="h-10 fill-current w-30"
         version="1.1"

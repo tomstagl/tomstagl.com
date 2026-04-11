@@ -35,7 +35,7 @@ function BlogPost({ data }) {
   const { title, subtitle, abstract, content, blogimage, meta, slug } = post;
   const gatsbyBlogImage = getImage(blogimage);
   const siteUrl = 'https://tomstagl.com/blog/' + slug + '/';
-  const hashTags = ['agility'];
+  const hashTags = ['platformengineering'];
 
   const mapSections = () => {
     const sections = [];
@@ -60,8 +60,8 @@ function BlogPost({ data }) {
         <span>
           <Link
             to="/blog/"
-            className="text-sm font-light text-gray-700 hover:text-teal-500"
-            activeClassName="text-teal-500 underline "
+            className="text-sm font-light text-slate-500 hover:text-slate-700"
+            activeClassName="text-slate-700 underline"
           >
             &lt; Back to Blog
           </Link>
@@ -69,7 +69,7 @@ function BlogPost({ data }) {
         <article className="prose md:mx-auto lg:prose-xl">
           <HelmetDatoCms seo={post.seoMetaTags} />
           <header>
-            <p className="text-sm font-thin text-right text-gray-500">
+            <p className="text-sm text-slate-400 text-right">
               Published{' '}
               <time itemProp="datePublished" dateTime={meta.htmlFirstPublishedAt}>
                 {meta.firstPublishedAt}
@@ -111,7 +111,7 @@ function BlogPost({ data }) {
             </LinkedinShareButton>
           </div>
           <div className="mr-2">
-            <FacebookShareButton url={siteUrl} quote={abstract} hashtag={'#agility'}>
+            <FacebookShareButton url={siteUrl} quote={abstract} hashtag={'#platformengineering'}>
               <FacebookIcon size={30} borderRadius={35} />
             </FacebookShareButton>
           </div>

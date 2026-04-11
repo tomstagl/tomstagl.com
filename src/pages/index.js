@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import SEO from '../components/seo';
 import Cover from '../components/Cover/cover';
@@ -7,10 +8,27 @@ import Layout from '../components/Layout/layout';
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Software engineering leader"
-      description="I love software development, all things ending with OPS and I like to work with people."
+      title="Platform Engineering Leader"
+      description="Senior Director Software Engineering at Dynatrace. Building the tooling, platforms, and infrastructure for 2,000+ engineers. Leading the shift to AI-first developer tooling."
     />
     <Cover />
+    <section className="px-4 py-12 md:py-16">
+      <div className="max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+          <span className="font-semibold text-slate-900">Senior Director Software Engineering at Dynatrace.</span>
+          {' '}Building the tooling, platforms, and infrastructure for 2,000+ engineers.
+          Leading the shift to AI-first developer tooling.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link to="/about/" className="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-md hover:bg-blue-100 transition-colors border-0">
+            About me &rarr;
+          </Link>
+          <Link to="/blog/" className="inline-flex items-center px-4 py-2 text-sm font-medium text-slate-600 bg-slate-100 rounded-md hover:bg-slate-200 transition-colors border-0">
+            Blog &rarr;
+          </Link>
+        </div>
+      </div>
+    </section>
   </Layout>
 );
 

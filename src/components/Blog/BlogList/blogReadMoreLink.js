@@ -6,7 +6,7 @@ const BlogReadMoreLink = ({ link, latest }) => {
   const latestPost = latest || false;
   return (
     <Link
-      className={`text-teal-600 hover:text-teal-500 hover:underline ${
+      className={`text-blue-600 hover:text-blue-500 hover:underline ${
         latestPost ? 'align-text-bottom' : ''
       }`}
       to={link}

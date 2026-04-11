@@ -14,11 +14,11 @@ function Cover() {
           height={600}
         />
       </div>
-      <div className="p-6 text-white bg-teal-500">
-        <h1 className="pb-6 font-serif text-6xl leading-none border-b-2 border-white">
+      <div className="p-6 text-white bg-slate-900">
+        <h1 className="pb-6 font-serif text-6xl leading-none tracking-tight border-b-2 border-slate-700">
           Googling for the regex
         </h1>
-        <p className="mt-2 text-xl leading-tight">Every. Damn. Time.</p>
+        <p className="mt-2 text-xl leading-tight text-slate-300">Every. Damn. Time.</p>
       </div>
     </div>
   );
