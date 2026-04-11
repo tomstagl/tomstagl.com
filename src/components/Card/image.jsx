@@ -13,10 +13,12 @@ const Image = ({ imgName, className, credits }) => (
         allImageSharp {
           edges {
             node {
-              fluid {
-                originalName
+              parent {
+                ... on File {
+                  base
+                }
               }
-              gatsbyImageData(layout: FULL_WIDTH, placeholder: TRACED_SVG)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             }
           }
         }
@@ -24,7 +26,7 @@ const Image = ({ imgName, className, credits }) => (
     `}
     render={(data) => {
       const image = data.allImageSharp.edges.find((edge) => {
-        if (edge.node.fluid.originalName === imgName) {
+        if (edge.node.parent.base === imgName) {
           return true;
         }
       });

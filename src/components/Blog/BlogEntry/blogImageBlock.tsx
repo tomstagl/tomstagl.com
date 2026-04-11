@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 
 type BlogImageBlockProps = {
   bild: {
-    fluid: FluidObject;
+    gatsbyImageData: IGatsbyImageData;
     alt: string;
   };
 };

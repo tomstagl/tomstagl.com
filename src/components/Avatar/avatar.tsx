@@ -1,5 +1,5 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React, { FunctionComponent } from 'react';
 
@@ -8,7 +8,7 @@ type PureAvatarProps = {
   data: {
     avatarImage: {
       childImageSharp: {
-        fluid: FluidObject;
+        gatsbyImageData: IGatsbyImageData;
       };
     };
   };
@@ -54,7 +54,7 @@ const Avatar = (props: AvatarProps): JSX.Element => {
     {
       avatarImage: file(relativePath: { eq: "avatar.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 300, layout: CONSTRAINED, placeholder: TRACED_SVG)
+          gatsbyImageData(width: 300, layout: CONSTRAINED, placeholder: BLURRED)
         }
       }
     }

@@ -140,7 +140,7 @@ export const query = graphql`
         htmlFirstPublishedAt: firstPublishedAt(formatString: "YYYY-MM-DD")
       }
       blogimage {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: TRACED_SVG)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         title
         alt
       }
@@ -168,9 +168,7 @@ export const query = graphql`
           bild {
             alt
             title
-            fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
-              ...GatsbyDatoCmsFluid
-            }
+            gatsbyImageData(width: 600, imgixParams: { fm: "jpg", auto: "compress" }, placeholder: BLURRED)
           }
         }
         ... on DatoCmsQuote {

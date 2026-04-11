@@ -21,7 +21,7 @@ const Image = (): JSX.Element => {
           gatsbyImageData(
             width: 300
             layout: CONSTRAINED
-            placeholder: TRACED_SVG
+            placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
           )
         }

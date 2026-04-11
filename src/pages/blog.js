@@ -33,7 +33,7 @@ export const query = graphql`
   {
     allDatoCmsBlogpost(
       filter: { meta: { status: { eq: "published" } } }
-      sort: { fields: meta___firstPublishedAt, order: DESC }
+      sort: { meta: { firstPublishedAt: DESC } }
     ) {
       edges {
         node {
@@ -46,7 +46,7 @@ export const query = graphql`
             htmlFirstPublishedAt: firstPublishedAt(formatString: "YYYY-MM-DD")
           }
           blogimage {
-            gatsbyImageData(width: 800, placeholder: TRACED_SVG, layout: FULL_WIDTH)
+            gatsbyImageData(width: 800, placeholder: BLURRED, layout: FULL_WIDTH)
             alt
           }
         }
