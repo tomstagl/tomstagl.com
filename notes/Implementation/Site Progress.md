@@ -26,10 +26,18 @@ Tracks what's been done on the site and what's queued, in relation to the brand 
 
 ## Queued (awaiting strategy)
 
-- Content pillar pages or blog posts aligned to positioning
 - LinkedIn / social metadata improvements
 - Potential: newsletter sign-up, contact form, or CTA section
 - Potential: speaking/talks page if speaking becomes a channel
+
+## In Review
+
+- [ ] Blog post: "I Turned My Personal Site Into an Agentic Workspace" (2026-04-12)
+  - DatoCMS draft ID: `CU4YoQcGR_2sZQAlr9fiow`
+  - Slug: `agentic-workspace-claude-code`
+  - Review URL: https://tomstagl.admin.datocms.com/editor/item_types/233068/items/CU4YoQcGR_2sZQAlr9fiow/edit
+  - 11 content blocks, 3 screenshots (hero + vault structure + parallel run)
+  - Awaiting Tom's review before publishing
 
 ## Notes
 
