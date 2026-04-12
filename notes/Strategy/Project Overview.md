@@ -2,7 +2,7 @@
 type: project
 status: discovery
 mode: keep-warm
-updated: 2026-04-11
+updated: 2026-04-12
 ---
 
 # Personal Brand Project — Tom Stagl
@@ -47,7 +47,7 @@ Engineering leadership at scale. Not platform engineering specifically. The AI/t
 - [ ] Site cleanup: fix known accuracy/copy issues (see [[../Implementation/Site Progress]])
 - [ ] LinkedIn audit: is the LinkedIn profile consistent with the site and positioning?
 - [ ] Competitive scan: what does a strong "keep warm" engineering leader brand look like?
-- [ ] Identify 2–3 content pillars Tom could write about authentically, without forced cadence
+- [x] Identify 2–3 content pillars Tom could write about authentically, without forced cadence
 
 ### Phase 2 — Strategy Definition
 - [ ] Finalise positioning statement and elevator pitch

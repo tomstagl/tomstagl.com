@@ -1,6 +1,6 @@
 ---
 type: reference
-updated: 2026-04-11
+updated: 2026-04-12
 ---
 
 # Agent Team
@@ -9,24 +9,26 @@ Specialist agents we spin up to work on the personal brand project. Each agent h
 
 ## Active Agents
 
-*(none yet — Phase 1 starting)*
+*(none currently running)*
 
-## Defined Agents
+## Completed Agents
 
-### Brand Analyst
+### Brand Analyst ✓
 **Purpose:** Assess Tom's current market position, competitive landscape, and where gaps or opportunities exist for engineering leaders building personal brands.
 **Delivers:** Competitive scan report → `Insights/Competitive Scan.md`
-**Trigger:** Once the outcome goal (A/B/C) is confirmed
+**Completed:** 2026-04-11
 
-### Audience Researcher
+### Audience Researcher ✓
 **Purpose:** Map who Tom's target audience is, where they live online, what they read, and what problems they're trying to solve.
 **Delivers:** Audience map → `Insights/Audience Map.md`
-**Trigger:** Once outcome goal is confirmed
+**Completed:** 2026-04-12
 
-### Content Strategist
+### Content Strategist ✓
 **Purpose:** Define content pillars, formats, and cadence based on audience and positioning. What should Tom be writing/saying and where?
 **Delivers:** Content strategy → `Strategy/Content Strategy.md`
-**Trigger:** After Brand Analyst + Audience Researcher complete
+**Completed:** 2026-04-12
+
+## Defined Agents (not yet run)
 
 ### Platform Scout
 **Purpose:** Audit Tom's current footprint (LinkedIn, GitHub, speaking appearances, etc.) and recommend where to show up and how.
