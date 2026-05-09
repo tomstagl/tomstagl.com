@@ -32,7 +32,7 @@ const Blog = (data) => {
 export const query = graphql`
   {
     allDatoCmsBlogpost(
-      filter: { meta: { status: { eq: "published" } } }
+      filter: { meta: { status: { in: ["published", "updated"] } } }
       sort: { meta: { firstPublishedAt: DESC } }
     ) {
       edges {
