@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description = ``, lang = `en`, meta = [], title }) {
+function SEO({ description = ``, lang = `en`, meta = [], title, ogImage = `/regex.png`, structuredData = [] }) {
   const { site } = useStaticQuery(graphql`
     query {
       site {
@@ -11,12 +11,14 @@ function SEO({ description = ``, lang = `en`, meta = [], title }) {
           title
           description
           author
+          siteUrl
         }
       }
     }
   `);
 
   const metaDescription = description || site.siteMetadata.description;
+  const ogImageUrl = `${site.siteMetadata.siteUrl}${ogImage}`;
 
   return (
     <Helmet
@@ -43,8 +45,20 @@ function SEO({ description = ``, lang = `en`, meta = [], title }) {
           content: `website`,
         },
         {
+          property: `og:site_name`,
+          content: site.siteMetadata.title,
+        },
+        {
+          property: `og:image`,
+          content: ogImageUrl,
+        },
+        {
+          property: `og:image:alt`,
+          content: `${title} - ${site.siteMetadata.title}`,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -58,9 +72,18 @@ function SEO({ description = ``, lang = `en`, meta = [], title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `twitter:image`,
+          content: ogImageUrl,
+        },
       ].concat(meta)}
     >
       <html lang="en" />
+      {structuredData.map((schema, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
     </Helmet>
   );
 }
@@ -70,6 +93,8 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  ogImage: PropTypes.string,
+  structuredData: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default SEO;

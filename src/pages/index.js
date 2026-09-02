@@ -5,11 +5,50 @@ import SEO from '../components/seo';
 import Cover from '../components/Cover/cover';
 import Layout from '../components/Layout/layout';
 
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Tom Stagl',
+    url: 'https://tomstagl.com',
+    jobTitle: 'Senior Director Software Engineering',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Dynatrace',
+      url: 'https://www.dynatrace.com',
+    },
+    description:
+      'Engineering leader with 20+ years in software. Building tooling and infrastructure for 2,000+ engineers at Dynatrace.',
+    sameAs: ['https://twitter.com/herrstagl', 'https://x.com/herrstagl'],
+    knowsAbout: [
+      'Engineering Leadership',
+      'Platform Engineering',
+      'Developer Tooling',
+      'Agile Methodology',
+      'SCRUM',
+      'AI-First Developer Tooling',
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Tom Stagl',
+    url: 'https://tomstagl.com',
+    description:
+      'Senior Director Software Engineering at Dynatrace. Writing about engineering leadership, platform engineering, and building at scale.',
+    author: {
+      '@type': 'Person',
+      name: 'Tom Stagl',
+    },
+  },
+];
+
 const IndexPage = () => (
   <Layout>
     <SEO
       title="Engineering Leader"
       description="Engineer turned engineering leader. Senior Director Software Engineering at Dynatrace."
+      structuredData={structuredData}
     />
     <Cover />
     <section className="px-4 py-12 md:py-16">
