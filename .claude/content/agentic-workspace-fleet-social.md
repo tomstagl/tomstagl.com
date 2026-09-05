@@ -1,4 +1,4 @@
-# Social variants — Autonomous for Three Days, Active for Three Hours
+# Social variants — Agent Fleet: Autonomous 3 Days, Active 3 Hours
 
 Post: https://tomstagl.com/blog/agentic-workspace-fleet/ (DatoCMS draft
 `B5DZCpgWQQ-uz11zD7b63Q` — unpublished at time of writing)
