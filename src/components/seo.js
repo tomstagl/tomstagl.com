@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description = ``, lang = `en`, meta = [], title, ogImage = `/regex.png`, structuredData = [] }) {
+function SEO({
+  description = ``,
+  lang = `en`,
+  meta = [],
+  title,
+  ogImage = `/regex.png`,
+  structuredData = [],
+  canonical = ``,
+}) {
   const { site } = useStaticQuery(graphql`
     query {
       site {
@@ -79,6 +87,7 @@ function SEO({ description = ``, lang = `en`, meta = [], title, ogImage = `/rege
       ].concat(meta)}
     >
       <html lang="en" />
+      {canonical && <link rel="canonical" href={canonical} />}
       {structuredData.map((schema, i) => (
         <script key={i} type="application/ld+json">
           {JSON.stringify(schema)}
@@ -95,6 +104,7 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
   ogImage: PropTypes.string,
   structuredData: PropTypes.arrayOf(PropTypes.object),
+  canonical: PropTypes.string,
 };
 
 export default SEO;

@@ -35,6 +35,30 @@ function BlogPost({ data }) {
   const siteUrl = 'https://tomstagl.com/blog/' + slug + '/';
   const hashTags = ['platformengineering'];
 
+  /* BlogPosting schema — Google reads this for article rich results.
+     HelmetDatoCms supplies the meta tags; it emits no JSON-LD, so this is
+     the only structured data on the page. */
+  const blogPostingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    mainEntityOfPage: { '@type': 'WebPage', '@id': siteUrl },
+    headline: title,
+    description: abstract,
+    datePublished: meta.htmlFirstPublishedAt,
+    dateModified: meta.htmlFirstPublishedAt,
+    author: {
+      '@type': 'Person',
+      name: 'Tom Stagl',
+      url: 'https://tomstagl.com/about/',
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Tom Stagl',
+      url: 'https://tomstagl.com/',
+    },
+    ...(blogimage && blogimage.url ? { image: blogimage.url } : {}),
+  };
+
   const mapSections = () => {
     const sections = [];
     content.forEach((item, index) => {
@@ -53,7 +77,7 @@ function BlogPost({ data }) {
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} canonical={siteUrl} structuredData={[blogPostingSchema]} />
       <Section>
         <span>
           <Link
@@ -130,6 +154,7 @@ export const query = graphql`
       }
       blogimage {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+        url
         title
         alt
       }
