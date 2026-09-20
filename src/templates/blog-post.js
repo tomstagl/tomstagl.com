@@ -91,7 +91,7 @@ function BlogPost({ data }) {
         <article className="prose md:mx-auto lg:prose-xl">
           <HelmetDatoCms seo={post.seoMetaTags} />
           <header>
-            <p className="text-sm text-slate-400 text-right">
+            <p className="text-sm text-slate-500 text-right">
               Published{' '}
               <time itemProp="datePublished" dateTime={meta.htmlFirstPublishedAt}>
                 {meta.firstPublishedAt}

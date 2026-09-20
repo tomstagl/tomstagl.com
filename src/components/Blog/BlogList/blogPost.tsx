@@ -5,7 +5,7 @@ function BlogPost({ post }) {
   const readMoreLink = `/blog/${post.slug}`;
   return (
     <article className="py-6 group">
-      <time className="text-sm text-slate-400 tabular-nums" itemProp="datePublished" dateTime={post.meta.htmlFirstPublishedAt}>
+      <time className="text-sm text-slate-500 tabular-nums" itemProp="datePublished" dateTime={post.meta.htmlFirstPublishedAt}>
         {post.meta.firstPublishedAt}
       </time>
       <Link to={readMoreLink} className="block border-0">
