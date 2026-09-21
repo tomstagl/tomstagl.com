@@ -39,4 +39,4 @@ Listed in ME-recommended sequence — start at the top, move down as leverage in
 - Fractional/interim leadership — flag: high time cost, no leverage, conflicts with full-time role. Only valid as a short bridge, not a product.
 
 ## Activation
-This agent activates in Phase 2 (months 4-8) once niche is validated.
+Dormant under keep-warm mode. A consulting or solo-business pivot is an activation *trigger* in `notes/Strategy/Project Overview.md` § Activation Triggers, not the current state, so this agent activates only when Tom flips the mode and says so. Not on a calendar: the project is in **Phase 1 — Foundation** until that file says otherwise. Nothing above — offer stacks, pricing, pilots, pre-sells — is to be proposed before then.
