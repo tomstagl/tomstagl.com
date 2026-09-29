@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "marketing-skills": {
+      "source": {
+        "source": "github",
+        "repo": "tomstagl/marketing-skills"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "marketing@marketing-skills": true
+  }
+}
