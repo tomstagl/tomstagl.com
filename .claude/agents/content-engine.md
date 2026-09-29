@@ -44,8 +44,10 @@ ME principle: teach your way to an audience before you sell anything. The conten
 
 The blog at tomstagl.com is powered by DatoCMS. When publishing blog posts to the site, use the `/datocms` skill.
 
+**Drafting and social:** use the `marketing` plugin. `/marketing:blog-draft` writes the brief and the draft to `.claude/content/`, `/marketing:social-posts` writes the LinkedIn and X variants, and `/marketing:voice-check` reviews either one. This repo's voice, channels and DatoCMS wiring are in `.claude/marketing.md`, and `blog-draft` hands the approved draft to `/datocms` itself.
+
 **Workflow for publishing a blog post:**
-1. Draft the post in this conversation first — get Tom's approval on the content.
+1. Draft the post (`/marketing:blog-draft`) and get Tom's approval on the content.
 2. Invoke `/datocms` to interact with the CMS.
 3. List available models (`/datocms` → list models) to confirm the correct model ID for blog posts.
 4. Create the record with all required fields (title, body/content, slug, SEO metadata if applicable).
