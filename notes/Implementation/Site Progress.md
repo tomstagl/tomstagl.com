@@ -38,6 +38,19 @@ Tracks what's been done on the site and what's queued, in relation to the brand 
   - Review URL: https://tomstagl.admin.datocms.com/editor/item_types/233068/items/CU4YoQcGR_2sZQAlr9fiow/edit
   - 11 content blocks, 3 screenshots (hero + vault structure + parallel run)
   - Awaiting Tom's review before publishing
+- [ ] Blog post: "cctop: htop for a Claude Code session" (2026-09-26)
+  - Draft: `.claude/content/cctop-blog-draft.md`, hero `.claude/content/cctop-hero.png` (2400×960, terminal-mock style matching the clawctl hero)
+  - Slug: `cctop-htop-for-claude-code` · Pillar 2 angle: measure the guidance, not just the developer (coach control arm)
+  - One `[TOM: …]` placeholder for a first-hand observation
+  - DatoCMS draft ID: `U6EeZdBpS3mX78ahGceVyw` (6 text blocks, hero upload `NSl76Z8HTqqYXpuUDn1hgg`)
+  - Review URL: https://tomstagl.admin.datocms.com/editor/item_types/233068/items/U6EeZdBpS3mX78ahGceVyw/edit
+  - Writes use `DATO_CMS_FULL_ACCESSAPI_TOKEN` from `.env`; `DATO_CMS_API_TOKEN` is read-only
+- [x] Blog post: "cctop: reading a Claude Code Workflow run" (published 2026-09-29), cctop v0.9.0
+  - Live: https://tomstagl.com/blog/cctop-workflow-runs/ · DatoCMS `dPO4s_V8Tp2IyJ7_ghiShA` (11 blocks)
+  - Draft: `.claude/content/cctop-workflow-runs-blog-draft.md`, written with `/marketing:blog-draft` (the plugin's first real run)
+  - Angle: the same measurement point as the first post. Failures counted in dollars looked healthy (234 of 300 failed, 198 on the first call); count and cost are shown side by side
+  - Media: hero + 2 in-body stills, and a 34 s mp4 embedded as a `<video>` in a text block (the `video` block model is external-provider only and has no component in `blog-post.js`)
+  - Social: `.claude/content/cctop-workflow-runs-social.md` (X post with video, X thread, LinkedIn), not posted yet
 
 ## Notes
 

@@ -22,7 +22,13 @@ X-Api-Version: 3
 Content-Type: application/vnd.api+json
 ```
 
-The API token must be in the environment variable `DATOCMS_API_TOKEN`. If it is not set, ask the user to provide it or set it with:
+The API token must be in the environment variable `DATOCMS_API_TOKEN`. If it is not set, load it from the project's `.env`: `DATO_CMS_FULL_ACCESSAPI_TOKEN` is the full-access token for writes (uploads, create, publish). `DATO_CMS_API_TOKEN` is the site's read-only token, and writes with it fail with `INSUFFICIENT_PERMISSIONS`.
+
+```bash
+set -a && . ./.env && set +a && export DATOCMS_API_TOKEN="$DATO_CMS_FULL_ACCESSAPI_TOKEN"
+```
+
+If neither is available, ask the user to provide it or set it with:
 ```
 export DATOCMS_API_TOKEN=your_token_here
 ```
@@ -97,7 +103,7 @@ The response includes the new record's `id`. Save it if you need to publish imme
 ### 4. Publish an existing record
 
 ```bash
-curl -s -X POST "https://site-api.datocms.com/items/ITEM_ID/publish" \
+curl -s -X PUT "https://site-api.datocms.com/items/ITEM_ID/publish" \
   -H "Authorization: Bearer $DATOCMS_API_TOKEN" \
   -H "Accept: application/json" \
   -H "X-Api-Version: 3" | jq .
@@ -135,7 +141,7 @@ ITEM_ID=$(curl -s -X POST "https://site-api.datocms.com/items" \
 echo "Created item: $ITEM_ID"
 
 # Step 2: Publish
-curl -s -X POST "https://site-api.datocms.com/items/$ITEM_ID/publish" \
+curl -s -X PUT "https://site-api.datocms.com/items/$ITEM_ID/publish" \
   -H "Authorization: Bearer $DATOCMS_API_TOKEN" \
   -H "Accept: application/json" \
   -H "X-Api-Version: 3" | jq .
