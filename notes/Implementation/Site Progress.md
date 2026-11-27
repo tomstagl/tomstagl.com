@@ -51,6 +51,13 @@ Tracks what's been done on the site and what's queued, in relation to the brand 
   - Angle: the same measurement point as the first post. Failures counted in dollars looked healthy (234 of 300 failed, 198 on the first call); count and cost are shown side by side
   - Media: hero + 2 in-body stills, and a 34 s mp4 embedded as a `<video>` in a text block (the `video` block model is external-provider only and has no component in `blog-post.js`)
   - Social: `.claude/content/cctop-workflow-runs-social.md` (X post with video, X thread, LinkedIn), not posted yet
+- [x] Blog post: "thunderstruck 0.21: it depends on your stack" (published 2026-11-27), thunderstruck v0.21.0
+  - Live: https://tomstagl.com/blog/thunderstruck-fracture-planes/ · DatoCMS `fVLIGJ0vQsefz8BYulDzRQ` (9 blocks)
+  - Draft: `.claude/content/thunderstruck-fracture-planes-blog-draft.md`, written with `/marketing:blog-draft`; the first thunderstruck post
+  - Angle: "it depends on your stack" lives in reviewers' heads; fracture planes write it down, a script picks it, a hash versions it, and it is never evidence. The honest part: the Spring seed is unmeasured, and a measured skeptic change in the same release did not ship
+  - Media: hero (2400×960) and a 27 s mp4 embedded as a `<video>` in a text block; build script `.claude/content/thunderstruck-fracture-planes-build_video.py`
+  - Social: `.claude/content/thunderstruck-fracture-planes-social.md` (X post with video, X thread, LinkedIn), not posted yet
+  - Note: `POST /uploads` now answers with an async job; poll `/job-results/<id>` for the upload ID, and `blogimage` requires a title
 
 ## Notes
 
